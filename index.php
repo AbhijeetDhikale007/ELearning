@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/src/styles/main.css">
 </head>
 <body>
-    <header class='flex items-center justify-between px-20'>
+    <header class='flex absolute top-0 items-center justify-between px-20'>
         <p class="text-3xl select-none">E-Learning</p>
         <nav class='flex text-xl'>
             <a class='Button' href="#">Home</a>
@@ -23,10 +23,10 @@
         <!-- <video class='z--1 w-100%' playsinline autoplay muted loop>
             <source src='/public/Background.mp4'>
         </video> -->
-        <div class='WelcomeDiv flex absolute flex-col justify-center items-center text-4xl'>
-            <h1>Welcome To E-Learning Platform</h1>
+        <div class='WelcomeDiv flex absolute flex-col justify-center items-center'>
+            <h1 class='text-4xl'>Welcome To E-Learning Platform</h1>
             <p>Learn and Implement</p>
-            <a class='Button2 text-lg' href="#">Get Started</a>
+            <a class='Button2 text-lg mt-2' href="#">Get Started</a>
         </div>
     </main>
 
