@@ -13,9 +13,9 @@
         <nav class='flex text-xl'>
             <a class='Button' href="#">Home</a>
             <a class='Button' href="#">Course</a>
-            <a class='Button' href="#">Course</a>
-            <a class='Button' href="#">Course</a>
             <a class='Button' href="#">Login</a>
+            <a class='Button' href="#">Signup</a>
+            <a class='Button' href="#">Contact</a>
         </nav>
     </header>
 
