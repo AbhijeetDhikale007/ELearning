@@ -19,7 +19,7 @@
         </nav>
     </header>
 
-    <main class='flex justify-center items-center'>
+    <main class='flex z-0 justify-center items-center'>
         <!-- <video class='z--1 w-100%' playsinline autoplay muted loop>
             <source src='/public/Background.mp4'>
         </video> -->
