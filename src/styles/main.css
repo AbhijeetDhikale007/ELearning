@@ -10,12 +10,21 @@ nav {
 }
 
 main {
-    border: 2px solid #000;
-    min-height: 90vh;
+    position: absolute;
+    /* border: 2px solid #000; */
+    min-height: 100vh;
 }
 
-main h1 {
-    filter: drop-shadow(0 0 10px rgb(0, 0, 0, .3));
+main video {
+    height: 100vh;
+    width: 100vw;
+}
+
+.WelcomeDiv {
+    padding: 20px 20px;
+    background: rgb(0, 0, 0, .2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
 }
 
 main p {

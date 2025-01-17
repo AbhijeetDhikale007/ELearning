@@ -19,10 +19,15 @@
         </nav>
     </header>
 
-    <main class='flex flex-col justify-center items-center text-4xl'>
-        <h1>Welcome To E-Learning Platform</h1>
-        <p>Learn and Implement</p>
-        <a class='Button2 text-lg' href="#">Get Started</a>
+    <main class='flex justify-center items-center'>
+        <!-- <video class='z--1 w-100%' playsinline autoplay muted loop>
+            <source src='/public/Background.mp4'>
+        </video> -->
+        <div class='WelcomeDiv flex absolute flex-col justify-center items-center text-4xl'>
+            <h1>Welcome To E-Learning Platform</h1>
+            <p>Learn and Implement</p>
+            <a class='Button2 text-lg' href="#">Get Started</a>
+        </div>
     </main>
 
     <script src="src/js/jquery-3.7.1.js"></script>
