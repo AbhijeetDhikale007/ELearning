@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Learning Platform</title>
 
-    <link rel="stylesheet" href="/src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/main.css">
 </head>
 <body>
     <header class='flex absolute top-0 items-center justify-between px-20'>
