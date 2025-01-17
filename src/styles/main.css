@@ -4,3 +4,26 @@
     margin: 0;
     padding: 0;
 }
+
+nav {
+    gap: 1.2vw;
+}
+
+.Button {
+    background-color: transparent;
+    padding: 6px 14px;
+    transition: .5s;
+    border: none;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.Button:hover {
+    color: #fff;
+    background: #000;
+}
+  
+.Button.active {
+    color: rgb(0, 250, 250);
+    border-bottom: .5px solid rgb(0, 250, 250);
+}
