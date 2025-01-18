@@ -24,8 +24,8 @@ if ($conn->connect_error) {
     <header class='flex absolute top-0 items-center justify-between px-20'>
         <p class="text-3xl select-none">E-Learning</p>
         <nav class='flex text-xl'>
-            <a class='Button' href="#">Home</a>
-            <a class='Button' href="#">Course</a>
+            <a class='Button' href="/Elearning/index.php">Home</a>
+            <a class='Button' href="/Elearning/cources.php">Course</a>
             <a class='Button' href="#">Login</a>
             <a class='Button' href="#">Signup</a>
             <a class='Button' href="#">Contact</a>
