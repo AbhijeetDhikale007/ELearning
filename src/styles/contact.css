@@ -1,0 +1,30 @@
+@import url(./tailwind-all.css);
+
+.Contact {
+    width: 60%;
+    padding: 2vh 1vw;
+}
+
+.Contact .InputDiv {
+    padding: 2vh 1vw;
+}
+
+.Contact .InputDiv input {
+    padding: .5rem;
+    background: #fff;
+    border: .5px solid rgb(0, 0, 0, .5);
+    border-radius: 8px;
+}
+
+.Contact .InputDiv input:focus {
+    border: none;
+    border: 1px solid #008000;
+}
+
+.Contact button {
+    padding: 0.5rem 1rem;
+    background: orangered;
+    border-radius: 10px;
+    margin-left: 1vw;
+    margin-top: 0.5vh;
+}
