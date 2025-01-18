@@ -64,6 +64,7 @@ include 'src/components/Icons.php';
             </div>
         </div>
 
+        <h1 class='text-5xl'>Popular Courses</h1>
         <?php include 'src/components/PopularCourses.php'; ?>
     </main>
 

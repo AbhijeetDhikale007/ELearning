@@ -6,9 +6,10 @@
 }
 
 header {
-    width: 98vw;
+    width: 98.5vw;
     z-index: 1;
     height: 10%;
+    border-bottom: .2px solid #000;
 }
 
 nav {
