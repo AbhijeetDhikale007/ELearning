@@ -67,28 +67,6 @@ main p {
     width: 20px;
 }
 
-.PopularCourses {
-    gap: 4rem;
-    width: 80%;
-}
-
-.PCourses-Div {
-    height: 46vh;
-    width: 18vw;
-    border: .4px solid rgb(0, 0, 0, .5);
-    border-radius: 10px;
-}
-
-.PCourses-Div img {
-    width: 100%;
-    height: 46%;
-}
-
-.PCourses-Text {
-    margin-top: 2vh;
-    padding: 0 2vw;
-}
-
 .Button {
     background-color: transparent;
     padding: 4px 12px;
