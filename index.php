@@ -1,14 +1,14 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "database"; 
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "database"; 
 
-$conn = new mysqli($servername, $username, $password);
+// $conn = new mysqli($servername, $username, $password);
 
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+// if ($conn->connect_error) {
+//   die("Connection failed: " . $conn->connect_error);
+// }
 
 include 'src/components/Icons.php';
 ?>
@@ -63,6 +63,8 @@ include 'src/components/Icons.php';
                 <p>Moneyback Guarantee</p>
             </div>
         </div>
+
+        <?php include 'src/components/PopularCourses.php'; ?>
     </main>
 
     <script src="src/js/jquery-3.7.1.js"></script>
