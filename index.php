@@ -1,14 +1,14 @@
 <?php
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $dbname = "database"; 
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "database"; 
 
-// $conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password);
 
-// if ($conn->connect_error) {
-//   die("Connection failed: " . $conn->connect_error);
-// }
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
 
 include 'src/components/Icons.php';
 ?>
@@ -27,10 +27,10 @@ include 'src/components/Icons.php';
         <p class="text-3xl select-none">E-Learning</p>
         <nav class='flex text-xl'>
             <a class='Button' href="/Elearning/index.php">Home</a>
-            <a class='Button' href="/Elearning/cources.php">Course</a>
+            <a class='Button' href="/Elearning/courses.php">Course</a>
             <a class='Button' href="#">Login</a>
             <a class='Button' href="#">Signup</a>
-            <a class='Button' href="#">Contact</a>
+            <a class='Button' href="/Elearning/contact.php">Contact</a>
         </nav>
     </header>
 
@@ -66,6 +66,7 @@ include 'src/components/Icons.php';
 
         <h1 class='text-5xl'>Popular Courses</h1>
         <?php include 'src/components/PopularCourses.php'; ?>
+        <?php include 'src/components/Contact.php'; ?>
     </main>
 
     <script src="src/js/jquery-3.7.1.js"></script>
