@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/PopularCourses.css">
 </head>
 
 <div class='PopularCourses flex flex-wrap justify-center p-10'>
