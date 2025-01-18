@@ -51,5 +51,6 @@
     </main>
 
     <script src="src/js/jquery-3.7.1.js"></script>
+    <script src="src/js/Talwind-3.4.1.js"></script>
 </body>
 </html>
