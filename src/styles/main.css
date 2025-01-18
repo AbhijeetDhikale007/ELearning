@@ -42,7 +42,7 @@ main video {
     gap: 2vh;
 }
 
-main p {
+.WelcomeContainer p {
     filter: drop-shadow(0 0 10px rgb(0, 0, 0, .3));
 }
 
