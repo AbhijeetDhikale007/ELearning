@@ -1,1 +1,8 @@
 @import url(./tailwind-all.css);
+
+footer a {
+    display: flex;
+    gap: .5vw;
+    justify-content: center;
+    align-items: center;
+}
