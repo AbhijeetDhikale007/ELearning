@@ -42,7 +42,7 @@ include 'src/components/Icons.php';
             <div class='WelcomeDiv flex absolute flex-col justify-center items-center'>
                 <h1 class='text-4xl'>Welcome To E-Learning Platform</h1>
                 <p>Learn and Implement</p>
-                <a class='Button2 text-lg mt-2' href="/Elearning/cources.php">Get Started</a>
+                <a class='Button2 text-lg mt-2' href="/Elearning/courses.php">Get Started</a>
             </div>
         </div>
         <div class='DetailsDiv bg-orange-600 flex justify-between items-center'>
