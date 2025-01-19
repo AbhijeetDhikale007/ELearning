@@ -6,6 +6,7 @@
     <title>E-Learning Platform - Contact</title>
 </head>
 <body>
+    <?php include 'src/components/Header.php'; ?>
     <main class='flex flex-col justify-center items-center'>
         <?php include 'src/components/Contact.php'; ?>
     </main>
