@@ -13,6 +13,6 @@
         <div class='InputDiv flex flex-col'>
             <input type="email" name="email" placeholder='Email'>
         </div>
-        <button type="submit">Send</button>
+        <button class='FormButton' type="submit">Send</button>
     </form>
 </div>

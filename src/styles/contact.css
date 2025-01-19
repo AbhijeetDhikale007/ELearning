@@ -21,10 +21,14 @@
     border: 1px solid #008000;
 }
 
-.Contact button {
+.FormButton {
     padding: 0.5rem 1rem;
-    background: orangered;
+    background: #ff4500;
     border-radius: 10px;
     margin-left: 1vw;
     margin-top: 0.5vh;
+}
+
+.FormButton:hover {
+    background: #ff0000;
 }
