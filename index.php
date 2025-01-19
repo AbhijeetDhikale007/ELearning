@@ -67,6 +67,7 @@ include 'src/components/Icons.php';
         <h1 class='text-4xl mt-20'>Popular Courses</h1>
         <?php include 'src/components/PopularCourses.php'; ?>
         <?php include 'src/components/Contact.php'; ?>
+        <?php include 'src/components/Footer.php'; ?>
     </main>
 
     <script src="src/js/jquery-3.7.1.js"></script>

@@ -1,3 +1,7 @@
+<?php
+include 'src/components/Icons.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +16,7 @@
     <main class='flex flex-col z-0 justify-center items-center mt-20'>
         <h1 class='text-5xl'>Courses</h1>
         <?php include 'src/components/PopularCourses.php'; ?>
+        <?php include 'src/components/Footer.php'; ?>
     </main>
 </body>
 </html>
