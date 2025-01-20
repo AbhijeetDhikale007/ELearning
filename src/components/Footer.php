@@ -25,7 +25,15 @@ include 'src/components/Icons.php';
             <p>WhatsApp</p>
         </a>
     </div>
-    <div>
-
+    <div class='w-92% flex justify-between items-center'>
+        <div>
+            <h1>E-Learning</h1>
+        </div>
+        <div>
+            <h3>Links</h3>
+        </div>
+        <div>
+            <h3>Get in touch</h3>
+        </div>
     </div>
 </footer>
