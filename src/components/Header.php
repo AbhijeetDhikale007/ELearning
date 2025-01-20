@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="src/styles/main.css">
 </head>
 <body>
-    <header class='flex absolute top-0 items-center justify-between px-20'>
+    <header class='flex absolute top-0 items-center justify-between'>
         <p class="text-3xl select-none">E-Learning</p>
-        <nav class='flex text-xl'>
-            <a class='Button' href="/Elearning/index.php">Home</a>
-            <a class='Button' href="/Elearning/cources.php">Course</a>
-            <a class='Button' href="#">Login</a>
-            <a class='Button' href="#">Signup</a>
-            <a class='Button' href="/Elearning/contact.php">Contact</a>
+        <nav class='flex justify-between items-center w-60% text-lg'>
+            <a class='HeaderButton' href="/Elearning/index.php">Home</a>
+            <a class='HeaderButton' href="/Elearning/cources.php">Course</a>
+            <a class='HeaderButton' href="/Elearning/contact.php">Contact</a>
+        </nav>
+        <nav class='flex gap-5 items-center'>
+                <a class='LoginButton' href="#">Login</a>
+                <a class='SignupButton' href="#">Signup</a>
         </nav>
     </header>
     

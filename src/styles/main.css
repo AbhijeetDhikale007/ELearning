@@ -8,12 +8,49 @@
 header {
     width: 98.5vw;
     z-index: 1;
-    height: 10%;
-    border-bottom: .2px solid #000;
+    height: 15%;
+    padding: 0 8vw;
+    /* border-bottom: .2px solid #000; */
 }
 
 nav {
     gap: 1.2vw;
+}
+
+.HeaderButton {
+    text-decoration: none;
+    font-weight: 400;
+    transition: .5s;
+}
+
+.HeaderButton:hover {
+    color: #0000ff;
+}
+
+.LoginButton {
+    padding: 1.5vh 1.4vw;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+.LoginButton:hover {
+    background: rgb(0, 0, 255, .8);
+    color: #fff;
+    padding: 1.5vh 1.4vw;
+    border-radius: 20px;
+}
+
+.SignupButton {
+    color: #0000ff;
+    background: rgb(10, 10, 255, .1);
+    padding: 1.5vh 1.4vw;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+.SignupButton:hover {
+    color: #fff;
+    background: rgb(0, 0, 255, .8);
 }
 
 main {
