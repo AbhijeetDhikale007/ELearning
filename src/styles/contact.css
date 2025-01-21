@@ -2,7 +2,7 @@
 
 .ContactContainer {
     width: 100%;
-    padding: 5vh 0;
+    padding: 10vh 0;
     background: linear-gradient(180deg, rgba(246,248,250,1) 0%, rgba(246,248,250,0.4) 100%);
 }
 
@@ -14,6 +14,10 @@
 
 .Contact form {
     width: 70%;
+}
+
+.ContactText {
+    font-weight: 600;
 }
 
 .Contact .InputDiv {
@@ -29,8 +33,9 @@
 }
 
 .Contact .InputDiv input:focus {
-    border: none;
-    border: 1px solid #008000;
+    outline: none;
+    border: 1px solid #224ef5;
+    transition: .6s all;
 }
 
 .Contact .InputDiv textarea {
@@ -38,16 +43,27 @@
     padding: 10px;
 }
 
+.Contact .InputDiv textarea:focus {
+    outline: none;
+    border: 1px solid #224ef5;
+    transition: .6s all;
+}
+
+
 .FormButton {
-    padding: 0.5rem 1rem;
-    background: #ff4500;
-    border-radius: 10px;
+    padding: 1rem 1rem;
+    background: #224ef5;
+    color: #fff;
+    border-radius: 20px;
     margin-left: 1vw;
-    margin-top: 0.5vh;
+    margin-top: 0.8vh;
+    border: .5px solid #224ef5;
+    transition: .5s;
 }
 
 .FormButton:hover {
-    background: #ff0000;
+    background: #fff;
+    color: #000;
 }
 
 .Contact .MailLink {
