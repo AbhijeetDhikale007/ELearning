@@ -1,0 +1,35 @@
+@import url(./tailwind-all.css);
+
+.StartLearning {
+    width: 100%;
+    padding: 10vh 0;
+}
+
+.StartLearning .Wrapper {
+    background: #234EF6;
+    width: 92%;
+    height: 50vh;
+    border-radius: 15px;
+}
+
+.StartLearning .Circle {
+    height: 200vh;
+    width: 80%;
+    background: #4067FF;
+    border-radius: 500px;
+    margin-top: -10vh;
+}
+
+.StartLearning .Hyperlink {
+    margin-top: -132vh;
+    color: #4067FF;
+    background: #fff;
+    padding: 3vh 5vw;
+    border: .5px solid #fff;
+    border-radius: 40px;
+}
+
+.StartLearning .Hyperlink:hover {
+    background: #4067FF;
+    color: #fff;
+}

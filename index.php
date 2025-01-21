@@ -21,6 +21,7 @@ include 'src/components/Icons.php';
     <title>E-Learning Platform</title>
 
     <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/startLearning.css">
 </head>
 <body>
     <?php echo include 'src/components/Header.php'; ?>
@@ -57,6 +58,7 @@ include 'src/components/Icons.php';
 
         <h1 class='text-4xl mt-20'>Popular Courses</h1>
         <?php include 'src/components/PopularCourses.php'; ?>
+        <?php include 'src/components/StartLearning.php'; ?>
         <?php include 'src/components/Contact.php'; ?>
         <?php include 'src/components/Footer.php'; ?>
     </main>
