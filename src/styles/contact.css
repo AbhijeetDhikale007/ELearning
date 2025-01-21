@@ -1,24 +1,41 @@
 @import url(./tailwind-all.css);
 
+.ContactContainer {
+    width: 100%;
+    padding: 5vh 0;
+    background: linear-gradient(180deg, rgba(246,248,250,1) 0%, rgba(246,248,250,0.4) 100%);
+}
+
 .Contact {
-    width: 60%;
+    width: 70%;
     padding: 2vh 1vw;
+    gap: 8vw;
+}
+
+.Contact form {
+    width: 70%;
 }
 
 .Contact .InputDiv {
     padding: 2vh 1vw;
 }
 
-.Contact .InputDiv input {
-    padding: .5rem;
+.Contact .InputDiv input, textarea {
+    padding: 10px;
     background: #fff;
-    border: .5px solid rgb(0, 0, 0, .5);
+    border: .5px solid rgb(250, 250, 250, .5);
     border-radius: 8px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.35);
 }
 
 .Contact .InputDiv input:focus {
     border: none;
     border: 1px solid #008000;
+}
+
+.Contact .InputDiv textarea {
+    min-height: 24vh;
+    padding: 10px;
 }
 
 .FormButton {
@@ -31,4 +48,8 @@
 
 .FormButton:hover {
     background: #ff0000;
+}
+
+.Contact .MailLink {
+    color: #0000ff;
 }
