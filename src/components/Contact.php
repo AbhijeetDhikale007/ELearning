@@ -1,7 +1,3 @@
-<head>
-    <link rel="stylesheet" href="src/styles/contact.css">
-</head>
-
 <div class='ContactContainer flex justify-center'>
 <div class='Contact flex justify-center'>
     <div>
