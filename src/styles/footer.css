@@ -2,7 +2,8 @@
 
 footer {
     width: 98.5vw;
-    gap: 5vh;
+    gap: 6vh;
+    padding: 3vh 0;
 }
 
 footer a {
@@ -33,12 +34,20 @@ footer a {
 }
 
 .LinksDiv {
-    width: 88%;
+    width: 70%;
     margin-bottom: 5vh;
+}
+
+.LinksDiv div {
+    width: 50%;
 }
 
 .LinksDiv h3 {
     font-size: 1.2em;
     font-weight: 500;
     margin-bottom: 2vh;
+}
+
+.LinksDiv a {
+    justify-content: left;
 }
