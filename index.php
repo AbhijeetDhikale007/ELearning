@@ -21,6 +21,7 @@ include 'src/components/Icons.php';
     <title>E-Learning Platform</title>
 
     <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/Contact.css">
     <link rel="stylesheet" href="src/styles/startLearning.css">
 </head>
 <body>
