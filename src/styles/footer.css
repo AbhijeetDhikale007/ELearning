@@ -12,13 +12,13 @@ footer a {
     align-items: center;
 }
 
-.DetailsDiv {
+.FooterBanner {
     width: 100%;
     height: 8vh;
     padding: 0 50px;
 }
 
-.DetailsDiv div {
+.FooterBanner div {
     display: flex;
     gap: 10px;
     text-wrap: nowrap;
@@ -27,7 +27,7 @@ footer a {
     font-size: 1.2em;
 }
 
-.DetailsDiv svg {
+.FooterBanner svg {
     height: 20px;
     width: 20px;
 }

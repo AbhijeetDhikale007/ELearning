@@ -87,6 +87,10 @@ main video {
     filter: drop-shadow(0 0 10px rgb(0, 0, 0, .3));
 }
 
+.DetailsDiv {
+    background: #224ef5;
+}
+
 /* .Button {
     background-color: transparent;
     padding: 4px 12px;

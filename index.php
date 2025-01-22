@@ -38,7 +38,7 @@ include 'src/components/Icons.php';
                 <a class='Button2 text-lg mt-2' href="/Elearning/courses.php">Get Started</a>
             </div>
         </div>
-        <div class='DetailsDiv bg-orange-600 flex justify-between items-center'>
+        <div class='DetailsDiv flex justify-between items-center'>
             <div>
                 <?php echo $Icon_cources; ?>
                 <p>100+ Cources</p>

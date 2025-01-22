@@ -7,7 +7,7 @@ include 'src/components/Icons.php';
 </head>
 
 <footer class='flex flex-col justify-between items-center'>
-    <div class='DetailsDiv flex justify-between items-center w-100%'>
+    <div class='FooterBanner flex justify-between items-center w-100%'>
         <a href='' target='_blank'>
             <?php echo $Icon_Instagram; ?>
             <p>Instagram</p>
