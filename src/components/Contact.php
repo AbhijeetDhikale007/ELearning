@@ -7,16 +7,16 @@
     </div>
     <form action="" method="get">
         <div class='InputDiv flex flex-col'>
-            <input type="text" name="name" placeholder='Name'>
+            <input type="text" name="name" placeholder='Name' required>
         </div>
         <div class='InputDiv flex flex-col'>
-            <input type="text" name="subject" placeholder='Subject'>
+            <input type="text" name="subject" placeholder='Subject' required>
         </div>
         <div class='InputDiv flex flex-col'>
-            <input type="email" name="email" placeholder='Email'>
+            <input type="email" name="email" placeholder='Email' required>
         </div>
         <div class='InputDiv flex flex-col'>
-            <textarea name="Message" placeholder='Your Message'></textarea>
+            <textarea name="Message" placeholder='Your Message' required></textarea>
         </div>
         <button class='FormButton' type="submit">Send Message</button>
     </form>
