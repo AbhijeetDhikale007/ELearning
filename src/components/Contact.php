@@ -1,5 +1,5 @@
 <div class='ContactContainer flex justify-center'>
-<div class='Contact flex justify-center'>
+<div class='Contact flex flex-col md:flex-row justify-center'>
     <div>
         <h1 class='ContactText text-6xl'>Contact Us</h1>
         <p class='mb-10 text-xl'>Get in touch with any questions or thoughts you have about Deep Learning Courses.</p>

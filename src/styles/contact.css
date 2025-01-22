@@ -69,3 +69,29 @@
 .Contact .MailLink {
     color: #0000ff;
 }
+
+/* Md - Mobile Landscape */
+@media not all and (min-width: 768px) {
+    .Contact {
+        width: 90%;
+    }
+
+    .Contact form {
+        width: 98%;
+    }
+}
+
+/* Lg - Laptop */
+@media not all and (min-width: 1024px) {
+
+}
+
+/* Xl - Desktop */
+@media not all and (min-width: 1280px) {
+
+}
+
+/* 2Xl - Desktop */
+@media not all and (min-width: 1536px) {
+
+}
