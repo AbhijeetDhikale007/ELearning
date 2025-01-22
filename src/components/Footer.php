@@ -43,4 +43,9 @@ include 'src/components/Icons.php';
             <a class='Button' href="">Instagram</a>
         </div>
     </div>
+    <hr>
+    <div class='FooterCopyright'>
+        <p>&copy; E-Learning.in</p>
+        <a href="">Privacy Policies</a>
+    </div>
 </footer>
