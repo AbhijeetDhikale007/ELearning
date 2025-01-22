@@ -45,7 +45,7 @@ include 'src/components/Icons.php';
     </div>
     <hr>
     <div class='FooterCopyright'>
-        <p>&copy; E-Learning.in</p>
+        <p>&copy;2025 | E-Learning.in</p>
         <a href="">Privacy Policies</a>
     </div>
 </footer>

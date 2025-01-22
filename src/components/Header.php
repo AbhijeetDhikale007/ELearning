@@ -6,7 +6,7 @@
         <a class='Button' href="/Elearning/contact.php">Contact</a>
     </nav>
     <nav class='flex gap-5 items-center'>
-            <a class='LoginButton' href="#">Login</a>
-            <a class='SignupButton' href="#">Signup</a>
+            <a class='LoginButton' href="/Elearning/login.php">Login</a>
+            <a class='SignupButton' href="/Elearning/signup.php">Signup</a>
     </nav>
 </header>
