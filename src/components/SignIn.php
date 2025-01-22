@@ -4,7 +4,7 @@
 
 <form action="" method="get">
     <div>
-        <input type="text" name="email" placeholder='Name'>
+        <input type="text" name="name" placeholder='Name'>
     </div>
     <div>
         <input type="email" name="email" placeholder='Email'>
