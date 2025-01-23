@@ -29,7 +29,7 @@ include 'src/components/Icons.php';
         <div>
             <h1 class='text-3xl'>E-Learning</h1>
         </div>
-        <div class='flex'>
+        <div class='flex justify-between w-42 gap-5vw'>
             <div>
                 <h3>Links</h3>
                 <a class='Button' href="">Courses</a>
