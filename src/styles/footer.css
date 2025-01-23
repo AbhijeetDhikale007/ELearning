@@ -34,12 +34,8 @@ footer a {
 }
 
 .LinksDiv {
-    width: 70%;
+    width: 100%;
     margin-bottom: 5vh;
-}
-
-.LinksDiv div {
-    width: 50%;
 }
 
 .LinksDiv h3 {

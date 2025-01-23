@@ -29,18 +29,20 @@ include 'src/components/Icons.php';
         <div>
             <h1 class='text-3xl'>E-Learning</h1>
         </div>
-        <div>
-            <h3>Links</h3>
-            <a class='Button' href="">Courses</a>
-            <a class='Button' href="">Contact</a>
-        </div>
-        <div>
-            <h3>Get in touch</h3>
-            <a class='Button' href="">YouTube</a>
-            <a class='Button' href="">LinkedIn</a>
-            <a class='Button' href="">X</a>
-            <a class='Button' href="">Facebook</a>
-            <a class='Button' href="">Instagram</a>
+        <div class='flex'>
+            <div>
+                <h3>Links</h3>
+                <a class='Button' href="">Courses</a>
+                <a class='Button' href="">Contact</a>
+            </div>
+            <div>
+                <h3>Get in touch</h3>
+                <a class='Button' href="">YouTube</a>
+                <a class='Button' href="">LinkedIn</a>
+                <a class='Button' href="">X</a>
+                <a class='Button' href="">Facebook</a>
+                <a class='Button' href="">Instagram</a>
+            </div>
         </div>
     </div>
     <hr>
