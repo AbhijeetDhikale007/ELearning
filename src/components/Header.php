@@ -2,7 +2,7 @@
     <p class="text-3xl select-none">E-Learning</p>
     <nav class='flex justify-between items-center w-60% text-lg'>
         <a class='Button' href="/Elearning/index.php">Home</a>
-        <a class='Button' href="/Elearning/cources.php">Courses</a>
+        <a class='Button' href="/Elearning/courses.php">Courses</a>
         <a class='Button' href="/Elearning/contact.php">Contact</a>
     </nav>
     <nav class='flex gap-5 items-center'>
