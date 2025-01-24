@@ -24,7 +24,7 @@
         <a href="/Elearning/login.php">Already Have An Account?</a>
         <div class='flex justify-between h-fit w-100 items-baseline flex-wrap'>
             <button class='FormButton' type="submit">Login</button>
-            <a href="/adminlogin">Admin Login</a>
+            <a href="/Elearning/adminlogin">Admin Login</a>
         </div>
     </form>
 </div>

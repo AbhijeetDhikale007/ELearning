@@ -16,7 +16,7 @@
         <a href="">Forgot Your Password?</a>
         <div class='flex flex-row justify-between w-100 items-baseline flex-wrap'>
             <button class='FormButton' type="submit">Login</button>
-            <a href="/adminlogin">Admin Login</a>
+            <a href="/Elearning/adminlogin.php">Admin Login</a>
         </div>
     </form>
 </div>
