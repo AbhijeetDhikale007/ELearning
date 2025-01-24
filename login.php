@@ -9,6 +9,7 @@ include 'src/components/Icons.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Learning Platform - Login</title>
+    <link rel="icon" type='img/png' href="public/Logo.png">
 
     <link rel="stylesheet" href="src/styles/main.css">
     <link rel="stylesheet" href="src/styles/login.css">
