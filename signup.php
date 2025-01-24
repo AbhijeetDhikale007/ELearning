@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="src/styles/signup.css">
 </head>
 <body>
-    <?php echo include 'src/components/Header.php';?>
+    <?php include 'src/components/Header.php';?>
 
     <main class='flex flex-col z-0 justify-center items-center'>
         <?php include 'src/components/SignUp.php'; ?>
