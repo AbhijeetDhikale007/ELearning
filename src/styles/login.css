@@ -47,7 +47,7 @@
 
 .Login input:focus {
     outline: none;
-    border: .5px solid #224ef5;
+    outline: .5px solid #224ef5;
 }
 
 .Login a {
