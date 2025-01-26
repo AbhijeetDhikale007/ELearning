@@ -11,6 +11,7 @@ include 'src/components/Icons.php';
     <link rel="icon" type='img/png' href="public/Logo.png">
 
     <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/PopularCourses.css">
 </head>
 <body>
     <?php include 'src/components/Header.php'; ?>

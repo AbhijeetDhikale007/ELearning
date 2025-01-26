@@ -13,6 +13,7 @@ include 'src/components/Icons.php';
 
     <link rel="stylesheet" href="src/styles/main.css">
     <link rel="stylesheet" href="src/styles/Contact.css">
+    <link rel="stylesheet" href="src/styles/PopularCourses.css">
     <link rel="stylesheet" href="src/styles/startLearning.css">
 </head>
 <body>
