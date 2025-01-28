@@ -11,6 +11,14 @@
     box-sizing: border-box;
 }
 
+/* Color Palette */
+:root {
+    --color-primary-dark: #2e5077; /* Deep Blue */
+    --color-primary: #4da1a9; /* Teal Blue */
+    --color-accent: #79d7be; /* Aqua Green */
+    --color-light: #f6f4f0; /* Light Cream */
+}
+
 .arsenal-sc {
     font-family: "Arsenal SC", serif;
     font-weight: 400;
