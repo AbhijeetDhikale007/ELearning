@@ -29,4 +29,5 @@ include 'Icons.php';
 </aside>
 <div class='DashContent w-100%'>
     <h1>Dashboard</h1>
+    <div></div>
 </div>
