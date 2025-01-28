@@ -18,7 +18,7 @@ include 'src/components/Icons.php';
     <?php include 'src/components/Header.php'; ?>
 
     <main class='flex flex-col z-0 justify-center items-center'>
-        <?php include 'src/components/AdminLogin.php'; ?>
+        <?php include 'src/components/AdminDash.php'; ?>
     </main>
 
     <script src="src/js/jquery-3.7.1.js"></script>
