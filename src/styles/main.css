@@ -2,6 +2,7 @@
 @import url(./tailwind.css);
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
     margin: 0;
@@ -10,8 +11,18 @@
     box-sizing: border-box;
 }
 
+.arsenal-sc {
+    font-family: "Arsenal SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .w-100 {
     width: 100%;
+}
+
+.h-80 {
+    height: 80%;
 }
 
 .gap-20px {
