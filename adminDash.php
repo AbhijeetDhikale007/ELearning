@@ -15,7 +15,7 @@ include 'src/components/Icons.php';
     <link rel="stylesheet" href="src/styles/adminDash.css">
 </head>
 <body class='bg-whitish'>
-    <main class='flex z-0 items-center'>
+    <main class='flex z-0 items-center gap-20px'>
         <?php include 'src/components/AdminDash.php'; ?>
     </main>
 
