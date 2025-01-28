@@ -20,5 +20,7 @@ include 'src/components/Icons.php';
         <?php include 'src/components/PopularCourses.php'; ?>
         <?php include 'src/components/Footer.php'; ?>
     </main>
+
+    <script src="components/js/bootstrap.min.js"></script>
 </body>
 </html>
