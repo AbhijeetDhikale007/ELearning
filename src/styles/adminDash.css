@@ -1,0 +1,36 @@
+aside {
+    background: #8F9599;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    width: 16vw;
+    height: 100vh;
+    font-size: 1.3em;
+    box-shadow: 0 0 6px #000;
+}
+
+aside div {
+    width: 100%;
+    height: 100%;
+}
+
+aside div svg {
+    height: 34px;
+    width: 34px;
+}
+
+aside div a {
+    padding: 1vh 1vw;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.gap-16px {
+    gap: 16px;
+}
+
+.bg-whitish {
+    background: #37404D;
+}

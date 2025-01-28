@@ -14,10 +14,8 @@ include 'src/components/Icons.php';
     <link rel="stylesheet" href="src/styles/main.css">
     <link rel="stylesheet" href="src/styles/adminDash.css">
 </head>
-<body>
-    <?php include 'src/components/Header.php'; ?>
-
-    <main class='flex flex-col z-0 justify-center items-center'>
+<body class='bg-whitish'>
+    <main class='flex z-0 items-center'>
         <?php include 'src/components/AdminDash.php'; ?>
     </main>
 
