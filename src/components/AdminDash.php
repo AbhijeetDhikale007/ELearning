@@ -28,6 +28,13 @@ include 'Icons.php';
     </div>
 </aside>
 <div class='DashContent w-100%'>
-    <h1>Dashboard</h1>
-    <div></div>
+    <h1 class='arsenal-sc'>Dashboard</h1>
+    <div>
+        <div class='Profile'>
+            <img src="public/Profile.jpg" alt="">
+            <div class='h-80'>
+                <p>Abhijeet Dhikale</p>
+            </div>
+        </div>
+    </div>
 </div>
