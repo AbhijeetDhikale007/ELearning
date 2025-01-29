@@ -3,7 +3,7 @@
 include 'Icons.php';
 ?>
 
-<?php include 'adminAside.php'; ?>
+<?php include 'AdminAside.php'; ?>
 <div class='DashContent w-100%'>
     <h1 class='arsenal-sc'>Dashboard</h1>
     <div>
