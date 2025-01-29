@@ -27,6 +27,11 @@ aside div a {
     align-items: center;
 }
 
+aside div .active {
+    color: rgb(0, 250, 250);
+    border-bottom: .5px solid rgb(0, 250, 250);
+}
+
 .DashContent {
     width: 100%;
     height: 100vh;
