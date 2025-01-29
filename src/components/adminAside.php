@@ -25,6 +25,6 @@ include 'Icons.php';
 
 
         </a> -->
-        <button class='absolute bottom-4per w-100 text-1-3 text-white flex justify-center items-center'><?php echo $Icon_Back; ?></button>
+        <a href='index.php' class='absolute bottom-4per w-100 text-1-3 text-white flex justify-center items-center'><?php echo $Icon_Back; ?></a>
     </div>
 </aside>
