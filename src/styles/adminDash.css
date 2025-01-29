@@ -69,6 +69,13 @@ aside div .active {
     box-shadow: 0 0 10px #000;
 }
 
+.Button-AddCourse {
+    margin-top: 18vh;
+    right: 10%;
+    color: #fff;
+    background: blue;
+}
+
 .bg-whitish {
     background: #37404D;
 }
