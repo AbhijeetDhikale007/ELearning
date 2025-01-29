@@ -97,6 +97,10 @@
     gap: 10px;
 }
 
+.gap-15px {
+    gap: 15px;
+}
+
 header {
     width: 98.5vw;
     z-index: 1;

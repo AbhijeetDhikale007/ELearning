@@ -20,7 +20,7 @@ $Courses = [
         <?php foreach($Courses as $courses): ?>
             <div class='CourseContainer flex justify-between p-3'>
                 <p><?= $courses['Name'] ?></p>
-                <div class='flex gap-10px'>
+                <div class='flex gap-15px'>
                     <button><?php echo $Icon_Delete ?></button>
                     <button><?php echo $Icon_Edit ?></button>
                 </div>

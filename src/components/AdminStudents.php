@@ -26,7 +26,7 @@ $Students = [
             <div class='CourseContainer flex justify-between p-3'>
                 <p><?= $students['Name'] ?></p>
                 <p><?= $students['Email'] ?></p>
-                <div class='flex gap-10px'>
+                <div class='flex gap-15px'>
                     <button><?php echo $Icon_Delete ?></button>
                     <button><?php echo $Icon_Edit ?></button>
                 </div>
