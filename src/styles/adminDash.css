@@ -59,12 +59,12 @@ aside div .active {
     font-size: 1.8em;
     background: #fff;
     border-radius: 20px;
-    padding: 2vh 3vw;
-    height: 42vh;
+    padding: 35px;
+    height: fit-content;
 }
 
 .DashContent .Profile img {
-    height: 88%;
+    height: 36vh;
     border-radius: 200px;
     box-shadow: 0 0 10px #000;
 }
