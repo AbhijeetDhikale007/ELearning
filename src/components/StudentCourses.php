@@ -12,7 +12,7 @@ $Courses = [
 
 <?php include 'StudentAside.php'; ?>
 <div class='DashContent w-100% relative'>
-    <h1 class='arsenal-sc'>Courses</h1>
+    <h1 class='arsenal-sc'>Your Courses</h1>
     <!-- <div class='flex justify-end w-94'>
         <button class='Button-AddCourse'>Add Course +</button>
     </div> -->
