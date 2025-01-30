@@ -14,7 +14,7 @@ $Courses = [
 <div class='DashContent w-100% relative'>
     <h1 class='arsenal-sc'>Courses</h1>
     <div class='flex justify-end w-94'>
-        <button class='Button-AddCourse'>Add Course +</button>
+        <button class='EditButton Button-AddCourse'>Add Course +</button>
     </div>
     <div class='flex flex-col gap-16px w-94'>
         <?php foreach($Courses as $courses): ?>
@@ -28,3 +28,56 @@ $Courses = [
         <?php endforeach ?>
     </div>
 </div>
+
+<div class='ProfileChange flex items-center justify-center absolute w-100 h-100'>
+    <form action="adminCourses.php" method="post">
+        <div class='flex w-100 items-end'>
+                <button class='CloseButton'><?php echo $Icon_Close; ?></button>
+        </div>
+        <div class='flex flex-row'>
+            <div>
+                <label for="course">Course Name</label>
+                <input type="text" name="course">
+            </div>
+            <div>
+                <label for="Img">Picture url</label>
+                <input type="text" name="Img">
+            </div>
+            <div>
+                <label for="video">Video url</label>
+                <input type="text" name="video">
+            </div>
+        </div>
+        <div class='flex flex-row'>
+            <div>
+                <label for="details">Course Description</label>
+                <input type="text" name="details">
+            </div>
+            <div>
+                <label for="prize">Prize</label>
+                <input type="number" name="prize">
+            </div>
+            <div>
+                <label for="discount">Discount</label>
+                <input type="number" name="discount">
+            </div>
+        </div>
+        <div class='items-center'>
+            <button class='submitButton' type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    const EditButton = document.querySelector('.EditButton');
+    const CloseButton = document.querySelector('.CloseButton');
+    const Profile = document.querySelector('.ProfileChange');
+
+    EditButton.addEventListener('click', ()=> {
+        Profile.classList.add('Active');
+    });
+
+    CloseButton.addEventListener('click', ()=> {
+        Profile.classList.remove('Active');
+    });
+</script>
