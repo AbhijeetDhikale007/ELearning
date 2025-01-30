@@ -9,6 +9,10 @@ include 'Icons.php';
             <?php echo $Icon_Dashboard ?>
             Dashboard
         </a>
+        <a href="adminProfile.php" class:active={}>
+            <?php echo $Icon_Profile ?>
+            Profile
+        </a>
         <a href="adminCourses.php" class:active={}>
             <?php echo $Icon_Courses ?>
             Courses
