@@ -33,6 +33,10 @@ $Num = '+91 88056 47422';
                 <button class='CloseButton'><?php echo $Icon_Close; ?></button>
             </div>
             <div>
+                <label for="profilelink">Profile url</label>
+                <input type="text" name="profilelink">
+            </div>
+            <div>
                 <label for="name">Your Name</label>
                 <input type="text" name="name">
             </div>
@@ -43,10 +47,6 @@ $Num = '+91 88056 47422';
             <div>
                 <label for="password">Password</label>
                 <input type="password" name="password">
-            </div>
-            <div>
-                <label for="re_password">Confirm Password</label>
-                <input type="password" name="re_password">
             </div>
             <div class='items-center'>
                 <button class='submitButton' type="submit">Submit</button>
