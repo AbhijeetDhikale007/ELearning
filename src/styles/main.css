@@ -113,6 +113,10 @@
     gap: 15px;
 }
 
+.first-letter-orange:first-letter {
+    color: #ffa500;
+}
+
 header {
     width: 98.5vw;
     z-index: 1;

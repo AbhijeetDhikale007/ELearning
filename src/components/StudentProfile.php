@@ -12,7 +12,7 @@ $College = 'MET Bhujbal Knowledge City';
 
 <?php include 'StudentAside.php'; ?>
 <div class='DashContent w-100%'>
-    <h1 class='arsenal-sc'>Student Profile</h1>
+    <h1 class='arsenal-sc'>Profile</h1>
     <div>
         <div class='Profile'>
             <img src=<?php echo $ImgLink; ?> alt="Profile">
