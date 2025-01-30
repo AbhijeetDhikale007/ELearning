@@ -98,7 +98,7 @@ aside div .active {
 .ProfileChange form {
     padding: 20px;
     border: .2px solid rgb(255, 255, 255, .4);
-    border-radius: 12px;
+    border-radius: 12px 42px;
     background: rgb(131, 131, 206, .8);
     gap: 20px;
     display: flex;
@@ -150,7 +150,7 @@ aside div .active {
     display: flex;
     flex-direction: column;
     background: rgb(131, 131, 206, .8);
-    border-radius: 12px;
+    border-radius: 12px 42px;
     padding: 12px;
     gap: 15px;
 }
