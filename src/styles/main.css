@@ -19,12 +19,14 @@
     --color-light: #f6f4f0; /* Light Cream */
 }
 
+/* Arsenal SC Font */
 .arsenal-sc {
     font-family: "Arsenal SC", serif;
     font-weight: 400;
     font-style: normal;
 }
 
+/* Border Classes*/
 .border {
     border: solid;
 }
@@ -35,6 +37,10 @@
 
 .border-black {
     border: #000;
+}
+
+.border-white {
+    border: #fff;
 }
 
 .w-100 {
@@ -65,6 +71,7 @@
     left: 50%;
 }
 
+/* Text Size Classes */
 .text-0-4 {
     font-size: 0.4em;
 }
