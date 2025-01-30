@@ -135,3 +135,48 @@ aside div .active {
     background: #fff;
     border-radius: 12px 25px;
 }
+
+.DeleteChange {
+    backdrop-filter: blur(4px);
+    scale: 0;
+    transition: .5s;
+}
+
+.DeleteChange.Active {
+    scale: 1;
+}
+
+.DeleteChange form {
+    display: flex;
+    flex-direction: column;
+    background: rgb(131, 131, 206, .8);
+    border-radius: 12px;
+    padding: 12px;
+    gap: 15px;
+}
+
+.DeleteChange form div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.DeleteChange form input {
+    padding: 5px 10px;
+    width: 24vw;
+    color: #000;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.DeleteChange form input:focus {
+    outline: none;
+    outline: .8px solid #fff;
+}
+
+.DeleteChange form .submitButton {
+    padding: 10px;
+    width: fit-content;
+    background: #fff;
+    border-radius: 12px 25px;
+}

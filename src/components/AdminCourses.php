@@ -21,7 +21,7 @@ $Courses = [
             <div class='CourseContainer flex justify-between p-3'>
                 <p><?= $courses['Name'] ?></p>
                 <div class='flex gap-15px'>
-                    <button><?php echo $Icon_Delete ?></button>
+                    <button class='DeleteButton'><?php echo $Icon_Delete ?></button>
                     <button><?php echo $Icon_Edit ?></button>
                 </div>
             </div>
@@ -68,10 +68,27 @@ $Courses = [
     </form>
 </div>
 
+<div class='DeleteChange flex items-center justify-center absolute w-100 h-100'>
+    <form action="adminCourses.php" method="post">
+        <div class='flex w-100 items-end'>
+                <button class='CloseButton'><?php echo $Icon_Close; ?></button>
+        </div>
+        <div>
+            <label for="delete">Type 'delete' to delete.</label>
+            <input type="text" name="delete">
+        </div>
+        <div class='items-center'>
+            <button class='submitButton' type="submit">Delete</button>
+        </div>
+    </form>
+</div>
+
 <script>
     const EditButton = document.querySelector('.EditButton');
     const CloseButton = document.querySelector('.CloseButton');
+    const DeleteButton = document.querySelector('.DeleteButton');
     const Profile = document.querySelector('.ProfileChange');
+    const Delete = document.querySelector('.DeleteChange');
 
     EditButton.addEventListener('click', ()=> {
         Profile.classList.add('Active');
@@ -79,5 +96,13 @@ $Courses = [
 
     CloseButton.addEventListener('click', ()=> {
         Profile.classList.remove('Active');
+    });
+
+    DeleteButton.addEventListener('click', ()=> {
+        Delete.classList.add('Active');
+    });
+
+    CloseButton.addEventListener('click', ()=> {
+        Delete.classList.remove('Active');
     });
 </script>
