@@ -6,19 +6,19 @@ include 'src/components/Icons.php';
 <aside class='flex justify-center items-center'>
     <div class='flex flex-col gap-16px justify-center relative text-white'>
         <p class='arsenal-sc absolute top-4per w-100 text-1-4 text-white text-center'>Admin</p>
-        <button href="adminDash.php" id='DashButton' class:active={}>
+        <button id='DashButton' class:active={}>
             <?php echo $Icon_Dashboard ?>
             Dashboard
         </button>
-        <button href="adminProfile.php" id='ProfileButton' class:active={}>
+        <button id='ProfileButton' class:active={}>
             <?php echo $Icon_Profile ?>
             Profile
         </button>
-        <button href="adminCourses.php" id='CoursesButton' class:active={}>
+        <button id='CoursesButton' class:active={}>
             <?php echo $Icon_Courses ?>
             Courses
         </button>
-        <button href="adminStudents.php" id='StudentsButton' class:active={}>
+        <button id='StudentsButton' class:active={}>
             <?php echo $Icon_Students ?>
             Students
         </button>
