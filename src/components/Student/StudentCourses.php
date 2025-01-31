@@ -1,6 +1,6 @@
 <?php
 // include 'src/components/dBconnection.php';
-include 'Icons.php';
+include 'src/components/Icons.php';
 
 $Courses = [
     [ 'img' => 'public/CSS.png', 'Name' => 'Data Science: Transformers for Natural Language Processing', 'Info' => "ChatGPT, GPT-4, BERT, Deep Learning, Machine Learning, & NLP with Hugging Face, Attention in Python, Tensorflow, PyTorch", 'Prize' => "Rs. 100" ],
@@ -10,7 +10,6 @@ $Courses = [
 ];
 ?>
 
-<?php include 'StudentAside.php'; ?>
 <div class='DashContent w-100% relative'>
     <h1 class='arsenal-sc'>Your Courses</h1>
     <!-- <div class='flex justify-end w-94'>

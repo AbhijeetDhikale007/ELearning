@@ -5,7 +5,7 @@ include 'src/components/Icons.php';
 
 <aside class='flex justify-center items-center'>
     <div class='flex flex-col gap-16px justify-center relative text-white'>
-        <p class='arsenal-sc absolute top-4per w-100 text-1-4 text-white text-center'>Admin</p>
+        <p class='absolute top-4per w-100 text-1-4 text-white text-center'>E-Learning</p>
         <button id='DashButton' class:active={}>
             <?php echo $Icon_Dashboard ?>
             Dashboard
@@ -17,10 +17,6 @@ include 'src/components/Icons.php';
         <button id='CoursesButton' class:active={}>
             <?php echo $Icon_Courses ?>
             Courses
-        </button>
-        <button id='StudentsButton' class:active={}>
-            <?php echo $Icon_Students ?>
-            Students
         </button>
         <!-- <a href="" class:active={}>
 
@@ -39,15 +35,11 @@ include 'src/components/Icons.php';
 </div>
 
 <div class='DashContent w-100%' id='ProfileContent'>
-    <?php include 'src/components/Admin/AdminProfile.php'; ?>
+    <?php include 'src/components/Student/StudentProfile.php'; ?>
 </div>
 
 <div class='DashContent w-100%' id='CoursesContent'>
-    <?php include 'src/components/Admin/AdminCourses.php'; ?>
-</div>
-
-<div class='DashContent w-100%' id='StudentsContent'>
-    <?php include 'src/components/Admin/AdminStudents.php'; ?>
+    <?php include 'src/components/Student/StudentCourses.php'; ?>
 </div>
 
 <script>
@@ -60,34 +52,21 @@ include 'src/components/Icons.php';
     const CoursesButton = document.querySelector('#CoursesButton');
     const CoursesContent = document.querySelector('#CoursesContent');
 
-    const StudentsButton = document.querySelector('#StudentsButton');
-    const StudentsContent = document.querySelector('#StudentsContent');
-
     DashButton.addEventListener('click', ()=> {
         DashContent.classList.remove('Active');
         ProfileContent.classList.remove('Active');
         CoursesContent.classList.remove('Active');
-        StudentsContent.classList.remove('Active');
     });
 
     ProfileButton.addEventListener('click', ()=> {
         ProfileContent.classList.add('Active');
         DashContent.classList.add('Active');
         CoursesContent.classList.remove('Active');
-        StudentsContent.classList.remove('Active');
     });
 
     CoursesButton.addEventListener('click', ()=> {
         CoursesContent.classList.add('Active');
         DashContent.classList.add('Active');
         ProfileContent.classList.remove('Active');
-        StudentsContent.classList.remove('Active');
-    });
-
-    StudentsButton.addEventListener('click', ()=> {
-        StudentsContent.classList.add('Active');
-        DashContent.classList.add('Active');
-        ProfileContent.classList.remove('Active');
-        CoursesContent.classList.remove('Active');
     });
 </script>

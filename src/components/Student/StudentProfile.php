@@ -1,6 +1,6 @@
 <?php
 // include 'src/components/dBconnection.php';
-include 'Icons.php';
+include 'src/components/Icons.php';
 
 $Name = 'Your Name';
 $Email = 'xyz.cct@gmail.com';
@@ -10,7 +10,6 @@ $Address = 'House No. 108, Near College, Nashik, Maharashtra ';
 $College = 'MET Bhujbal Knowledge City';
 ?>
 
-<?php include 'StudentAside.php'; ?>
 <div class='DashContent w-100%'>
     <h1 class='arsenal-sc'>Profile</h1>
     <div>

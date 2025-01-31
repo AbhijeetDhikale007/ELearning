@@ -16,7 +16,7 @@ include 'src/components/Icons.php';
 </head>
 <body class='bg-whitish'>
     <main class='flex z-0 items-center gap-20px'>
-        <?php include 'src/components/StudentDash.php'; ?>
+        <?php include 'src/components/Student/StudentDash.php'; ?>
     </main>
 
     <script src="src/js/jquery-3.7.1.js"></script>
