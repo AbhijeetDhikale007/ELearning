@@ -10,11 +10,11 @@ $Courses = [
 ];
 ?>
 
-<?php include 'AdminAside.php'; ?>
+<!-- <?php // include 'AdminAside.php'; ?> -->
 <div class='DashContent w-100% relative'>
     <h1 class='arsenal-sc'>Courses</h1>
     <div class='flex justify-end w-94'>
-        <button class='EditButton Button-AddCourse'>Add Course +</button>
+        <button class='EditButtonCourses Button-AddCourse'>Add Course +</button>
     </div>
     <div class='flex flex-col gap-16px w-94'>
         <?php foreach($Courses as $courses): ?>
@@ -71,7 +71,7 @@ $Courses = [
 <div class='DeleteChange flex items-center justify-center absolute w-100 h-100'>
     <form action="adminCourses.php" method="post">
         <div class='flex w-100 items-end'>
-                <button class='CloseButton'><?php echo $Icon_Close; ?></button>
+                <button class='CloseButtonCourses'><?php echo $Icon_Close; ?></button>
         </div>
         <div>
             <label for="delete">Type 'delete' to delete.</label>
@@ -84,25 +84,25 @@ $Courses = [
 </div>
 
 <script>
-    const EditButton = document.querySelector('.EditButton');
-    const CloseButton = document.querySelector('.CloseButton');
-    const DeleteButton = document.querySelector('.DeleteButton');
-    const Profile = document.querySelector('.ProfileChange');
+    const EditButtonCourses = document.querySelector('.EditButtonCourses');
+    const CloseButtonCourses = document.querySelector('.CloseButtonCourses');
+    const DeleteButtonCourses = document.querySelector('.DeleteButtonCourses');
+    const Courses = document.querySelector('.ProfileChange');
     const Delete = document.querySelector('.DeleteChange');
 
-    EditButton.addEventListener('click', ()=> {
-        Profile.classList.add('Active');
+    EditButtonCourses.addEventListener('click', ()=> {
+        Courses.classList.add('Active');
     });
 
-    CloseButton.addEventListener('click', ()=> {
-        Profile.classList.remove('Active');
+    CloseButtonCourses.addEventListener('click', ()=> {
+        Courses.classList.remove('Active');
     });
 
-    DeleteButton.addEventListener('click', ()=> {
+    DeleteButtonCourses.addEventListener('click', ()=> {
         Delete.classList.add('Active');
     });
 
-    CloseButton.addEventListener('click', ()=> {
+    CloseButtonCourses.addEventListener('click', ()=> {
         Delete.classList.remove('Active');
     });
 </script>

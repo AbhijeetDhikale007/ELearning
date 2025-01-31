@@ -27,9 +27,62 @@ aside div a {
     align-items: center;
 }
 
-aside div .active {
+aside div button {
+    padding: 1vh 2vw;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+aside div a.active {
     color: rgb(0, 250, 250);
     border-bottom: .5px solid rgb(0, 250, 250);
+}
+
+#DashContent {
+    scale: 1;
+    display: flex;
+    transition: .5s;
+}
+
+#DashContent.Active {
+    scale: 0;
+    display: none;
+}
+
+#ProfileContent {
+    scale: 0;
+    display: none;
+    transition: .5s;
+}
+
+#ProfileContent.Active {
+    scale: 1;
+    display: flex;
+}
+
+#CoursesContent {
+    scale: 0;
+    display: none;
+    transition: .5s;
+}
+
+#CoursesContent.Active {
+    scale: 1;
+    display: flex;
+}
+
+#StudentsContent {
+    scale: 0;
+    display: none;
+    transition: .5s;
+}
+
+#StudentsContent.Active {
+    scale: 1;
+    display: flex;
 }
 
 .DashContent {

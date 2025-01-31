@@ -3,7 +3,103 @@
 include 'Icons.php';
 ?>
 
-<?php include 'AdminAside.php'; ?>
-<div class='DashContent w-100%'>
+<aside class='flex justify-center items-center'>
+    <div class='flex flex-col gap-16px justify-center relative text-white'>
+        <p class='arsenal-sc absolute top-4per w-100 text-1-4 text-white text-center'>Admin</p>
+        <button href="adminDash.php" id='DashButton' class:active={}>
+            <?php echo $Icon_Dashboard ?>
+            Dashboard
+        </button>
+        <button href="adminProfile.php" id='ProfileButton' class:active={}>
+            <?php echo $Icon_Profile ?>
+            Profile
+        </button>
+        <button href="adminCourses.php" id='CoursesButton' class:active={}>
+            <?php echo $Icon_Courses ?>
+            Courses
+        </button>
+        <button href="adminStudents.php" id='StudentsButton' class:active={}>
+            <?php echo $Icon_Students ?>
+            Students
+        </button>
+        <!-- <a href="" class:active={}>
+
+
+        </a>
+        <a href="" class:active={}>
+
+
+        </a> -->
+        <a href='index.php' class='absolute bottom-4per w-100 text-1-3 text-white flex justify-center items-center'><?php echo $Icon_Back; ?></a>
+    </div>
+</aside>
+
+<div class='DashContent w-100%' id='DashContent'>
     <h1 class='arsenal-sc'>Dashboard</h1>
 </div>
+
+<div class='DashContent w-100%' id='ProfileContent'>
+    <?php include 'src/components/AdminProfile.php'; ?>
+</div>
+
+<div class='DashContent w-100%' id='CoursesContent'>
+    <?php include 'src/components/AdminCourses.php'; ?>
+</div>
+
+<div class='DashContent w-100%' id='StudentsContent'>
+    <?php include 'src/components/AdminStudents.php'; ?>
+</div>
+
+<script>
+    const DashButton = document.querySelector('#DashButton');
+    const DashContent = document.querySelector('#DashContent');
+
+    const ProfileButton = document.querySelector('#ProfileButton');
+    const ProfileContent = document.querySelector('#ProfileContent');
+
+    const CoursesButton = document.querySelector('#CoursesButton');
+    const CoursesContent = document.querySelector('#CoursesContent');
+
+    const StudentsButton = document.querySelector('#StudentsButton');
+    const StudentsContent = document.querySelector('#StudentsContent');
+
+    DashButton.addEventListener('click', ()=> {
+        DashContent.classList.remove('Active');
+        ProfileContent.classList.remove('Active');
+        CoursesContent.classList.remove('Active');
+        StudentsContent.classList.remove('Active');
+    });
+
+    ProfileButton.addEventListener('click', ()=> {
+        ProfileContent.classList.add('Active');
+        DashContent.classList.add('Active');
+        CoursesContent.classList.remove('Active');
+        StudentsContent.classList.remove('Active');
+    });
+
+    CoursesButton.addEventListener('click', ()=> {
+        CoursesContent.classList.add('Active');
+        DashContent.classList.add('Active');
+        ProfileContent.classList.remove('Active');
+        StudentsContent.classList.remove('Active');
+    });
+
+    StudentsButton.addEventListener('click', ()=> {
+        StudentsContent.classList.add('Active');
+        DashContent.classList.add('Active');
+        ProfileContent.classList.remove('Active');
+        CoursesContent.classList.remove('Active');
+    });
+
+    // CloseButton.addEventListener('click', ()=> {
+    //     Profile.classList.remove('Active');
+    // });
+
+    // DeleteButton.addEventListener('click', ()=> {
+    //     Delete.classList.add('Active');
+    // });
+
+    // CloseButton.addEventListener('click', ()=> {
+    //     Delete.classList.remove('Active');
+    // });
+</script>
