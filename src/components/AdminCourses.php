@@ -21,7 +21,7 @@ $Courses = [
             <div class='CourseContainer flex justify-between p-3'>
                 <p><?= $courses['Name'] ?></p>
                 <div class='flex gap-15px'>
-                    <button class='DeleteButton'><?php echo $Icon_Delete ?></button>
+                    <button class='DeleteButtonCourses'><?php echo $Icon_Delete ?></button>
                     <button><?php echo $Icon_Edit ?></button>
                 </div>
             </div>
@@ -32,7 +32,7 @@ $Courses = [
 <div class='ProfileChange flex items-center justify-center absolute w-100 h-100'>
     <form action="adminCourses.php" method="post">
         <div class='flex w-100 items-end'>
-                <button class='CloseButton'><?php echo $Icon_Close; ?></button>
+                <button class='CloseButtonCourses'><?php echo $Icon_Close; ?></button>
         </div>
         <div class='flex flex-row'>
             <div>
