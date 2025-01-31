@@ -8,7 +8,6 @@ $ImgLink = 'public/Profile.jpg';
 $Num = '+91 88056 47422';
 ?>
 
-<!-- <?php // include 'AdminAside.php'; ?> -->
 <div class='DashContent w-100%'>
     <h1 class='arsenal-sc'>Profile</h1>
     <div>
