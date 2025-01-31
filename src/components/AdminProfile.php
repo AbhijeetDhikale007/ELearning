@@ -28,7 +28,7 @@ $Num = '+91 88056 47422';
 </div>
 
 <div class='ProfileChange flex items-center justify-center absolute w-100 h-100'>
-        <form action="AdminProfile.php" method="post">
+        <form action="adminDash.php" method="post">
             <div class='flex w-100 items-end'>
                 <button class='CloseButton'><?php echo $Icon_Close; ?></button>
             </div>

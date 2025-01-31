@@ -29,8 +29,8 @@ $Courses = [
     </div>
 </div>
 
-<div class='ProfileChange flex items-center justify-center absolute w-100 h-100'>
-    <form action="adminCourses.php" method="post">
+<div class='CoursesChange flex items-center justify-center absolute w-100 h-100'>
+    <form action="adminDash.php" method="post">
         <div class='flex w-100 items-end'>
                 <button class='CloseButtonCourses'><?php echo $Icon_Close; ?></button>
         </div>
@@ -69,7 +69,7 @@ $Courses = [
 </div>
 
 <div class='DeleteChange flex items-center justify-center absolute w-100 h-100'>
-    <form action="adminCourses.php" method="post">
+    <form action="adminDash.php" method="post">
         <div class='flex w-100 items-end'>
                 <button class='CloseButtonCourses'><?php echo $Icon_Close; ?></button>
         </div>
@@ -87,7 +87,7 @@ $Courses = [
     const EditButtonCourses = document.querySelector('.EditButtonCourses');
     const CloseButtonCourses = document.querySelector('.CloseButtonCourses');
     const DeleteButtonCourses = document.querySelector('.DeleteButtonCourses');
-    const Courses = document.querySelector('.ProfileChange');
+    const Courses = document.querySelector('.CoursesChange');
     const Delete = document.querySelector('.DeleteChange');
 
     EditButtonCourses.addEventListener('click', ()=> {
