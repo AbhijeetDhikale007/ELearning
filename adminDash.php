@@ -16,7 +16,7 @@ include 'src/components/Icons.php';
 </head>
 <body class='bg-whitish'>
     <main class='flex z-0 items-center gap-20px'>
-        <?php include 'src/components/AdminDash.php'; ?>
+        <?php include 'src/components/Admin/AdminDash.php'; ?>
     </main>
 
     <script src="src/js/jquery-3.7.1.js"></script>

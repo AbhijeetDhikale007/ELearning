@@ -1,6 +1,6 @@
 <?php
 // include 'src/components/dBconnection.php';
-include 'Icons.php';
+include 'src/components/Icons.php';
 ?>
 
 <aside class='flex justify-center items-center'>
@@ -39,15 +39,15 @@ include 'Icons.php';
 </div>
 
 <div class='DashContent w-100%' id='ProfileContent'>
-    <?php include 'src/components/AdminProfile.php'; ?>
+    <?php include 'src/components/Admin/AdminProfile.php'; ?>
 </div>
 
 <div class='DashContent w-100%' id='CoursesContent'>
-    <?php include 'src/components/AdminCourses.php'; ?>
+    <?php include 'src/components/Admin/AdminCourses.php'; ?>
 </div>
 
 <div class='DashContent w-100%' id='StudentsContent'>
-    <?php include 'src/components/AdminStudents.php'; ?>
+    <?php include 'src/components/Admin/AdminStudents.php'; ?>
 </div>
 
 <script>

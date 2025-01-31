@@ -1,6 +1,6 @@
 <?php
 // include 'src/components/dBconnection.php';
-include 'Icons.php';
+include 'src/components/Icons.php';
 
 $Students = [
     [ 'img' => 'public/CSS.png', 'Name' => 'ABC XYZ 1', 'Email' => 'ABC@calanjiyam.in' ],

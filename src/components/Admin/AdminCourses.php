@@ -1,6 +1,6 @@
 <?php
 // include 'src/components/dBconnection.php';
-include 'Icons.php';
+include 'src/components/Icons.php';
 
 $Courses = [
     [ 'img' => 'public/CSS.png', 'Name' => 'Data Science: Transformers for Natural Language Processing', 'Info' => "ChatGPT, GPT-4, BERT, Deep Learning, Machine Learning, & NLP with Hugging Face, Attention in Python, Tensorflow, PyTorch", 'Prize' => "Rs. 100" ],
