@@ -4,7 +4,7 @@ include 'src/components/Icons.php';
 
 $Name = 'Your Name';
 $Email = 'xyz.cct@gmail.com';
-$ImgLink = 'public/Profile.jpg';
+$ImgLink = 'https://raw.githubusercontent.com/AbhijeetDhikale007/ELearning/b6aee5ccab0967fd1a4df2078e16d18b521c8e86/public/Profile.jpg';
 $Num = '+91 88056 47422';
 $Address = 'House No. 108, Near College, Nashik, Maharashtra ';
 $College = 'MET Bhujbal Knowledge City';
