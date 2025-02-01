@@ -2,10 +2,30 @@
 include 'src/components/dBconnection.php';
 include 'src/components/Icons.php';
 
-$Name = 'Your Name';
-$Username = 'Username';
-$ImgLink = 'https://raw.githubusercontent.com/AbhijeetDhikale007/ELearning/b6aee5ccab0967fd1a4df2078e16d18b521c8e86/public/Profile.jpg';
-$Num = '+91 88056 47422';
+// SQL query to fetch data
+$sql = "SELECT * FROM admin"; // Adjust table & columns as needed
+$result = $conn->query($sql);
+
+if (!$result) {
+    die("Query failed: " . $conn->error);
+}
+
+    // $row = $result->fetch_assoc();
+
+    // // Assign values to variables
+    // $name = $row['name'];
+    // $Username = $row['username'];
+    // $ImgLink = $row['profilelink'];
+    // $Num = $row['number'];
+
+    // Output values
+    // echo "Name: " . $name . "<br>";
+    // echo "Email: " . $email . "<br>";
+
+// $Name = 'Your Name';
+// $Username = 'Username';
+// $ImgLink = 'https://raw.githubusercontent.com/AbhijeetDhikale007/ELearning/b6aee5ccab0967fd1a4df2078e16d18b521c8e86/public/Profile.jpg';
+// $Num = '+91 88056 47422';
 ?>
 
 <div class='DashContent w-100%'>
