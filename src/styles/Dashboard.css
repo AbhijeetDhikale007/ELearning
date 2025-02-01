@@ -2,9 +2,9 @@ aside {
     background: #666a6d;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
-    width: 32vw;
+    width: 22vw;
+    font-size: 1.3em;
     height: 100vh;
-    font-size: 1em;
     box-shadow: 0 0 6px #000;
 }
 
@@ -107,10 +107,10 @@ aside div a.active {
 
 .DashContent .Profile {
     display: flex;
-    flex-direction: column;
+    font-size: 1.8em;
+    flex-direction: row;
     align-items: center;
     gap: 5vw;
-    font-size: 1.2em;
     background: #fff;
     border-radius: 20px;
     padding: 35px;
@@ -118,7 +118,7 @@ aside div a.active {
 }
 
 .DashContent .Profile img {
-    height: 20vh;
+    height: 36vh;
     border-radius: 200px;
     box-shadow: 0 0 10px #000;
 }
@@ -286,7 +286,7 @@ aside div a.active {
     border-radius: 12px 25px;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     aside {
         width: 22vw;
         font-size: 1.3em;
@@ -300,4 +300,20 @@ aside div a.active {
     .DashContent .Profile img {
         height: 36vh;
     }
-}
+} */
+
+@media screen and (max-width: 600px) {
+    aside {
+        width: 32vw;
+        font-size: 1em; 
+    }
+
+    .DashContent .Profile {
+        font-size: 1.2em;
+        flex-direction: column;
+    }
+
+    .DashContent .Profile img {
+        height: 20vh;
+    }
+  }
