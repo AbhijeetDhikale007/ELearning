@@ -90,7 +90,7 @@ if ($result->num_rows > 0) {
         </div>
         <div>
             <label for="delete">Type 'delete' to delete.</label>
-            <input type="text" name="delete">
+            <input type="text" name="delete" required>
         </div>
         <div class='items-center'>
             <button class='submitButton' type="submit">Delete</button>
