@@ -50,34 +50,34 @@ if ($result->num_rows > 0) {
         <div class='flex flex-row'>
             <div>
                 <label for="profilelink">Profile url</label>
-                <input type="text" name="profilelink">
+                <input type="text" name="profilelink" required>
             </div>
             <div>
                 <label for="name">Your Name</label>
-                <input type="text" name="name">
+                <input type="text" name="name" required>
             </div>
             <div>
                 <label for="email">Email</label>
-                <input type="email" name="email">
+                <input type="email" name="email" required>
             </div>
         </div>
         <div class='flex flex-row'>
             <div>
                 <label for="number">Number</label>
-                <input type="number" name="number">
+                <input type="number" name="number" required>
             </div>
             <div>
                 <label for="location">Location</label>
-                <input type="text" name="location">
+                <input type="text" name="location" required>
             </div>
             <div>
                 <label for="college">College</label>
-                <input type="text" name="college">
+                <input type="text" name="college" required>
             </div>
         </div>
         <div>
             <label for="password">Password</label>
-            <input type="password" name="password">
+            <input type="password" name="password" required>
         </div>
         <div class='items-center'>
             <button class='submitButton' type="submit">Submit</button>
