@@ -1,20 +1,32 @@
 <?php
-// include 'src/components/dBconnection.php';
+include 'src/components/dBconnection.php';
 include 'src/components/Icons.php';
 
-$Name = 'Your Name';
-$Email = 'xyz.cct@gmail.com';
-$ImgLink = 'https://raw.githubusercontent.com/AbhijeetDhikale007/ELearning/b6aee5ccab0967fd1a4df2078e16d18b521c8e86/public/Profile.jpg';
-$Num = '+91 88056 47422';
-$Address = 'House No. 108, Near College, Nashik, Maharashtra ';
-$College = 'MET Bhujbal Knowledge City';
+$sql = "SELECT * FROM students";
+$result = $conn->query($sql);
+
+if(!$result) {
+    die("Query Failed: ". $conn->error);
+}
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $id = $row['id'];
+        $Name = $row['sname'];
+        $Email = $row['email'];
+        $Img = $row['profileurl'];
+        $Num = $row['number'];
+        $Address = $row['address'];
+        $College = $row['college'];
+    }
+}
 ?>
 
 <div class='DashContent w-100%'>
     <h1 class='arsenal-sc'>Profile</h1>
     <div>
         <div class='Profile'>
-            <img src=<?php echo $ImgLink; ?> alt="Profile">
+            <img src=<?php echo $Img; ?> alt="Profile">
             <div class='h-100 flex flex-col gap-16px'>
                 <p><?php echo $Name; ?></p>
                 <p class='text-0-6'>Student</p>
