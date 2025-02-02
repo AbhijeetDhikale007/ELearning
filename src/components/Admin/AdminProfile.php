@@ -17,15 +17,6 @@ if (!$result) {
     $Username = $row['username'];
     $ImgLink = $row['profilelink'];
     $Num = $row['number'];
-
-    // Output values
-    // echo "Name: " . $name . "<br>";
-    // echo "Email: " . $email . "<br>";
-
-// $Name = 'Your Name';
-// $Username = 'Username';
-// $ImgLink = 'https://raw.githubusercontent.com/AbhijeetDhikale007/ELearning/b6aee5ccab0967fd1a4df2078e16d18b521c8e86/public/Profile.jpg';
-// $Num = '+91 88056 47422';
 ?>
 
 <div class='DashContent w-100%'>
@@ -53,19 +44,19 @@ if (!$result) {
             </div>
             <div>
                 <label for="profilelink">Profile url</label>
-                <input type="text" name="profilelink">
+                <input type="text" name="profilelink" required>
             </div>
             <div>
                 <label for="name">Your Name</label>
-                <input type="text" name="name">
+                <input type="text" name="name" required>
             </div>
             <div>
                 <label for="username">Username</label>
-                <input type="text" name="username">
+                <input type="text" name="username" required>
             </div>
             <div>
                 <label for="password">Password</label>
-                <input type="password" name="password">
+                <input type="password" name="password" required>
             </div>
             <div class='items-center'>
                 <button class='submitButton' type="submit">Submit</button>
