@@ -52,29 +52,29 @@ if ($result->num_rows > 0) {
         <div class='flex flex-row'>
             <div>
                 <label for="course">Course Name</label>
-                <input type="text" name="course">
+                <input type="text" name="course" required>
             </div>
             <div>
                 <label for="Img">Picture url</label>
-                <input type="text" name="Img">
+                <input type="text" name="Img" required>
             </div>
             <div>
                 <label for="video">Video url</label>
-                <input type="text" name="video">
+                <input type="text" name="video" required>
             </div>
         </div>
         <div class='flex flex-row'>
             <div>
                 <label for="details">Course Description</label>
-                <input type="text" name="details">
+                <input type="text" name="details" required>
             </div>
             <div>
                 <label for="prize">Prize</label>
-                <input type="number" name="prize">
+                <input type="number" name="prize" required>
             </div>
             <div>
                 <label for="discount">Discount</label>
-                <input type="number" name="discount">
+                <input type="number" name="discount" required>
             </div>
         </div>
         <div class='items-center'>
