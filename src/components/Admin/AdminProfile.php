@@ -3,20 +3,20 @@ include 'src/components/dBconnection.php';
 include 'src/components/Icons.php';
 
 // SQL query to fetch data
-$sql = "SELECT * FROM admin"; // Adjust table & columns as needed
+$sql = "SELECT * FROM `admin`"; // Adjust table & columns as needed
 $result = $conn->query($sql);
 
 if (!$result) {
     die("Query failed: " . $conn->error);
 }
 
-    // $row = $result->fetch_assoc();
+    $row = $result->fetch_assoc();
 
     // // Assign values to variables
-    // $name = $row['name'];
-    // $Username = $row['username'];
-    // $ImgLink = $row['profilelink'];
-    // $Num = $row['number'];
+    $Name = $row['name'];
+    $Username = $row['username'];
+    $ImgLink = $row['profilelink'];
+    $Num = $row['number'];
 
     // Output values
     // echo "Name: " . $name . "<br>";
