@@ -1,13 +1,29 @@
 <?php
-// include 'src/components/dBconnection.php';
+include 'src/components/dBconnection.php';
 include 'src/components/Icons.php';
 
-$Students = [
-    [ 'img' => 'public/CSS.png', 'Name' => 'ABC XYZ 1', 'Email' => 'ABC@calanjiyam.in' ],
-    [ 'img' => 'public/CSS.png', 'Name' => 'ABC XYZ 2', 'Email' => 'ABC@calanjiyam.in' ],
-    [ 'img' => 'public/CSS.png', 'Name' => 'ABC XYZ 3', 'Email' => 'ABC@calanjiyam.in' ],
-    [ 'img' => 'public/CSS.png', 'Name' => 'ABC XYZ 4', 'Email' => 'ABC@calanjiyam.in' ],
-];
+$sql = "SELECT * FROM students";
+$result = $conn->query($sql);
+
+if(!$result) {
+    die("Query Failed: ". $conn->error);
+}
+
+$Students = [];
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $Students[] = [
+            // 'id' => $row['id'],
+            'Name' => $row['sname'],
+            // 'Img' => $row['profileurl'],
+            'Email' => $row['email'],
+            // 'Number' => $row['number'],
+            // 'Location' => $row['location'],
+            // 'College' => $row['college']
+        ];
+    }
+}
 ?>
 
 <div class='DashContent w-100% relative'>
