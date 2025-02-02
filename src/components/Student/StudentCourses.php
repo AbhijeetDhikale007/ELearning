@@ -1,13 +1,29 @@
 <?php
-// include 'src/components/dBconnection.php';
+include 'src/components/dBconnection.php';
 include 'src/components/Icons.php';
 
-$Courses = [
-    [ 'img' => 'public/CSS.png', 'Name' => 'Data Science: Transformers for Natural Language Processing', 'Info' => "ChatGPT, GPT-4, BERT, Deep Learning, Machine Learning, & NLP with Hugging Face, Attention in Python, Tensorflow, PyTorch", 'Prize' => "Rs. 100" ],
-    [ 'img' => 'public/CSS.png', 'Name' => 'Math 0-1: Calculus for Data Science & Machine Learning', 'Info' => "A Casual Guide for Artificial Intelligence, Deep Learning, and Python Programmers", 'Prize' => "Rs. 100" ],
-    [ 'img' => 'public/CSS.png', 'Name' => 'Financial Engineering and Artificial Intelligence in Python', 'Info' => "Financial Analysis, Time Series Analysis, Portfolio Optimization, CAPM, Algorithmic Trading, Q-Learning, and MORE!", 'Prize' => "Rs. 100" ],
-    [ 'img' => 'public/CSS.png', 'Name' => 'C++ Crash Course', 'Info' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, corporis?", 'Prize' => "Rs. 100" ],
-];
+$sql = "SELECT * FROM courses";
+$result = $conn->query($sql);
+
+if(!$result) {
+    die("Query Failed: ". $conn->error);
+}
+
+$Courses = [];
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $Courses[] = [
+            // 'id' => $row['id'],
+            'Name' => $row['cname'],
+            // 'img' => $row['pictureurl'],
+            // 'video' => $row['videourl'],
+            // 'Info' => $row['cinfo'],
+            'Prize' => $row['prize'],
+            // 'Discount' => $row['discount']
+        ];
+    }
+}
 ?>
 
 <div class='DashContent w-100% relative'>
@@ -19,10 +35,7 @@ $Courses = [
         <?php foreach($Courses as $courses): ?>
             <div class='CourseContainer flex justify-between p-3'>
                 <p><?= $courses['Name'] ?></p>
-                <div class='flex gap-15px'>
-                    <!-- <button><?php echo $Icon_Delete ?></button>
-                    <button><?php echo $Icon_Edit ?></button> -->
-                </div>
+                <p><?= $courses['Prize'] ?> &#8377;</p>
             </div>
         <?php endforeach ?>
     </div>
