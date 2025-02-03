@@ -241,6 +241,8 @@ aside div a.active {
     border-radius: 12px 25px;
 }
 
+/* Delete Change */
+
 .DeleteChange {
     backdrop-filter: blur(4px);
     scale: 0;
