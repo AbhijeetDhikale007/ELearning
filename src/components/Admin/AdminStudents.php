@@ -50,10 +50,51 @@ if ($result->num_rows > 0) {
     </div>
 </div>
 
+<!-------------------- Edit Div -------------------->
+<div class='CoursesChange StudentsChange flex items-center justify-center absolute w-100 h-100'>
+    <form action="adminDash.php" method="post">
+        <div class='flex w-100 items-end'>
+                <button class='CloseButtonStudents'><?php echo $Icon_Close; ?></button>
+        </div>
+        <div class='flex flex-row'>
+            <div>
+                <label for="course">Course Name</label>
+                <input type="text" name="course" required>
+            </div>
+            <div>
+                <label for="Img">Picture url</label>
+                <input type="text" name="Img" required>
+            </div>
+            <div>
+                <label for="video">Video url</label>
+                <input type="text" name="video" required>
+            </div>
+        </div>
+        <div class='flex flex-row'>
+            <div>
+                <label for="details">Course Description</label>
+                <input type="text" name="details" required>
+            </div>
+            <div>
+                <label for="prize">Prize</label>
+                <input type="number" name="prize" required>
+            </div>
+            <div>
+                <label for="discount">Discount</label>
+                <input type="number" name="discount" required>
+            </div>
+        </div>
+        <div class='items-center'>
+            <button class='submitButton' type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+<!-------------------- Delete Div -------------------->
 <div class='DeleteChange DeleteChangeStudents flex items-center justify-center absolute w-100 h-100'>
     <form action="adminDash.php" method="post">
         <div class='flex w-100 items-end'>
-                <button class='CloseButtonCourses'><?php echo $Icon_Close; ?></button>
+                <button class='CloseButtonStudentsDelete'><?php echo $Icon_Close; ?></button>
         </div>
         <div>
             <label for="delete">Type 'delete' to delete.</label>
@@ -67,21 +108,17 @@ if ($result->num_rows > 0) {
 
 <script>
     // const EditButtonCourses = document.querySelector('.EditButtonCourses');
-    // const CloseButtonCourses = document.querySelector('.CloseButtonCourses');
 
     <?php foreach($Students as $students): ?>
     const DeleteStudents<?= $students['id']; ?> = document.querySelector('.DeleteStudents<?= $students['id']; ?>');
     <?php endforeach; ?>
 
-    // const Courses = document.querySelector('.CoursesChange');
+    const StudentsChange = document.querySelector('.StudentsChange');
+    const CloseButtonStudentsDelete = document.querySelector('.CloseButtonStudentsDelete');
     const DeleteChangeStudents = document.querySelector('.DeleteChangeStudents');
 
     // EditButtonCourses.addEventListener('click', ()=> {
     //     Courses.classList.add('Active');
-    // });
-
-    // CloseButtonCourses.addEventListener('click', ()=> {
-    //     Courses.classList.remove('Active');
     // });
 
     <?php foreach($Students as $students): ?>
@@ -89,6 +126,10 @@ if ($result->num_rows > 0) {
         DeleteChangeStudents.classList.add('Active');
     });
     <?php endforeach; ?>
+
+    CloseButtonStudentsDelete.addEventListener('click', ()=> {
+        DeleteChangeStudents.classList.remove('Active');
+    });
 
     // CloseButtonCourses.addEventListener('click', ()=> {
     //     Delete.classList.remove('Active');
