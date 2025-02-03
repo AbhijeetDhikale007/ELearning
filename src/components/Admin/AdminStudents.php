@@ -90,7 +90,7 @@ if ($result->num_rows > 0) {
     </form>
 </div>
 
-<!-------------------- Delete Div -------------------->
+<!-------------------- Students Delete Div -------------------->
 <div class='DeleteChange DeleteChangeStudents flex items-center justify-center absolute w-100 h-100'>
     <div class='Wrapper'>
         <div class='flex w-100 justify-end'>
@@ -109,8 +109,6 @@ if ($result->num_rows > 0) {
 </div>
 
 <script>
-    // const EditButtonCourses = document.querySelector('.EditButtonCourses');
-
     <?php foreach($Students as $students): ?>
         const EditStudents<?= $students['id']; ?> = document.querySelector('.EditStudents<?= $students['id']; ?>');
     <?php endforeach; ?>
@@ -143,8 +141,4 @@ if ($result->num_rows > 0) {
     CloseButtonStudentsDelete.addEventListener('click', ()=> {
         DeleteChangeStudents.classList.remove('Active');
     });
-
-    // CloseButtonCourses.addEventListener('click', ()=> {
-    //     Delete.classList.remove('Active');
-    // });
 </script>
