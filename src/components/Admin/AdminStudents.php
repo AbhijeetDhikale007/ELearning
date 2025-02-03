@@ -52,42 +52,44 @@ if ($result->num_rows > 0) {
 
 <!-------------------- Edit Div -------------------->
 <div class='CoursesChange StudentsChange flex items-center justify-center absolute w-100 h-100'>
-    <form action="adminDash.php" method="post">
-        <div class='flex w-100 items-end'>
+    <div class="Wrapper">
+        <div class='flex w-100 justify-end'>
                 <button class='CloseButtonStudents'><?php echo $Icon_Close; ?></button>
         </div>
-        <div class='flex flex-row'>
-            <div>
-                <label for="name">Name</label>
-                <input type="text" name="name" required>
+        <form action="adminDash.php" method="post">
+            <div class='flex flex-row'>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div>
+                    <label for="profileurl">Profile Link</label>
+                    <input type="text" name="profileurl" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required>
+                </div>
             </div>
-            <div>
-                <label for="profileurl">Profile Link</label>
-                <input type="text" name="profileurl" required>
+            <div class='flex flex-row'>
+                <div>
+                    <label for="number">Phone Number</label>
+                    <input type="number" name="number" required>
+                </div>
+                <div>
+                    <label for="address">Address</label>
+                    <input type="text" name="address" required>
+                </div>
+                <div>
+                    <label for="college">College</label>
+                    <input type="text" name="college" required>
+                </div>
             </div>
-            <div>
-                <label for="email">Email</label>
-                <input type="email" name="email" required>
+            <div class='items-center'>
+                <button class='submitButton' type="submit">Submit</button>
             </div>
-        </div>
-        <div class='flex flex-row'>
-            <div>
-                <label for="number">Phone Number</label>
-                <input type="number" name="number" required>
-            </div>
-            <div>
-                <label for="address">Address</label>
-                <input type="text" name="address" required>
-            </div>
-            <div>
-                <label for="college">College</label>
-                <input type="text" name="college" required>
-            </div>
-        </div>
-        <div class='items-center'>
-            <button class='submitButton' type="submit">Submit</button>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
 
 <!-------------------- Students Delete Div -------------------->
