@@ -14,7 +14,7 @@ $Courses = [];
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $Courses[] = [
-            // 'id' => $row['id'],
+            'id' => $row['id'],
             'Name' => $row['cname'],
             // 'img' => $row['pictureurl'],
             // 'video' => $row['videourl'],
@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
             <div class='CourseContainer flex justify-between p-3'>
                 <p><?= $courses['Name'] ?></p>
                 <div class='flex gap-15px'>
-                    <button class='DeleteButtonCourses'><?php echo $Icon_Delete ?></button>
+                    <button class='DeleteButtonCourses<?= $courses['id']; ?>'><?php echo $Icon_Delete ?></button>
                     <button><?php echo $Icon_Edit ?></button>
                 </div>
             </div>
@@ -101,7 +101,11 @@ if ($result->num_rows > 0) {
 <script>
     const EditButtonCourses = document.querySelector('.EditButtonCourses');
     const CloseButtonCourses = document.querySelector('.CloseButtonCourses');
-    const DeleteButtonCourses = document.querySelector('.DeleteButtonCourses');
+
+    <?php foreach($Courses as $courses): ?>
+    const DeleteButtonCourses<?= $courses['id']; ?> = document.querySelector('.DeleteButtonCourses<?= $courses['id']; ?>');
+    <?php endforeach; ?>
+
     const Courses = document.querySelector('.CoursesChange');
     const Delete = document.querySelector('.DeleteChange');
 
@@ -113,9 +117,11 @@ if ($result->num_rows > 0) {
         Courses.classList.remove('Active');
     });
 
-    DeleteButtonCourses.addEventListener('click', ()=> {
+    <?php foreach($Courses as $courses): ?>
+    DeleteButtonCourses<?= $courses['id']; ?>.addEventListener('click', ()=> {
         Delete.classList.add('Active');
     });
+    <?php endforeach; ?>
 
     CloseButtonCourses.addEventListener('click', ()=> {
         Delete.classList.remove('Active');
