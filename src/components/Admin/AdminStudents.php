@@ -110,21 +110,32 @@ if ($result->num_rows > 0) {
     // const EditButtonCourses = document.querySelector('.EditButtonCourses');
 
     <?php foreach($Students as $students): ?>
-    const DeleteStudents<?= $students['id']; ?> = document.querySelector('.DeleteStudents<?= $students['id']; ?>');
+        const EditStudents<?= $students['id']; ?> = document.querySelector('.EditStudents<?= $students['id']; ?>');
+    <?php endforeach; ?>
+
+    <?php foreach($Students as $students): ?>
+        const DeleteStudents<?= $students['id']; ?> = document.querySelector('.DeleteStudents<?= $students['id']; ?>');
     <?php endforeach; ?>
 
     const StudentsChange = document.querySelector('.StudentsChange');
+    const CloseButtonStudents = document.querySelector('.CloseButtonStudents');
     const CloseButtonStudentsDelete = document.querySelector('.CloseButtonStudentsDelete');
     const DeleteChangeStudents = document.querySelector('.DeleteChangeStudents');
 
-    // EditButtonCourses.addEventListener('click', ()=> {
-    //     Courses.classList.add('Active');
-    // });
+    <?php foreach($Students as $students): ?>
+        EditStudents<?= $students['id']; ?>.addEventListener('click', ()=> {
+            StudentsChange.classList.add('Active');
+        });
+    <?php endforeach; ?>
+
+    CloseButtonStudents.addEventListener('click', ()=> {
+        StudentsChange.classList.remove('Active');
+    });
 
     <?php foreach($Students as $students): ?>
-    DeleteStudents<?= $students['id']; ?>.addEventListener('click', ()=> {
-        DeleteChangeStudents.classList.add('Active');
-    });
+        DeleteStudents<?= $students['id']; ?>.addEventListener('click', ()=> {
+            DeleteChangeStudents.classList.add('Active');
+        });
     <?php endforeach; ?>
 
     CloseButtonStudentsDelete.addEventListener('click', ()=> {
