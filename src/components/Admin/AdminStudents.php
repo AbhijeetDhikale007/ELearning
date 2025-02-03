@@ -14,7 +14,7 @@ $Students = [];
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $Students[] = [
-            // 'id' => $row['id'],
+            'id' => $row['id'],
             'Name' => $row['sname'],
             // 'Img' => $row['profileurl'],
             'Email' => $row['email'],
@@ -42,10 +42,55 @@ if ($result->num_rows > 0) {
                 <p><?= $students['Name'] ?></p>
                 <p><?= $students['Email'] ?></p>
                 <div class='flex gap-15px'>
-                    <button><?php echo $Icon_Delete ?></button>
-                    <button><?php echo $Icon_Edit ?></button>
+                    <button class='DeleteStudents<?= $students['id']; ?>'><?php echo $Icon_Delete ?></button>
+                    <button class='EditStudents<?= $students['id']; ?>'><?php echo $Icon_Edit ?></button>
                 </div>
             </div>
         <?php endforeach ?>
     </div>
 </div>
+
+<div class='DeleteChange DeleteChangeStudents flex items-center justify-center absolute w-100 h-100'>
+    <form action="adminDash.php" method="post">
+        <div class='flex w-100 items-end'>
+                <button class='CloseButtonCourses'><?php echo $Icon_Close; ?></button>
+        </div>
+        <div>
+            <label for="delete">Type 'delete' to delete.</label>
+            <input type="text" name="delete">
+        </div>
+        <div class='items-center'>
+            <button class='submitButton' type="submit">Delete</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    // const EditButtonCourses = document.querySelector('.EditButtonCourses');
+    // const CloseButtonCourses = document.querySelector('.CloseButtonCourses');
+
+    <?php foreach($Students as $students): ?>
+    const DeleteStudents<?= $students['id']; ?> = document.querySelector('.DeleteStudents<?= $students['id']; ?>');
+    <?php endforeach; ?>
+
+    // const Courses = document.querySelector('.CoursesChange');
+    const DeleteChangeStudents = document.querySelector('.DeleteChangeStudents');
+
+    // EditButtonCourses.addEventListener('click', ()=> {
+    //     Courses.classList.add('Active');
+    // });
+
+    // CloseButtonCourses.addEventListener('click', ()=> {
+    //     Courses.classList.remove('Active');
+    // });
+
+    <?php foreach($Students as $students): ?>
+    DeleteStudents<?= $students['id']; ?>.addEventListener('click', ()=> {
+        DeleteChangeStudents.classList.add('Active');
+    });
+    <?php endforeach; ?>
+
+    // CloseButtonCourses.addEventListener('click', ()=> {
+    //     Delete.classList.remove('Active');
+    // });
+</script>
