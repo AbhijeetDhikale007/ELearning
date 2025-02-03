@@ -47,83 +47,87 @@ if ($result->num_rows > 0) {
 <!-------------------- Add Courses Div -------------------->
 
 <div class='CoursesChange flex items-center justify-center absolute w-100 h-100'>
-    <form action="adminDash.php" method="post">
-        <div class='flex w-100 items-end'>
+    <div class='Wrapper'>
+        <div class='flex w-100 justify-end'>
                 <button class='CloseButtonCourses'><?php echo $Icon_Close; ?></button>
         </div>
-        <div class='flex flex-row'>
-            <div>
-                <label for="course">Course Name</label>
-                <input type="text" name="course" required>
+        <form action="adminDash.php" method="post">
+            <div class='flex flex-row'>
+                <div>
+                    <label for="course">Course Name</label>
+                    <input type="text" name="course" required>
+                </div>
+                <div>
+                    <label for="Img">Picture url</label>
+                    <input type="text" name="Img" required>
+                </div>
+                <div>
+                    <label for="video">Video url</label>
+                    <input type="text" name="video" required>
+                </div>
             </div>
-            <div>
-                <label for="Img">Picture url</label>
-                <input type="text" name="Img" required>
+            <div class='flex flex-row'>
+                <div>
+                    <label for="details">Course Description</label>
+                    <input type="text" name="details" required>
+                </div>
+                <div>
+                    <label for="prize">Prize</label>
+                    <input type="number" name="prize" required>
+                </div>
+                <div>
+                    <label for="discount">Discount</label>
+                    <input type="number" name="discount" required>
+                </div>
             </div>
-            <div>
-                <label for="video">Video url</label>
-                <input type="text" name="video" required>
+            <div class='items-center'>
+                <button class='submitButton' type="submit">Submit</button>
             </div>
-        </div>
-        <div class='flex flex-row'>
-            <div>
-                <label for="details">Course Description</label>
-                <input type="text" name="details" required>
-            </div>
-            <div>
-                <label for="prize">Prize</label>
-                <input type="number" name="prize" required>
-            </div>
-            <div>
-                <label for="discount">Discount</label>
-                <input type="number" name="discount" required>
-            </div>
-        </div>
-        <div class='items-center'>
-            <button class='submitButton' type="submit">Submit</button>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
 
 <!-------------------- Courses Editing Div -------------------->
 
 <div class='CoursesChange CoursesEdit flex items-center justify-center absolute w-100 h-100'>
-    <form action="adminDash.php" method="post">
-        <div class='flex w-100 items-end'>
+    <div class="Wrapper">
+        <div class='flex w-100 justify-end'>
                 <button class='CloseButtonCoursesEdit'><?php echo $Icon_Close; ?></button>
         </div>
-        <div class='flex flex-row'>
-            <div>
-                <label for="course">Course Name</label>
-                <input type="text" name="course" required>
+        <form action="adminDash.php" method="post">
+            <div class='flex flex-row'>
+                <div>
+                    <label for="course">Course Name</label>
+                    <input type="text" name="course" required>
+                </div>
+                <div>
+                    <label for="Img">Picture url</label>
+                    <input type="text" name="Img" required>
+                </div>
+                <div>
+                    <label for="video">Video url</label>
+                    <input type="text" name="video" required>
+                </div>
             </div>
-            <div>
-                <label for="Img">Picture url</label>
-                <input type="text" name="Img" required>
+            <div class='flex flex-row'>
+                <div>
+                    <label for="details">Course Description</label>
+                    <input type="text" name="details" required>
+                </div>
+                <div>
+                    <label for="prize">Prize</label>
+                    <input type="number" name="prize" required>
+                </div>
+                <div>
+                    <label for="discount">Discount</label>
+                    <input type="number" name="discount" required>
+                </div>
             </div>
-            <div>
-                <label for="video">Video url</label>
-                <input type="text" name="video" required>
+            <div class='items-center'>
+                <button class='submitButton' type="submit">Submit</button>
             </div>
-        </div>
-        <div class='flex flex-row'>
-            <div>
-                <label for="details">Course Description</label>
-                <input type="text" name="details" required>
-            </div>
-            <div>
-                <label for="prize">Prize</label>
-                <input type="number" name="prize" required>
-            </div>
-            <div>
-                <label for="discount">Discount</label>
-                <input type="number" name="discount" required>
-            </div>
-        </div>
-        <div class='items-center'>
-            <button class='submitButton' type="submit">Submit</button>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
 
 <!-------------------- Courses Delete Div -------------------->
@@ -148,6 +152,7 @@ if ($result->num_rows > 0) {
 <script>
     const EditButtonCourses = document.querySelector('.EditButtonCourses');
     const CloseButtonCourses = document.querySelector('.CloseButtonCourses');
+    const CloseButtonCoursesEdit = document.querySelector('.CloseButtonCoursesEdit');
     const CloseButtonCoursesDelete = document.querySelector('.CloseButtonCoursesDelete');
 
     <?php foreach($Courses as $courses): ?>
@@ -168,6 +173,10 @@ if ($result->num_rows > 0) {
 
     CloseButtonCourses.addEventListener('click', ()=> {
         Courses.classList.remove('Active');
+    });
+
+    CloseButtonCoursesEdit.addEventListener('click', ()=> {
+        CoursesEdit.classList.remove('Active');
     });
 
     <?php foreach($Courses as $courses): ?>
