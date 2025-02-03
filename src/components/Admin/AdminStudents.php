@@ -92,18 +92,20 @@ if ($result->num_rows > 0) {
 
 <!-------------------- Delete Div -------------------->
 <div class='DeleteChange DeleteChangeStudents flex items-center justify-center absolute w-100 h-100'>
-    <form action="adminDash.php" method="post">
-        <div class='flex w-100 items-end'>
+    <div class='Wrapper'>
+        <div class='flex w-100 justify-end'>
                 <button class='CloseButtonStudentsDelete'><?php echo $Icon_Close; ?></button>
         </div>
-        <div>
-            <label for="delete">Type 'delete' to delete.</label>
-            <input type="text" name="delete">
-        </div>
-        <div class='items-center'>
-            <button class='submitButton' type="submit">Delete</button>
-        </div>
-    </form>
+        <form action="adminDash.php" method="post">
+            <div>
+                <label for="delete">Type 'delete' to delete.</label>
+                <input type="text" name="delete">
+            </div>
+            <div class='items-center'>
+                <button class='submitButton' type="submit">Delete</button>
+            </div>
+        </form>
+    </div>
 </div>
 
 <script>
