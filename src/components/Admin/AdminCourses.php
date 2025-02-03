@@ -37,19 +37,60 @@ if ($result->num_rows > 0) {
                 <p><?= $courses['Name'] ?></p>
                 <div class='flex gap-15px'>
                     <button class='DeleteButtonCourses<?= $courses['id']; ?>'><?php echo $Icon_Delete ?></button>
-                    <button><?php echo $Icon_Edit ?></button>
+                    <button class='EditButtonCourses<?= $courses['id']; ?>'><?php echo $Icon_Edit ?></button>
                 </div>
             </div>
         <?php endforeach ?>
     </div>
 </div>
 
-<!-------------------- Courses Editing Div -------------------->
+<!-------------------- Add Courses Div -------------------->
 
 <div class='CoursesChange flex items-center justify-center absolute w-100 h-100'>
     <form action="adminDash.php" method="post">
         <div class='flex w-100 items-end'>
                 <button class='CloseButtonCourses'><?php echo $Icon_Close; ?></button>
+        </div>
+        <div class='flex flex-row'>
+            <div>
+                <label for="course">Course Name</label>
+                <input type="text" name="course" required>
+            </div>
+            <div>
+                <label for="Img">Picture url</label>
+                <input type="text" name="Img" required>
+            </div>
+            <div>
+                <label for="video">Video url</label>
+                <input type="text" name="video" required>
+            </div>
+        </div>
+        <div class='flex flex-row'>
+            <div>
+                <label for="details">Course Description</label>
+                <input type="text" name="details" required>
+            </div>
+            <div>
+                <label for="prize">Prize</label>
+                <input type="number" name="prize" required>
+            </div>
+            <div>
+                <label for="discount">Discount</label>
+                <input type="number" name="discount" required>
+            </div>
+        </div>
+        <div class='items-center'>
+            <button class='submitButton' type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+<!-------------------- Courses Editing Div -------------------->
+
+<div class='CoursesChange CoursesEdit flex items-center justify-center absolute w-100 h-100'>
+    <form action="adminDash.php" method="post">
+        <div class='flex w-100 items-end'>
+                <button class='CloseButtonCoursesEdit'><?php echo $Icon_Close; ?></button>
         </div>
         <div class='flex flex-row'>
             <div>
@@ -108,12 +149,17 @@ if ($result->num_rows > 0) {
     const EditButtonCourses = document.querySelector('.EditButtonCourses');
     const CloseButtonCourses = document.querySelector('.CloseButtonCourses');
     const CloseButtonCoursesDelete = document.querySelector('.CloseButtonCoursesDelete');
-    
+
+    <?php foreach($Courses as $courses): ?>
+    const EditButtonCourses<?= $courses['id']; ?> = document.querySelector('.EditButtonCourses<?= $courses['id']; ?>');
+    <?php endforeach; ?>
+
     <?php foreach($Courses as $courses): ?>
     const DeleteButtonCourses<?= $courses['id']; ?> = document.querySelector('.DeleteButtonCourses<?= $courses['id']; ?>');
     <?php endforeach; ?>
 
     const Courses = document.querySelector('.CoursesChange');
+    const CoursesEdit = document.querySelector('.CoursesEdit');
     const Delete = document.querySelector('.DeleteChange');
 
     EditButtonCourses.addEventListener('click', ()=> {
@@ -125,9 +171,15 @@ if ($result->num_rows > 0) {
     });
 
     <?php foreach($Courses as $courses): ?>
-    DeleteButtonCourses<?= $courses['id']; ?>.addEventListener('click', ()=> {
-        Delete.classList.add('Active');
-    });
+        EditButtonCourses<?= $courses['id']; ?>.addEventListener('click', ()=> {
+            CoursesEdit.classList.add('Active');
+        });
+    <?php endforeach; ?>
+
+    <?php foreach($Courses as $courses): ?>
+        DeleteButtonCourses<?= $courses['id']; ?>.addEventListener('click', ()=> {
+            Delete.classList.add('Active');
+        });
     <?php endforeach; ?>
 
     CloseButtonCoursesDelete.addEventListener('click', ()=> {
