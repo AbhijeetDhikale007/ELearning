@@ -44,6 +44,8 @@ if ($result->num_rows > 0) {
     </div>
 </div>
 
+<!-------------------- Courses Editing Div -------------------->
+
 <div class='CoursesChange flex items-center justify-center absolute w-100 h-100'>
     <form action="adminDash.php" method="post">
         <div class='flex w-100 items-end'>
@@ -83,25 +85,30 @@ if ($result->num_rows > 0) {
     </form>
 </div>
 
+<!-------------------- Courses Delete Div -------------------->
+
 <div class='DeleteChange flex items-center justify-center absolute w-100 h-100'>
-    <form action="adminDash.php" method="post">
-        <div class='flex w-100 items-end'>
-                <button class='CloseButtonCourses'><?php echo $Icon_Close; ?></button>
+    <div class='Wrapper'>
+        <div class='flex w-100 justify-end'>
+                <button class='CloseButtonCoursesDelete'><?php echo $Icon_Close; ?></button>
         </div>
-        <div>
-            <label for="delete">Type 'delete' to delete.</label>
-            <input type="text" name="delete">
-        </div>
-        <div class='items-center'>
-            <button class='submitButton' type="submit">Delete</button>
-        </div>
-    </form>
+        <form action="adminDash.php" method="post">
+            <div>
+                <label for="delete">Type 'delete' to delete.</label>
+                <input type="text" name="delete">
+            </div>
+            <div class='items-center'>
+                <button class='submitButton' type="submit">Delete</button>
+            </div>
+        </form>
+    </div>
 </div>
 
 <script>
     const EditButtonCourses = document.querySelector('.EditButtonCourses');
     const CloseButtonCourses = document.querySelector('.CloseButtonCourses');
-
+    const CloseButtonCoursesDelete = document.querySelector('.CloseButtonCoursesDelete');
+    
     <?php foreach($Courses as $courses): ?>
     const DeleteButtonCourses<?= $courses['id']; ?> = document.querySelector('.DeleteButtonCourses<?= $courses['id']; ?>');
     <?php endforeach; ?>
@@ -123,7 +130,7 @@ if ($result->num_rows > 0) {
     });
     <?php endforeach; ?>
 
-    CloseButtonCourses.addEventListener('click', ()=> {
+    CloseButtonCoursesDelete.addEventListener('click', ()=> {
         Delete.classList.remove('Active');
     });
 </script>
