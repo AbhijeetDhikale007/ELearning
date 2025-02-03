@@ -253,12 +253,18 @@ aside div a.active {
     scale: 1;
 }
 
-.DeleteChange form {
+.DeleteChange .Wrapper {
     display: flex;
     flex-direction: column;
     background: rgb(131, 131, 206, .8);
     border-radius: 12px 42px;
     padding: 12px;
+    gap: 15px;
+}
+
+.DeleteChange form {
+    display: flex;
+    flex-direction: column;
     gap: 15px;
 }
 
