@@ -56,17 +56,24 @@ include 'src/components/Icons.php';
         DashContent.classList.remove('Active');
         ProfileContent.classList.remove('Active');
         CoursesContent.classList.remove('Active');
+
+        document.title = 'E-Learning Platform - Dashboard';
     });
 
     ProfileButton.addEventListener('click', ()=> {
         ProfileContent.classList.add('Active');
         DashContent.classList.add('Active');
         CoursesContent.classList.remove('Active');
+
+        document.title = 'E-Learning Platform - Profile';
+
     });
 
     CoursesButton.addEventListener('click', ()=> {
         CoursesContent.classList.add('Active');
         DashContent.classList.add('Active');
         ProfileContent.classList.remove('Active');
+
+        document.title = 'E-Learning Platform - Courses';
     });
 </script>
