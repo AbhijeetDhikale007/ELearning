@@ -69,7 +69,7 @@ include 'src/components/Icons.php';
         CoursesContent.classList.remove('Active');
         StudentsContent.classList.remove('Active');
 
-        document.title = 'Admin Dashboard'
+        document.title = 'Admin Dashboard';
     });
 
     ProfileButton.addEventListener('click', ()=> {
@@ -78,7 +78,7 @@ include 'src/components/Icons.php';
         CoursesContent.classList.remove('Active');
         StudentsContent.classList.remove('Active');
 
-        document.title = 'Admin Profile'
+        document.title = 'Admin Profile';
     });
 
     CoursesButton.addEventListener('click', ()=> {
@@ -87,7 +87,7 @@ include 'src/components/Icons.php';
         ProfileContent.classList.remove('Active');
         StudentsContent.classList.remove('Active');
 
-        document.title = 'Admin Courses'
+        document.title = 'Admin Courses';
     });
 
     StudentsButton.addEventListener('click', ()=> {
@@ -96,6 +96,6 @@ include 'src/components/Icons.php';
         ProfileContent.classList.remove('Active');
         CoursesContent.classList.remove('Active');
 
-        document.title = 'Admin Students'
+        document.title = 'Admin Students';
     });
 </script>
