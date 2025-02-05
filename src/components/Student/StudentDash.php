@@ -3,6 +3,8 @@
 include 'src/components/Icons.php';
 ?>
 
+<!------------- Aside Content ------------->
+
 <aside class='flex justify-center items-center'>
     <div class='flex flex-col gap-16px justify-center relative text-white'>
         <p class='absolute top-4per w-100 text-1-4 text-white text-center'>E-Learning</p>
@@ -30,28 +32,38 @@ include 'src/components/Icons.php';
     </div>
 </aside>
 
+<!------------- Dashboard Content ------------->
+
 <div class='DashContent w-100%' id='DashContent'>
     <h1 class='arsenal-sc'>Dashboard</h1>
 </div>
 
+<!------------- Profile Content ------------->
+
 <div class='DashContent w-100%' id='ProfileContent'>
     <?php include 'src/components/Student/StudentProfile.php'; ?>
 </div>
+
+<!------------- Courses Content ------------->
 
 <div class='DashContent w-100%' id='CoursesContent'>
     <?php include 'src/components/Student/StudentCourses.php'; ?>
 </div>
 
 <script>
+    // Dashboard Button and Content
     const DashButton = document.querySelector('#DashButton');
     const DashContent = document.querySelector('#DashContent');
 
+    // Profile Button and Content
     const ProfileButton = document.querySelector('#ProfileButton');
     const ProfileContent = document.querySelector('#ProfileContent');
 
+    // Courses Button and Content
     const CoursesButton = document.querySelector('#CoursesButton');
     const CoursesContent = document.querySelector('#CoursesContent');
 
+    // Dasboard Button
     DashButton.addEventListener('click', ()=> {
         DashContent.classList.remove('Active');
         ProfileContent.classList.remove('Active');
@@ -60,6 +72,7 @@ include 'src/components/Icons.php';
         document.title = 'E-Learning Platform - Dashboard';
     });
 
+    // Profile Button
     ProfileButton.addEventListener('click', ()=> {
         ProfileContent.classList.add('Active');
         DashContent.classList.add('Active');
@@ -69,6 +82,7 @@ include 'src/components/Icons.php';
 
     });
 
+    // Courses Button
     CoursesButton.addEventListener('click', ()=> {
         CoursesContent.classList.add('Active');
         DashContent.classList.add('Active');
