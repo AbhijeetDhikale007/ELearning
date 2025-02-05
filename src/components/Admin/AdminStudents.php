@@ -26,6 +26,8 @@ if ($result->num_rows > 0) {
 }
 ?>
 
+<!-------------------- Students Div -------------------->
+
 <div class='DashContent w-100% relative'>
     <h1 class='arsenal-sc'>Students</h1>
     <!-- <div class='flex justify-end w-94'>
@@ -111,35 +113,48 @@ if ($result->num_rows > 0) {
 </div>
 
 <script>
+    // Edit Buttons of Students
     <?php foreach($Students as $students): ?>
         const EditStudents<?= $students['id']; ?> = document.querySelector('.EditStudents<?= $students['id']; ?>');
     <?php endforeach; ?>
 
+    // Delete Buttons of Students
     <?php foreach($Students as $students): ?>
         const DeleteStudents<?= $students['id']; ?> = document.querySelector('.DeleteStudents<?= $students['id']; ?>');
     <?php endforeach; ?>
 
+    // Students Editing Container
     const StudentsChange = document.querySelector('.StudentsChange');
+
+    // Close Button of Students Editing Container
     const CloseButtonStudents = document.querySelector('.CloseButtonStudents');
+
+    // Close Button of Students Delete Container
     const CloseButtonStudentsDelete = document.querySelector('.CloseButtonStudentsDelete');
+
+    // Delete Students Container
     const DeleteChangeStudents = document.querySelector('.DeleteChangeStudents');
 
+    // Edit Buttons of Students
     <?php foreach($Students as $students): ?>
         EditStudents<?= $students['id']; ?>.addEventListener('click', ()=> {
             StudentsChange.classList.add('Active');
         });
     <?php endforeach; ?>
 
+    // Close Button of Students Editing Container
     CloseButtonStudents.addEventListener('click', ()=> {
         StudentsChange.classList.remove('Active');
     });
 
+    // Delete Buttons of Students
     <?php foreach($Students as $students): ?>
         DeleteStudents<?= $students['id']; ?>.addEventListener('click', ()=> {
             DeleteChangeStudents.classList.add('Active');
         });
     <?php endforeach; ?>
 
+    // Close Button of Students Delete Container
     CloseButtonStudentsDelete.addEventListener('click', ()=> {
         DeleteChangeStudents.classList.remove('Active');
     });
