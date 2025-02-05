@@ -19,6 +19,8 @@ if (!$result) {
     $Num = $row['number'];
 ?>
 
+<!-------------------- Profile Div -------------------->
+
 <div class='DashContent w-100%'>
     <h1 class='arsenal-sc'>Profile</h1>
     <div>
@@ -36,6 +38,8 @@ if (!$result) {
         </div>
     </div>
 </div>
+
+<!-------------------- Profile Edit Div -------------------->
 
 <div class='ProfileChange flex items-center justify-center absolute w-100 h-100'>
         <form action="adminDash.php" method="post">
@@ -65,14 +69,21 @@ if (!$result) {
 </div>
 
 <script>
+    // Edit Button Profile
     const EditButton = document.querySelector('.EditButton');
+
+    // Close Button of Profile Edit Container
     const CloseButton = document.querySelector('.CloseButton');
+
+    // Edit Profile Container
     const Profile = document.querySelector('.ProfileChange');
 
+    // Edit Profile Button
     EditButton.addEventListener('click', ()=> {
         Profile.classList.add('Active');
     });
 
+    // Close Button of Profile Edit Container
     CloseButton.addEventListener('click', ()=> {
         Profile.classList.remove('Active');
     });
