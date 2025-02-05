@@ -3,6 +3,7 @@
 include 'src/components/Icons.php';
 ?>
 
+<!------------- Aside Content ------------->
 <aside class='flex justify-center items-center'>
     <div class='flex flex-col gap-16px justify-center relative text-white'>
         <p class='arsenal-sc absolute top-4per w-100 text-1-4 text-white text-center'>Admin</p>
@@ -34,35 +35,44 @@ include 'src/components/Icons.php';
     </div>
 </aside>
 
+<!------------- Dashboard Content ------------->
 <div class='DashContent w-100%' id='DashContent'>
     <h1 class='arsenal-sc'>Dashboard</h1>
 </div>
 
+<!------------- Profile Content ------------->
 <div class='DashContent w-100%' id='ProfileContent'>
     <?php include 'src/components/Admin/AdminProfile.php'; ?>
 </div>
 
+<!------------- Courses Content ------------->
 <div class='DashContent w-100%' id='CoursesContent'>
     <?php include 'src/components/Admin/AdminCourses.php'; ?>
 </div>
 
+<!------------- Students Content ------------->
 <div class='DashContent w-100%' id='StudentsContent'>
     <?php include 'src/components/Admin/AdminStudents.php'; ?>
 </div>
 
 <script>
+    // Dashboard Content
     const DashButton = document.querySelector('#DashButton');
     const DashContent = document.querySelector('#DashContent');
 
+    // Profile Content
     const ProfileButton = document.querySelector('#ProfileButton');
     const ProfileContent = document.querySelector('#ProfileContent');
 
+    // Courses Content
     const CoursesButton = document.querySelector('#CoursesButton');
     const CoursesContent = document.querySelector('#CoursesContent');
 
+    // Students Content
     const StudentsButton = document.querySelector('#StudentsButton');
     const StudentsContent = document.querySelector('#StudentsContent');
 
+    // Dashboard Content
     DashButton.addEventListener('click', ()=> {
         DashContent.classList.remove('Active');
         ProfileContent.classList.remove('Active');
@@ -72,6 +82,7 @@ include 'src/components/Icons.php';
         document.title = 'Admin Dashboard';
     });
 
+    // Profile Content
     ProfileButton.addEventListener('click', ()=> {
         ProfileContent.classList.add('Active');
         DashContent.classList.add('Active');
@@ -81,6 +92,7 @@ include 'src/components/Icons.php';
         document.title = 'Admin Profile';
     });
 
+    // Courses Content
     CoursesButton.addEventListener('click', ()=> {
         CoursesContent.classList.add('Active');
         DashContent.classList.add('Active');
@@ -90,6 +102,7 @@ include 'src/components/Icons.php';
         document.title = 'Admin Courses';
     });
 
+    // Students Content
     StudentsButton.addEventListener('click', ()=> {
         StudentsContent.classList.add('Active');
         DashContent.classList.add('Active');
