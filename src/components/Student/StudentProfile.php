@@ -22,6 +22,8 @@ if ($result->num_rows > 0) {
 }
 ?>
 
+<!------------- Profile Content ------------->
+
 <div class='DashContent w-100%'>
     <h1 class='arsenal-sc'>Profile</h1>
     <div>
@@ -41,6 +43,8 @@ if ($result->num_rows > 0) {
         </div>
     </div>
 </div>
+
+<!------------- Profile Edit Container ------------->
 
 <div class='ProfileChange flex items-center justify-center absolute w-100 h-100'>
     <form action="StudentProfile.php" method="post">
@@ -86,14 +90,19 @@ if ($result->num_rows > 0) {
 </div>
 
 <script>
+    // Profile Edit Button
     const EditButton = document.querySelector('.EditButton');
+
+    // Profile Edit Button and Container
     const CloseButton = document.querySelector('.CloseButton');
     const Profile = document.querySelector('.ProfileChange');
 
+    // Profile Edit Button
     EditButton.addEventListener('click', ()=> {
         Profile.classList.add('Active');
     });
 
+    // Profile Close Button of Editing Container
     CloseButton.addEventListener('click', ()=> {
         Profile.classList.remove('Active');
     });
