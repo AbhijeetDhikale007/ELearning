@@ -152,21 +152,35 @@ if ($result->num_rows > 0) {
 </div>
 
 <script>
+    // Add Button of Adding New Course Container
     const AddButtonCourses = document.querySelector('.AddButtonCourses');
+
+    // Close Button of Adding New Course Container
     const CloseButtonCourses = document.querySelector('.CloseButtonCourses');
+
+    // Close Button In Courses Edit Container
     const CloseButtonCoursesEdit = document.querySelector('.CloseButtonCoursesEdit');
+
+    // Close Button In Course Delete
     const CloseButtonCoursesDelete = document.querySelector('.CloseButtonCoursesDelete');
 
+    // Edit Buttons of Courses
     <?php foreach($Courses as $courses): ?>
     const EditButtonCourses<?= $courses['id']; ?> = document.querySelector('.EditButtonCourses<?= $courses['id']; ?>');
     <?php endforeach; ?>
 
+    // Delete Buttons of Courses
     <?php foreach($Courses as $courses): ?>
     const DeleteButtonCourses<?= $courses['id']; ?> = document.querySelector('.DeleteButtonCourses<?= $courses['id']; ?>');
     <?php endforeach; ?>
 
+    // New Course Container
     const Courses = document.querySelector('.CoursesChange');
+
+    // Courses Edit Container
     const CoursesEdit = document.querySelector('.CoursesEdit');
+
+    // Courses Delete Container
     const Delete = document.querySelector('.DeleteChange');
 
     // Add Button of Adding New Course Container
