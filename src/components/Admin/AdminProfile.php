@@ -69,10 +69,8 @@ if (!$result) {
 </div>
 
 <script>
-    // Edit Button Profile
+    // Profile Edit Button and Content
     const EditButton = document.querySelector('.EditButton');
-
-    // Close Button of Profile Edit Container
     const CloseButton = document.querySelector('.CloseButton');
 
     // Edit Profile Container
