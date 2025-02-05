@@ -26,10 +26,12 @@ if ($result->num_rows > 0) {
 }
 ?>
 
+<!------------- Courses Content ------------->
+
 <div class='DashContent w-100% relative'>
     <h1 class='arsenal-sc'>Courses</h1>
     <div class='flex justify-end w-94'>
-        <button class='EditButtonCourses Button-AddCourse'>Add Course +</button>
+        <button class='AddButtonCourses Button-AddCourse'>Add Course +</button>
     </div>
     <div class='flex flex-col gap-16px w-94'>
         <?php foreach($Courses as $courses): ?>
@@ -150,7 +152,7 @@ if ($result->num_rows > 0) {
 </div>
 
 <script>
-    const EditButtonCourses = document.querySelector('.EditButtonCourses');
+    const AddButtonCourses = document.querySelector('.AddButtonCourses');
     const CloseButtonCourses = document.querySelector('.CloseButtonCourses');
     const CloseButtonCoursesEdit = document.querySelector('.CloseButtonCoursesEdit');
     const CloseButtonCoursesDelete = document.querySelector('.CloseButtonCoursesDelete');
@@ -167,30 +169,36 @@ if ($result->num_rows > 0) {
     const CoursesEdit = document.querySelector('.CoursesEdit');
     const Delete = document.querySelector('.DeleteChange');
 
-    EditButtonCourses.addEventListener('click', ()=> {
+    // Add Button of Adding New Course Container
+    AddButtonCourses.addEventListener('click', ()=> {
         Courses.classList.add('Active');
     });
 
+    // Close Button of Adding New Course Container
     CloseButtonCourses.addEventListener('click', ()=> {
         Courses.classList.remove('Active');
     });
 
+    // Close Button In Courses Edit Container
     CloseButtonCoursesEdit.addEventListener('click', ()=> {
         CoursesEdit.classList.remove('Active');
     });
 
+    // Edit Buttons of Courses
     <?php foreach($Courses as $courses): ?>
         EditButtonCourses<?= $courses['id']; ?>.addEventListener('click', ()=> {
             CoursesEdit.classList.add('Active');
         });
     <?php endforeach; ?>
 
+    // Delete Buttons of Courses
     <?php foreach($Courses as $courses): ?>
         DeleteButtonCourses<?= $courses['id']; ?>.addEventListener('click', ()=> {
             Delete.classList.add('Active');
         });
     <?php endforeach; ?>
 
+    // Close Button In Course Delete
     CloseButtonCoursesDelete.addEventListener('click', ()=> {
         Delete.classList.remove('Active');
     });
