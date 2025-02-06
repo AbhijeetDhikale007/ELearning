@@ -14,8 +14,8 @@ aside div {
 }
 
 aside div svg {
-    height: 34px;
-    width: 34px;
+    min-height: 34px;
+    min-width: 34px;
 }
 
 aside div button {
@@ -312,6 +312,18 @@ aside div a.active {
     aside {
         width: 32vw;
         font-size: 1em; 
+    }
+
+    aside div button {
+        font-size: 0em;
+        justify-content: center;
+    }
+
+    aside div svg {
+        height: 24px;
+        width: 24px;
+        min-height: 24px;
+        min-width: 24px;
     }
 
     .DashContent .Profile {
