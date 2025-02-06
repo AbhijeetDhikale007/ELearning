@@ -339,11 +339,20 @@ aside div a.active {
     }
 
     .DashContent .Profile {
-        font-size: 1.2em;
+        font-size: 1.3em;
         flex-direction: column;
     }
 
     .DashContent .Profile img {
         height: 18vh;
+    }
+
+    .DashContent .Courses {
+        font-size: .8em;
+    }
+
+    .DashContent .Courses svg {
+        height: 16px;
+        width: 16px;
     }
 }
