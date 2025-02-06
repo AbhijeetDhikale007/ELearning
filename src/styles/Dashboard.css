@@ -321,12 +321,11 @@ aside div a.active {
 
 @media screen and (max-width: 600px) {
     aside {
-        width: 28vw;
-        font-size: 1em; 
+        width: 18vw;
     }
 
     aside p {
-        font-size: 1em;
+        font-size: .8em;
     }
 
     aside div button {
@@ -349,10 +348,11 @@ aside div a.active {
     .DashContent .Profile {
         font-size: 1.3em;
         flex-direction: column;
+        padding: 20px;
     }
 
     .DashContent .Profile img {
-        height: 18vh;
+        height: 22vh;
     }
 
     .DashContent .Courses {
