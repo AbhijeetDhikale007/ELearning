@@ -18,15 +18,6 @@ aside div svg {
     width: 34px;
 }
 
-aside div a {
-    padding: 1vh 2vw;
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    gap: 1vw;
-    align-items: center;
-}
-
 aside div button {
     padding: 1vh 2vw;
     width: 100%;
