@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
     <!-- <div class='flex justify-end w-94'>
         <button class='Button-AddCourse'>Add Student +</button>
     </div> -->
-    <div class='flex flex-col gap-16px w-94'>
+    <div class='Students flex flex-col gap-16px w-94'>
         <div class='CourseContainer flex justify-between p-2'>
             <p>Username</p>
             <p>Email</p>
