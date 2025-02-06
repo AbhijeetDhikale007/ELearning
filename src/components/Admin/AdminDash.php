@@ -6,7 +6,7 @@ include 'src/components/Icons.php';
 <!------------- Aside Content ------------->
 <aside class='flex justify-center items-center'>
     <div class='flex flex-col gap-16px justify-center relative text-white'>
-        <p class='arsenal-sc absolute top-4per w-100 text-1-4 text-white text-center'>Admin</p>
+        <p class='arsenal-sc absolute top-4per w-100 text-white text-center'>Admin</p>
         <button id='DashButton' class:active={}>
             <?php echo $Icon_Dashboard ?>
             Dashboard
