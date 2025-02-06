@@ -186,6 +186,7 @@ main {
     min-width: 98vw;
     max-width: 100vw;
     overflow: hidden;
+    gap: 20px;
 }
 
 main video {
@@ -272,4 +273,10 @@ main video {
 .Button2.active {
     color: rgb(0, 250, 250);
     border-bottom: .5px solid rgb(0, 250, 250);
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        gap: 0;
+    }
 }

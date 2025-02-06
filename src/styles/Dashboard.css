@@ -321,7 +321,7 @@ aside div a.active {
 
 @media screen and (max-width: 600px) {
     aside {
-        width: 32vw;
+        width: 28vw;
         font-size: 1em; 
     }
 
@@ -357,6 +357,15 @@ aside div a.active {
 
     .DashContent .Courses {
         font-size: .8em;
+    }
+
+    .DashContent .Students {
+        font-size: .8em;
+    }
+
+    .DashContent .Students svg {
+        height: 16px;
+        width: 16px;
     }
 
     .DashContent .Courses svg {
