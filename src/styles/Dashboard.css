@@ -8,6 +8,10 @@ aside {
     box-shadow: 0 0 6px #000;
 }
 
+aside p {
+    font-size: 1.4em;
+}
+
 aside div {
     width: 100%;
     height: 100%;
@@ -319,6 +323,10 @@ aside div a.active {
     aside {
         width: 32vw;
         font-size: 1em; 
+    }
+
+    aside p {
+        font-size: 1em;
     }
 
     aside div button {
