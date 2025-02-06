@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
     <!-- <div class='flex justify-end w-94'>
         <button class='Button-AddCourse'>Add Course +</button>
     </div> -->
-    <div class='flex flex-col gap-16px w-94'>
+    <div class='Courses flex flex-col gap-16px w-94'>
         <?php foreach($Courses as $courses): ?>
             <div class='CourseContainer flex justify-between p-3'>
                 <p><?= $courses['Name'] ?></p>
