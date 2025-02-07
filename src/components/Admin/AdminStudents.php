@@ -34,13 +34,13 @@ if ($result->num_rows > 0) {
         <button class='Button-AddCourse'>Add Student +</button>
     </div> -->
     <div class='Students flex flex-col gap-16px w-94'>
-        <div class='CourseContainer flex justify-between p-2'>
+        <div class='CourseContainer flex justify-between p-2 text-[1.2vw]'>
             <p>Username</p>
             <p>Email</p>
             <p>Actions</p>
         </div>
         <?php foreach($Students as $students): ?>
-            <div class='CourseContainer flex justify-between p-3'>
+            <div class='CourseContainer flex justify-between p-3 text-[1.2vw]'>
                 <p><?= $students['Name'] ?></p>
                 <p><?= $students['Email'] ?></p>
                 <div class='flex gap-15px'>
