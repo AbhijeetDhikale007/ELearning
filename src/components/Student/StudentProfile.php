@@ -31,11 +31,11 @@ if ($result->num_rows > 0) {
             <img src=<?php echo $Img; ?> alt="Profile">
             <div class='h-100 flex flex-col gap-16px'>
                 <p><?php echo $Name; ?></p>
-                <p class='text-0-6'>Student</p>
-                <p class='text-0-6'><?php echo $Email; ?></p>
-                <p class='text-0-48'><?php echo $Num; ?></p>
-                <p class='text-0-48'><?php echo $Address; ?></p>
-                <p class='text-0-48'><?php echo $College; ?></p>
+                <p class='text-[1.2vw]'>Student</p>
+                <p class='text-[1.2vw]'><?php echo $Email; ?></p>
+                <p class='text-[1.1vw]'><?php echo $Num; ?></p>
+                <p class='text-[1.1vw]'><?php echo $Address; ?></p>
+                <p class='text-[1.1vw]'><?php echo $College; ?></p>
                 <div class='flex justify-end items-end'>
                     <button class='EditButton'><?php echo $Icon_Edit ?></button>
                 </div>

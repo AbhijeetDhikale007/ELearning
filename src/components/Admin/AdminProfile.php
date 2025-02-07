@@ -28,9 +28,9 @@ if (!$result) {
             <img src=<?php echo $ImgLink; ?> alt="Profile">
             <div class='h-100 flex flex-col gap-20px'>
                 <p><?php echo $Name; ?></p>
-                <p class='text-0-6'>Instructor/Admin</p>
-                <p class='text-0-6'><?php echo $Username; ?></p>
-                <p class='text-0-48'><?php echo $Num; ?></p>
+                <p class='text-[1.2vw]'>Instructor/Admin</p>
+                <p class='text-[1.1vw]'><?php echo $Username; ?></p>
+                <p class='text-[1vw]'><?php echo $Num; ?></p>
                 <div class='flex justify-end items-end'>
                     <button class='EditButton'><?php echo $Icon_Edit ?></button>
                 </div>
