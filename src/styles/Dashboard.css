@@ -2,7 +2,7 @@ aside {
     background: #666a6d;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
-    width: 22vw;
+    /* width: 22vw; */
     font-size: 1.3em;
     height: 100vh;
     box-shadow: 0 0 6px #000;
@@ -320,9 +320,9 @@ aside div a.active {
 } */
 
 @media screen and (max-width: 600px) {
-    aside {
+    /* aside {
         width: 18vw;
-    }
+    } */
 
     aside p {
         font-size: .5em;
