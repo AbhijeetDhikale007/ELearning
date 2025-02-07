@@ -4,7 +4,7 @@ include 'src/components/Icons.php';
 ?>
 
 <!------------- Aside Content ------------->
-<aside class='flex justify-center items-center'>
+<aside class='flex justify-center items-center w-[18vw] md:w-[22vw]'>
     <div class='flex flex-col gap-16px justify-center relative text-white'>
         <p class='arsenal-sc absolute top-4per w-100 text-white text-center'>Admin</p>
         <button id='DashButton' class:active={}>
