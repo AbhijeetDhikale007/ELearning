@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
     </div> -->
     <div class='Courses flex flex-col gap-16px w-94'>
         <?php foreach($Courses as $courses): ?>
-            <div class='CourseContainer flex justify-between p-3'>
+            <div class='CourseContainer flex justify-between text-[1.2vw] p-3'>
                 <p><?= $courses['Name'] ?></p>
                 <p><?= $courses['Prize'] ?> &#8377;</p>
             </div>
