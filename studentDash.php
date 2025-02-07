@@ -13,6 +13,7 @@ include 'src/components/Icons.php';
 
     <link rel="stylesheet" href="src/styles/main.css">
     <link rel="stylesheet" href="src/styles/Dashboard.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 <body class='bg-whitish'>
     <main class='flex z-0 items-center'>
