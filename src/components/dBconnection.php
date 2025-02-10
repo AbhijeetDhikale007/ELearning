@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost";
+$servername = "localhost";  // IP Address To Connect To The Database
 $username = "root";
 $password = "";
 $dbname = "elearning"; 
