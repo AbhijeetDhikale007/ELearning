@@ -24,6 +24,10 @@ if ($result->num_rows > 0) {
         ];
     }
 }
+
+if(isset($_POST['newcourse']) && isset($_POST['newImg']) && isset($_POST['newvideo']) && isset($_POST['newdetails']) && isset($_POST['newprize']) && isset($_POST['newdiscount'])) {
+
+}
 ?>
 
 <!------------- Courses Content ------------->
@@ -53,33 +57,33 @@ if ($result->num_rows > 0) {
         <div class='flex w-100 justify-end'>
                 <button class='CloseButtonCourses'><?php echo $Icon_Close; ?></button>
         </div>
-        <form action="adminDash.php" method="post">
+        <form action="adminDash.php" method="POST">
             <div class='flex flex-row'>
                 <div>
-                    <label for="course">Course Name</label>
-                    <input type="text" name="course" required>
+                    <label for="newcourse">Course Name</label>
+                    <input type="text" name="newcourse" required>
                 </div>
                 <div>
-                    <label for="Img">Picture url</label>
-                    <input type="text" name="Img" required>
+                    <label for="newImg">Picture url</label>
+                    <input type="text" name="newImg" required>
                 </div>
                 <div>
-                    <label for="video">Video url</label>
-                    <input type="text" name="video" required>
+                    <label for="newvideo">Video url</label>
+                    <input type="text" name="newvideo" required>
                 </div>
             </div>
             <div class='flex flex-row'>
                 <div>
-                    <label for="details">Course Description</label>
-                    <input type="text" name="details" required>
+                    <label for="newdetails">Course Description</label>
+                    <input type="text" name="newdetails" required>
                 </div>
                 <div>
-                    <label for="prize">Prize</label>
-                    <input type="number" name="prize" required>
+                    <label for="newprize">Prize</label>
+                    <input type="number" name="newprize" required>
                 </div>
                 <div>
-                    <label for="discount">Discount</label>
-                    <input type="number" name="discount" required>
+                    <label for="newdiscount">Discount</label>
+                    <input type="number" name="newdiscount" required>
                 </div>
             </div>
             <div class='items-center'>
