@@ -118,29 +118,29 @@ if(isset($_POST['newcourse']) && isset($_POST['newImg']) && isset($_POST['newvid
         <form action="adminDash.php" method="post">
             <div class='flex flex-row'>
                 <div>
-                    <label for="course">Course Name</label>
+                    <label for="editcourse">Course Name</label>
                     <input type="text" name="editcourse" required>
                 </div>
                 <div>
-                    <label for="Img">Picture url</label>
+                    <label for="editImg">Picture url</label>
                     <input type="text" name="editImg" required>
                 </div>
                 <div>
-                    <label for="video">Video url</label>
+                    <label for="editvideo">Video url</label>
                     <input type="text" name="editvideo" required>
                 </div>
             </div>
             <div class='flex flex-row'>
                 <div>
-                    <label for="details">Course Description</label>
+                    <label for="editdetails">Course Description</label>
                     <input type="text" name="editdetails" required>
                 </div>
                 <div>
-                    <label for="prize">Prize</label>
+                    <label for="editprize">Prize</label>
                     <input type="number" name="editprize" required>
                 </div>
                 <div>
-                    <label for="discount">Discount</label>
+                    <label for="editdiscount">Discount</label>
                     <input type="number" name="editdiscount" required>
                 </div>
             </div>
