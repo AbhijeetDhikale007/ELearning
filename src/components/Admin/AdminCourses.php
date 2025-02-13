@@ -25,6 +25,7 @@ if ($result->num_rows > 0) {
     }
 }
 
+// -------------------------- Inserting New Course --------------------------
 if(isset($_POST['newcourse']) && isset($_POST['newImg']) && isset($_POST['newvideo']) && isset($_POST['newdetails']) && isset($_POST['newprize']) && isset($_POST['newdiscount']) && !empty($_POST['newcourse']) && !empty($_POST['newImg']) && !empty($_POST['newvideo']) && !empty($_POST['newdetails']) && !empty($_POST['newprize']) && !empty($_POST['newdiscount'])) {
     $newid = 12;
     $newcourse = $_POST['newcourse'];
