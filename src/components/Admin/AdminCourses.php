@@ -160,8 +160,8 @@ if(isset($_POST['newcourse']) && isset($_POST['newImg']) && isset($_POST['newvid
         </div>
         <form action="adminDash.php" method="post">
             <div>
-                <label for="delete">Type 'delete' to delete.</label>
-                <input type="text" name="delete">
+                <label for="coursesdelete">Type 'delete' to delete.</label>
+                <input type="text" name="coursesdelete">
             </div>
             <div class='items-center'>
                 <button class='submitButton' type="submit">Delete</button>
