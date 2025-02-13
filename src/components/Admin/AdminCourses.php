@@ -27,7 +27,7 @@ if ($result->num_rows > 0) {
 
 // -------------------------- Inserting New Course --------------------------
 if(isset($_POST['newcourse']) && isset($_POST['newImg']) && isset($_POST['newvideo']) && isset($_POST['newdetails']) && isset($_POST['newprize']) && isset($_POST['newdiscount']) && !empty($_POST['newcourse']) && !empty($_POST['newImg']) && !empty($_POST['newvideo']) && !empty($_POST['newdetails']) && !empty($_POST['newprize']) && !empty($_POST['newdiscount'])) {
-    $newid = 12;
+    // $newid = 12;
     $newcourse = $_POST['newcourse'];
     $newImg = $_POST['newImg'];
     $newvideo = $_POST['newvideo'];
@@ -35,7 +35,7 @@ if(isset($_POST['newcourse']) && isset($_POST['newImg']) && isset($_POST['newvid
     $newprize = $_POST['newprize'];
     $newdiscount = $_POST['newdiscount'];
 
-    $sql = "INSERT INTO courses (id, cname, pictureurl, videourl, cinfo, prize, discount) VALUES ('$newid', '$newcourse', '$newImg', '$newvideo', '$newdetails', '$newprize', '$newdiscount')";
+    $sql = "INSERT INTO courses (cname, pictureurl, videourl, cinfo, prize, discount) VALUES ('$newcourse', '$newImg', '$newvideo', '$newdetails', '$newprize', '$newdiscount')";
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
