@@ -119,29 +119,29 @@ if(isset($_POST['newcourse']) && isset($_POST['newImg']) && isset($_POST['newvid
             <div class='flex flex-row'>
                 <div>
                     <label for="course">Course Name</label>
-                    <input type="text" name="course" required>
+                    <input type="text" name="editcourse" required>
                 </div>
                 <div>
                     <label for="Img">Picture url</label>
-                    <input type="text" name="Img" required>
+                    <input type="text" name="editImg" required>
                 </div>
                 <div>
                     <label for="video">Video url</label>
-                    <input type="text" name="video" required>
+                    <input type="text" name="editvideo" required>
                 </div>
             </div>
             <div class='flex flex-row'>
                 <div>
                     <label for="details">Course Description</label>
-                    <input type="text" name="details" required>
+                    <input type="text" name="editdetails" required>
                 </div>
                 <div>
                     <label for="prize">Prize</label>
-                    <input type="number" name="prize" required>
+                    <input type="number" name="editprize" required>
                 </div>
                 <div>
                     <label for="discount">Discount</label>
-                    <input type="number" name="discount" required>
+                    <input type="number" name="editdiscount" required>
                 </div>
             </div>
             <div class='items-center'>
