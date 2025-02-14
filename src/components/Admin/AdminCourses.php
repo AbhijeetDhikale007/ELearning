@@ -41,6 +41,7 @@ if(isset($_POST['newcourse']) && isset($_POST['newImg']) && isset($_POST['newvid
     } else {
         echo '<script>alert("Error: " . $sql . "<br>" . $conn->error)</script>';
     }
+    $conn->close();
 }
 ?>
 
