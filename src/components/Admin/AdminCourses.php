@@ -37,9 +37,9 @@ if(isset($_POST['newcourse']) && isset($_POST['newImg']) && isset($_POST['newvid
     $sql = "INSERT INTO courses (cname, pictureurl, videourl, cinfo, prize, discount) VALUES ('$newcourse', '$newImg', '$newvideo', '$newdetails', '$newprize', '$newdiscount')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+        echo '<script>alert("New course created successfully")</script>';
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo '<script>alert("Error: " . $sql . "<br>" . $conn->error)</script>';
     }
 }
 ?>
