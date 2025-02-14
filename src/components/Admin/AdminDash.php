@@ -4,7 +4,8 @@ include 'src/components/Icons.php';
 ?>
 
 <!------------- Aside Content ------------->
-<aside class='flex justify-center items-center w-[18vw] md:w-[22vw]'>
+<section class='flex w-[18vw] md:w-[22vw]'>
+<aside class='fixed top-0 flex justify-center items-center w-[18vw] md:w-[18vw]'>
     <div class='flex flex-col gap-16px justify-center relative text-white'>
         <p class='arsenal-sc text-[2.2vw] absolute top-4per w-100 text-white text-center'>Admin</p>
         <button id='DashButton' class:active={}>
@@ -34,6 +35,7 @@ include 'src/components/Icons.php';
         <a href='index.php' class='absolute bottom-4per w-100 text-1-3 text-white flex justify-center items-center'><?php echo $Icon_Back; ?></a>
     </div>
 </aside>
+</section>
 
 <!------------- Dashboard Content ------------->
 <div class='DashContent w-100%' id='DashContent'>
