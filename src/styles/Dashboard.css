@@ -84,8 +84,9 @@ aside div a.active {
 }
 
 .DashContent {
+    padding: 2vh 0;
     width: 100%;
-    min-height: 100vh;
+    min-height: 96vh;
     gap: 3vh;
     display: flex;
     flex-direction: column;
