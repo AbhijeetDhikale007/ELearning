@@ -63,6 +63,20 @@ if(isset($_POST['editcourse']) && isset($_POST['editImg']) && isset($_POST['edit
     }
     $conn->close();
 }
+
+// -------------------------- Deleting Course --------------------------
+if(isset($_POST['coursesdelete'])) {
+    // Assign ID From the button
+
+    $sql = "DELETE FROM courses WHERE id='$Deleteid' ";
+
+    if ($conn->query($sql) === TRUE) {
+        echo '<script>alert("New course created successfully")</script>';
+    } else {
+        echo '<script>alert("Error: " . $sql . "<br>" . $conn->error)</script>';
+    }
+    $conn->close();
+}
 ?>
 
 <!------------- Courses Content ------------->
