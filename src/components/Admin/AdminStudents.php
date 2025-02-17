@@ -16,14 +16,33 @@ if ($result->num_rows > 0) {
         $Students[] = [
             'id' => $row['id'],
             'Name' => $row['sname'],
-            // 'Img' => $row['profileurl'],
+            'Img' => $row['profileurl'],
             'Email' => $row['email'],
-            // 'Number' => $row['number'],
-            // 'Location' => $row['location'],
-            // 'College' => $row['college']
+            'Number' => $row['number'],
+            'Location' => $row['location'],
+            'College' => $row['college']
         ];
     }
 }
+
+if(isset($_POST['editprofilelink']) && isset($_POST['editname']) && isset($_POST['editemail']) && isset($_POST['editnumber']) && isset($_POST['editaddress']) && isset($_POST['editcollege']) && !empty($_POST['editprofileurl']) && !empty($_POST['editname']) && !empty($_POST['editemail']) && !empty($_POST['editnumber']) && !empty($_POST['editaddress']) && !empty($_POST['editcollege'])) {
+    // Assign ID Here From Button
+    $editprofileurl = $_POST['editprofileurl'];
+    $editname = $_POST['editname'];
+    $editnumber = $_POST['editnumber'];
+    $editaddress = $_POST['editaddress'];
+    $editcollege = $_POST['editcollege'];
+
+    $sql = "UPDATE table courses SET profileurl= '$editprofileurl', sname= '$editname', email= '$editemail', number= '$editnumber', address= '$editaddress', college= 'editcollege' WHERE id='$id' ";
+
+    if ($conn->query($sql) === TRUE) {
+        echo '<script>alert("Your profile edited successfully")</script>';
+    } else {
+        echo '<script>alert("Error: " . $sql . "<br>" . $conn->error)</script>';
+    }
+    $conn->close();
+}
+
 ?>
 
 <!-------------------- Students Div -------------------->
@@ -61,30 +80,30 @@ if ($result->num_rows > 0) {
         <form action="adminDash.php" method="post">
             <div class='flex flex-row'>
                 <div>
-                    <label for="name">Name</label>
-                    <input type="text" name="name" required>
+                    <label for="editname">Name</label>
+                    <input type="text" name="editname" required>
                 </div>
                 <div>
-                    <label for="profileurl">Profile Link</label>
-                    <input type="text" name="profileurl" required>
+                    <label for="editprofileurl">Profile Link</label>
+                    <input type="text" name="editprofileurl" required>
                 </div>
                 <div>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" required>
+                    <label for="editemail">Email</label>
+                    <input type="email" name="editemail" required>
                 </div>
             </div>
             <div class='flex flex-row'>
                 <div>
-                    <label for="number">Phone Number</label>
+                    <label for="editnumber">Phone Number</label>
                     <input type="number" name="number" required>
                 </div>
                 <div>
-                    <label for="address">Address</label>
-                    <input type="text" name="address" required>
+                    <label for="editaddress">Address</label>
+                    <input type="text" name="editaddress" required>
                 </div>
                 <div>
-                    <label for="college">College</label>
-                    <input type="text" name="college" required>
+                    <label for="editcollege">College</label>
+                    <input type="text" name="editcollege" required>
                 </div>
             </div>
             <div class='items-center'>
