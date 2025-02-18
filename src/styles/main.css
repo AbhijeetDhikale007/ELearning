@@ -1,13 +1,16 @@
 @import url(./bootstrap.min.css);
 @import url(./tailwind.css);
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    font-family: "Roboto", serif;
+    font-family: "Nunito", "Roboto", serif;
     box-sizing: border-box;
 }
 
@@ -20,6 +23,11 @@
     --medium-blue: #0352BD;
     --light-gray: #C7C7C7;
     --deep-green: #07875D;
+}
+
+/* Josefin Sans */
+.josefin-sans {
+    font-family: "Josefin Sans","Arsenal SC";
 }
 
 /* Arsenal SC Font */
