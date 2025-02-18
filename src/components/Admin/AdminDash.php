@@ -7,7 +7,7 @@ include 'src/components/Icons.php';
 <section class='flex w-[18vw] md:w-[22vw]'>
 <aside class='fixed top-0 flex justify-center items-center w-[18vw] md:w-[18vw]'>
     <div class='flex flex-col gap-16px justify-center relative text-white'>
-        <p class='arsenal-sc text-[2.2vw] absolute top-4per w-100 text-black text-center'>Admin</p>
+        <p class='josefin-sans text-[2.2vw] absolute top-4per w-100 text-black text-center'>Admin</p>
         <button id='DashButton' class:active={}>
             <?php echo $Icon_Dashboard ?>
             Dashboard
@@ -39,7 +39,7 @@ include 'src/components/Icons.php';
 
 <!------------- Dashboard Content ------------->
 <div class='DashContent w-100%' id='DashContent'>
-    <h1 class='arsenal-sc'>Dashboard</h1>
+    <h1 class='josefin-sans'>Dashboard</h1>
 </div>
 
 <!------------- Profile Content ------------->
