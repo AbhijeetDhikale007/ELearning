@@ -19,7 +19,7 @@ if ($result->num_rows > 0) {
             'Img' => $row['profileurl'],
             'Email' => $row['email'],
             'Number' => $row['number'],
-            'Location' => $row['location'],
+            'Location' => $row['address'],
             'College' => $row['college']
         ];
     }
