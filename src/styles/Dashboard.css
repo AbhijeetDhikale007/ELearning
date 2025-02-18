@@ -159,7 +159,7 @@ aside div a.active {
     padding: 20px;
     border: .2px solid rgb(255, 255, 255, .4);
     border-radius: 12px 42px;
-    background: rgb(131, 131, 206, .8);
+    background: var(--burnt-orange);
     gap: 20px;
     display: flex;
     flex-direction: column;
@@ -210,7 +210,7 @@ aside div a.active {
     padding: 20px;
     border: .2px solid rgb(255, 255, 255, .4);
     border-radius: 12px 42px;
-    background: rgb(131, 131, 206, .8);
+    background: var(--burnt-orange);
     gap: 20px;
     display: flex;
     align-items: center;
