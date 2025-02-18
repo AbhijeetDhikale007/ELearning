@@ -29,7 +29,7 @@ if ($result->num_rows > 0) {
 <!------------- Courses Content ------------->
 
 <div class='DashContent w-100% relative'>
-    <h1 class='arsenal-sc'>Your Courses</h1>
+    <h1 class='josefin-sans'>Your Courses</h1>
     <!-- <div class='flex justify-end w-94'>
         <button class='Button-AddCourse'>Add Course +</button>
     </div> -->

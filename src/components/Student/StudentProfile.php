@@ -44,7 +44,7 @@ if(isset($_POST['editprofilelink']) && isset($_POST['editname']) && isset($_POST
 <!------------- Profile Content ------------->
 
 <div class='DashContent w-100%'>
-    <h1 class='arsenal-sc'>Profile</h1>
+    <h1 class='josefin-sans'>Profile</h1>
     <div>
         <div class='Profile'>
             <img src=<?php echo $Img; ?> alt="Profile">
