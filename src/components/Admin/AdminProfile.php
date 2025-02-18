@@ -22,7 +22,7 @@ if (!$result) {
 <!-------------------- Profile Div -------------------->
 
 <div class='DashContent w-100%'>
-    <h1 class='arsenal-sc'>Profile</h1>
+    <h1 class='josefin-sans'>Profile</h1>
     <div>
         <div class='Profile'>
             <img src=<?php echo $ImgLink; ?> alt="Profile">

@@ -82,7 +82,7 @@ if(isset($_POST['coursesdelete'])) {
 <!------------- Courses Content ------------->
 
 <div class='DashContent w-100% relative'>
-    <h1 class='arsenal-sc'>Courses</h1>
+    <h1 class='josefin-sans'>Courses</h1>
     <div class='flex justify-end w-94'>
         <button class='AddButtonCourses Button-AddCourse'>Add Course +</button>
     </div>

@@ -48,7 +48,7 @@ if(isset($_POST['editprofilelink']) && isset($_POST['editname']) && isset($_POST
 <!-------------------- Students Div -------------------->
 
 <div class='DashContent w-100% relative'>
-    <h1 class='arsenal-sc'>Students</h1>
+    <h1 class='josefin-sans'>Students</h1>
     <!-- <div class='flex justify-end w-94'>
         <button class='Button-AddCourse'>Add Student +</button>
     </div> -->
