@@ -13,10 +13,13 @@
 
 /* Color Palette */
 :root {
-    --color-primary-dark: #2e5077; /* Deep Blue */
-    --color-primary: #4da1a9; /* Teal Blue */
-    --color-accent: #79d7be; /* Aqua Green */
-    --color-light: #f6f4f0; /* Light Cream */
+    --burnt-orange: #C65008;
+    --gray: #747474;
+    --medium-sea-green: #0ACB8B;
+    --white: #ffffff;
+    --medium-blue: #0352BD;
+    --light-gray: #C7C7C7;
+    --deep-green: #07875D;
 }
 
 /* Arsenal SC Font */
