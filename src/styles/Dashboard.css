@@ -1,5 +1,5 @@
 aside {
-    background: #666a6d;
+    background: var(--light-gray);
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
     /* width: 22vw; */
@@ -22,6 +22,7 @@ aside div svg {
     min-width: 34px;
     height: 34px;
     width: 34px;
+    filter: invert(1);
 }
 
 aside div button {
@@ -32,6 +33,7 @@ aside div button {
     display: flex;
     gap: 1vw;
     align-items: center;
+    color: #000;
 }
 
 aside div a.active {
@@ -106,7 +108,7 @@ aside div a.active {
 
 .DashContent h1:first-letter {
     font-size: 1.2em;
-    color: orange;
+    color: var(--burnt-orange);
 }
 
 .DashContent .Profile {
@@ -131,7 +133,7 @@ aside div a.active {
     padding: 10px;
     border-radius: 10px;
     color: #fff;
-    background: blue;
+    background: var(--medium-blue);
 }
 
 .CourseContainer {
@@ -140,7 +142,7 @@ aside div a.active {
 }
 
 .bg-whitish {
-    background: #37404D;
+    background: var(--gray);
 }
 
 .ProfileChange {
