@@ -11,7 +11,7 @@ if (!$result) {
 
     $row = $result->fetch_assoc();
 
-    // // Assign values to variables
+    // Assign values to variables
     $Name = $row['name'];
     $Username = $row['username'];
     $ImgLink = $row['profilelink'];
