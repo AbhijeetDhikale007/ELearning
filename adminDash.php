@@ -1,6 +1,9 @@
 <?php
 // include 'src/components/dBconnection.php';
 include 'src/components/Icons.php';
+
+// By default set to 1, change it with login.
+$Login_id = 1;
 ?>
 
 <!DOCTYPE html>

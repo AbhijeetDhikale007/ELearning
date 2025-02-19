@@ -3,7 +3,7 @@ include 'src/components/dBconnection.php';
 include 'src/components/Icons.php';
 
 // SQL query to fetch data
-$sql = "SELECT * FROM admin"; // Adjust table & columns as needed
+$sql = "SELECT * FROM admin where id= '$Login_id'"; // Adjust table & columns as needed
 $result = $conn->query($sql);
 
 if (!$result) {

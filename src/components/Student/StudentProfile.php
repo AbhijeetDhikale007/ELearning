@@ -2,7 +2,7 @@
 include 'src/components/dBconnection.php';
 include 'src/components/Icons.php';
 
-$sql = "SELECT * FROM students";
+$sql = "SELECT * FROM students where id='$Login_id'";
 $result = $conn->query($sql);
 
 if(!$result) {
