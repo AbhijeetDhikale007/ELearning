@@ -41,7 +41,7 @@ if (!$result) {
 
 <!-------------------- Profile Edit Div -------------------->
 
-<div class='ProfileChange flex items-center justify-center absolute w-100 h-100'>
+<div class='ProfileChange flex items-center justify-center fixed w-100 h-100'>
         <form action="adminDash.php" method="post">
             <div class='flex w-100 items-end'>
                 <button class='CloseButton'><?php echo $Icon_Close; ?></button>

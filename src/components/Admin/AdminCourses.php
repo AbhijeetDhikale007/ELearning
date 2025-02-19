@@ -101,7 +101,7 @@ if(isset($_POST['coursesdelete'])) {
 
 <!-------------------- Add Courses Div -------------------->
 
-<div class='CoursesChange flex items-center justify-center absolute w-100 h-100'>
+<div class='CoursesChange flex items-center justify-center fixed top-0 w-100 h-100'>
     <div class='Wrapper'>
         <div class='flex w-100 justify-end'>
                 <button class='CloseButtonCourses'><?php echo $Icon_Close; ?></button>
@@ -144,7 +144,7 @@ if(isset($_POST['coursesdelete'])) {
 
 <!-------------------- Courses Editing Div -------------------->
 
-<div class='CoursesChange CoursesEdit flex items-center justify-center absolute w-100 h-100'>
+<div class='CoursesChange CoursesEdit flex items-center justify-center fixed top-0 w-100 h-100'>
     <div class="Wrapper">
         <div class='flex w-100 justify-end'>
                 <button class='CloseButtonCoursesEdit'><?php echo $Icon_Close; ?></button>
