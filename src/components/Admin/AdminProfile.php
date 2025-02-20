@@ -4,6 +4,7 @@ include 'src/components/Icons.php';
 
 // SQL query to fetch data
 $sql = "SELECT * FROM admin where id= '$Login_id'";
+$result = $conn->query($sql);
 
 if (!$result) {
     die("Query failed: " . $conn->error);
