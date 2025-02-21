@@ -98,10 +98,6 @@ if(isset($_POST['editprofilelink']) && isset($_POST['editname']) && isset($_POST
                 <input type="text" name="editcollege" required>
             </div>
         </div>
-        <div>
-            <label for="editpassword">Password</label>
-            <input type="password" name="editpassword" required>
-        </div>
         <div class='items-center'>
             <button class='submitButton' type="submit">Submit</button>
         </div>
