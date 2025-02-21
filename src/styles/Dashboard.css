@@ -143,6 +143,7 @@ aside div a.active {
     border-radius: 12px;
     border: .5px solid var(--medium-blue);
     box-shadow: inset 0 0 4px var(--medium-blue);
+    align-items: center;
 }
 
 .bg-whitish {
