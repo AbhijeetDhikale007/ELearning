@@ -277,21 +277,27 @@ aside div a.active {
     flex-direction: column;
     background: rgb(3, 82, 189, .8);
     backdrop-filter: blur(10px);
-    border-radius: 12px 42px;
+    border-radius: 12px;
     padding: 12px;
-    gap: 15px;
+    width: 32vw;
+    gap: 28px;
 }
 
 .DeleteChange form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 28px;
 }
 
 .DeleteChange form div {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.DeleteChange form label {
+    color: #fff;
+    text-align: center;
 }
 
 .DeleteChange form input {
@@ -311,7 +317,7 @@ aside div a.active {
     padding: 10px;
     width: fit-content;
     background: #fff;
-    border-radius: 12px 25px;
+    border-radius: 12px;
 }
 
 /* @media (min-width: 768px) {
