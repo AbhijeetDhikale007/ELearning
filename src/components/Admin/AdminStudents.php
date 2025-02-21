@@ -120,10 +120,7 @@ if(isset($_POST['editprofilelink']) && isset($_POST['editname']) && isset($_POST
                 <button class='CloseButtonStudentsDelete'><?php echo $Icon_Close; ?></button>
         </div>
         <form action="adminDash.php" method="post">
-            <div>
-                <label for="delete">Type 'delete' to delete.</label>
-                <input type="text" name="delete">
-            </div>
+            <label for="delete">Are you want to delete.</label>
             <div class='items-center'>
                 <button class='submitButton' type="submit">Delete</button>
             </div>

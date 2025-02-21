@@ -193,10 +193,7 @@ if(isset($_POST['coursesdelete'])) {
                 <button class='CloseButtonCoursesDelete'><?php echo $Icon_Close; ?></button>
         </div>
         <form action="adminDash.php" method="post">
-            <div>
-                <label for="coursesdelete">Type 'delete' to delete.</label>
-                <input type="text" name="coursesdelete">
-            </div>
+                <label for="coursesdelete">Are you want to delete.</label>
             <div class='items-center'>
                 <button class='submitButton' type="submit">Delete</button>
             </div>
