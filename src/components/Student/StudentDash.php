@@ -8,7 +8,7 @@ include 'src/components/Icons.php';
 <section class='flex w-[18vw] md:w-[22vw]'>
 <aside class='fixed top-0 flex justify-center items-center w-[18vw] md:w-[18vw]'>
     <div class='flex flex-col gap-16px justify-center relative text-white'>
-        <p class='josefin-sans absolute text-[2.2vw] top-4per w-100 text-black text-center'>E-Learning</p>
+        <p class='josefin-sans absolute text-[2.2vw] top-4per w-100 text-white text-center'>E-Learning</p>
         <button id='ProfileButton' class:active={}>
             <?php echo $Icon_Profile ?>
             Profile
