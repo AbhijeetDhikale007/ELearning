@@ -11,7 +11,7 @@ $Login_id = 1;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Admin Profile</title>
     <link rel="icon" type='img/png' href="https://raw.githubusercontent.com/AbhijeetDhikale007/ELearning/refs/heads/main/public/Logo.png">
 
     <link rel="stylesheet" href="src/styles/main.css">
