@@ -20,25 +20,6 @@ if ($result->num_rows > 0) {
         $College = $row['college'];
     }
 }
-
-// -------------------------- Editing Profile --------------------------
-if(isset($_POST['editprofilelink']) && isset($_POST['editname']) && isset($_POST['editemail']) && isset($_POST['editnumber']) && isset($_POST['editlocation']) && isset($_POST['editcollege']) && !empty($_POST['editprofilelink']) && !empty($_POST['editname']) && !empty($_POST['editemail']) && !empty($_POST['editnumber']) && !empty($_POST['editlocation']) && !empty($_POST['editcollege'])) {
-    // Assign ID Here
-    $editprofilelink = $_POST['editprofilelink'];
-    $editname = $_POST['editname'];
-    $editnumber = $_POST['editnumber'];
-    $editlocation = $_POST['editlocation'];
-    $editcollege = $_POST['editcollege'];
-
-    $sql = "UPDATE table courses SET profileurl= '$editprofilelink', sname= '$editname', email= '$editemail', number= '$editnumber', address= '$editlocation', college= 'editcollege' WHERE id='$id' ";
-
-    if ($conn->query($sql) === TRUE) {
-        echo '<script>alert("Your profile edited successfully")</script>';
-    } else {
-        echo '<script>alert("Error: " . $sql . "<br>" . $conn->error)</script>';
-    }
-    $conn->close();
-}
 ?>
 
 <!------------- Profile Content ------------->
@@ -66,40 +47,40 @@ if(isset($_POST['editprofilelink']) && isset($_POST['editname']) && isset($_POST
 <!------------- Profile Edit Container ------------->
 
 <div class='ProfileChange flex items-center justify-center absolute w-100 h-100'>
-    <form action="StudentProfile.php" method="post">
+    <form method="POST">
         <div class='flex w-100 items-end'>
                 <button class='CloseButton'><?php echo $Icon_Close; ?></button>
         </div>
         <div class='flex flex-row'>
             <div>
                 <label for="editprofilelink">Profile url</label>
-                <input type="text" name="editprofilelink" required>
+                <input type="text" id="editprofilelink" name="editprofilelink" required>
             </div>
             <div>
                 <label for="editname">Your Name</label>
-                <input type="text" name="editname" required>
+                <input type="text" id="editname" name="editname" required>
             </div>
             <div>
                 <label for="editemail">Email</label>
-                <input type="email" name="editemail" required>
+                <input type="email" id="editemail" name="editemail" required>
             </div>
         </div>
         <div class='flex flex-row'>
             <div>
                 <label for="editnumber">Number</label>
-                <input type="number" name="editnumber" required>
+                <input type="number" id="editnumber" name="editnumber" required>
             </div>
             <div>
                 <label for="editlocation">Location</label>
-                <input type="text" name="editlocation" required>
+                <input type="text" id="editlocation" name="editlocation" required>
             </div>
             <div>
                 <label for="editcollege">College</label>
-                <input type="text" name="editcollege" required>
+                <input type="text" id="editcollege" name="editcollege" required>
             </div>
         </div>
         <div class='items-center'>
-            <button class='submitButton' type="submit">Submit</button>
+            <button class='submitButton' type="submit" onclick="updateProfile()">Submit</button>
         </div>
     </form>
 </div>
@@ -121,4 +102,25 @@ if(isset($_POST['editprofilelink']) && isset($_POST['editname']) && isset($_POST
     CloseButton.addEventListener('click', ()=> {
         Profile.classList.remove('Active');
     });
+
+        // Update Profile
+        function updateProfile() {
+            event.preventDefault();
+
+            var editprofilelink = $('#editprofilelink').val();
+            var editname = $('#editname').val();
+            var editemail = $('#editemail').val();
+            var editnumber = $('#editnumber').val();
+            var editlocation = $('#editlocation').val();
+            var editcollege = $('#editcollege').val();
+
+            $.ajax({
+                url: 'src/components/Student/Functions/UpdateProfile.php',
+                type: 'POST',
+                data: {'editprofilelink': editprofilelink, 'editname': editname, 'editemail': editemail, 'editnumber': editnumber, 'editlocation': editlocation, 'editcollege': editcollege},
+                success: function(response) {
+                    alert(response);
+                }
+            });
+        }
 </script>
