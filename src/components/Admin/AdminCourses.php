@@ -25,25 +25,6 @@ if ($result->num_rows > 0) {
     }
 }
 
-// -------------------------- Inserting New Course --------------------------
-if(isset($_POST['newcourse']) && isset($_POST['newImg']) && isset($_POST['newvideo']) && isset($_POST['newdetails']) && isset($_POST['newprize']) && isset($_POST['newdiscount']) && !empty($_POST['newcourse']) && !empty($_POST['newImg']) && !empty($_POST['newvideo']) && !empty($_POST['newdetails']) && !empty($_POST['newprize']) && !empty($_POST['newdiscount'])) {
-    $newcourse = $_POST['newcourse'];
-    $newImg = $_POST['newImg'];
-    $newvideo = $_POST['newvideo'];
-    $newdetails = $_POST['newdetails'];
-    $newprize = $_POST['newprize'];
-    $newdiscount = $_POST['newdiscount'];
-
-    $sql = "INSERT INTO courses (cname, pictureurl, videourl, cinfo, prize, discount) VALUES ('$newcourse', '$newImg', '$newvideo', '$newdetails', '$newprize', '$newdiscount')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo '<script>alert("New course created successfully")</script>';
-    } else {
-        echo '<script>alert("Error: " . $sql . "<br>" . $conn->error)</script>';
-    }
-    $conn->close();
-}
-
 // -------------------------- Editing Course --------------------------
 if(isset($_POST['editcourse']) && isset($_POST['editImg']) && isset($_POST['editvideo']) && isset($_POST['editdetails']) && isset($_POST['editprize']) && isset($_POST['editdiscount']) && !empty($_POST['editcourse']) && !empty($_POST['editImg']) && !empty($_POST['editvideo']) && !empty($_POST['editdetails']) && !empty($_POST['editprize']) && !empty($_POST['editdiscount'])) {
     // Assign ID From the button
@@ -106,37 +87,37 @@ if(isset($_POST['coursesdelete'])) {
         <div class='flex w-100 justify-end'>
                 <button class='CloseButtonCourses'><?php echo $Icon_Close; ?></button>
         </div>
-        <form action="adminDash.php" method="POST">
+        <form method="POST">
             <div class='flex flex-row'>
                 <div>
                     <label for="newcourse">Course Name</label>
-                    <input type="text" name="newcourse" required>
+                    <input type="text" id="newcourse" name="newcourse" required>
                 </div>
                 <div>
                     <label for="newImg">Picture url</label>
-                    <input type="text" name="newImg" required>
+                    <input type="text" id="newImg" name="newImg" required>
                 </div>
                 <div>
                     <label for="newvideo">Video url</label>
-                    <input type="text" name="newvideo" required>
+                    <input type="text" id="newvideo" name="newvideo" required>
                 </div>
             </div>
             <div class='flex flex-row'>
                 <div>
                     <label for="newdetails">Course Description</label>
-                    <input type="text" name="newdetails" required>
+                    <input type="text" id="newdetails" name="newdetails" required>
                 </div>
                 <div>
                     <label for="newprize">Prize</label>
-                    <input type="number" name="newprize" required>
+                    <input type="number" id="newprize" name="newprize" required>
                 </div>
                 <div>
                     <label for="newdiscount">Discount</label>
-                    <input type="number" name="newdiscount" required>
+                    <input type="number" id="newdiscount" name="newdiscount" required>
                 </div>
             </div>
             <div class='items-center'>
-                <button class='submitButton' type="submit">Submit</button>
+                <button class='submitButton' type="submit" onclick="addCourse()">Submit</button>
             </div>
         </form>
     </div>
@@ -266,4 +247,25 @@ if(isset($_POST['coursesdelete'])) {
     CloseButtonCoursesDelete.addEventListener('click', ()=> {
         Delete.classList.remove('Active');
     });
+
+            // Add New Course
+            function addCourse() {
+            event.preventDefault();
+
+            var newcourse = $('#newcourse').val();
+            var newImg = $('#newImg').val();
+            var newvideo = $('#newvideo').val();
+            var newdetails = $('#newdetails').val();
+            var newprize = $('#newprize').val();
+            var newdiscount = $('#newdiscount').val();
+
+            $.ajax({
+                url: 'src/components/Admin/Functions/AddCourse.php',
+                type: 'POST',
+                data: {'newcourse': newcourse, 'newImg': newImg, 'newvideo': newvideo, 'newdetails': newdetails, 'newprize': newprize, 'newdiscount': newdiscount},
+                success: function(response) {
+                    alert(response);
+                }
+            });
+        }
 </script>
