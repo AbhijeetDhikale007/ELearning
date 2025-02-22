@@ -42,28 +42,28 @@ if (!$result) {
 <!-------------------- Profile Edit Div -------------------->
 
 <div class='ProfileChange flex items-center justify-center fixed w-100 h-100'>
-        <form action="adminDash.php" method="post">
+        <form method="POST">
             <div class='flex w-100 items-end'>
                 <button class='CloseButton'><?php echo $Icon_Close; ?></button>
             </div>
             <div>
-                <label for="profilelink">Profile url</label>
-                <input type="text" name="profilelink" required>
+                <label for="editprofilelink">Profile url</label>
+                <input type="text" id="editprofilelink" name="editprofilelink" required>
             </div>
             <div>
-                <label for="name">Your Name</label>
-                <input type="text" name="name" required>
+                <label for="editname">Your Name</label>
+                <input type="text" id="editname" name="editname" required>
             </div>
             <div>
-                <label for="username">Username</label>
-                <input type="text" name="username" required>
+                <label for="editusername">Username</label>
+                <input type="text" id="editusername" name="editusername" required>
             </div>
-            <div>
-                <label for="password">Password</label>
-                <input type="password" name="password" required>
-            </div>
+            <!-- <div>
+                <label for="editpassword">Password</label>
+                <input type="password" id="editpassword" name="editpassword" required>
+            </div> -->
             <div class='items-center'>
-                <button class='submitButton' type="submit">Submit</button>
+                <button class='submitButton' type="submit" onclick="updateProfile()">Submit</button>
             </div>
         </form>
 </div>
@@ -85,4 +85,22 @@ if (!$result) {
     CloseButton.addEventListener('click', ()=> {
         Profile.classList.remove('Active');
     });
+
+    // Update Profile
+    function updateProfile() {
+            event.preventDefault();
+
+            var editprofilelink = $('#editprofilelink').val();
+            var editname = $('#editname').val();
+            var editusername = $('#editusername').val();
+
+            $.ajax({
+                url: 'src/components/Admin/Functions/UpdateProfile.php',
+                type: 'POST',
+                data: {'editprofilelink': editprofilelink, 'editname': editname, 'editusername': editusername},
+                success: function(response) {
+                    alert(response);
+                }
+            });
+        }
 </script>
