@@ -1,0 +1,25 @@
+<?php
+$Login_file = 'C:\x' . "ampp\htdocs\ELearning\LoginID.php";
+$DB_file = 'C:\x' . "ampp\htdocs\ELearning\src\components\dBconnection.php";
+
+require $Login_file;
+require $DB_file;
+
+if(isset($_POST['editcourse']) && isset($_POST['editImg']) && isset($_POST['editvideo']) && isset($_POST['editdetails']) && isset($_POST['editprize']) && isset($_POST['editdiscount'])) {
+    
+    $editcourse = $_POST['editcourse'];
+    $editImg = $_POST['editImg'];
+    $editvideo = $_POST['editvideo'];
+    $editdetails = $_POST['editdetails'];
+    $editprize = $_POST['editprize'];
+    $editdiscount = $_POST['editdiscount'];
+
+    $sql = "UPDATE courses SET cname = '$editcourse', pictureurl = '$editImg', videourl = '$editvideo', cinfo = '$editdetails', prize = '$editprize', discount = '$editdiscount' WHERE id = '$Login_id";
+    
+    if($conn->query($sql) == true) {
+        echo "Course Edited Successfully";
+    } else {
+        echo "Failed To Edit Course";
+    }
+}
+?>
