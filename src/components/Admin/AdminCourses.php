@@ -73,7 +73,7 @@ if(isset($_POST['coursesdelete'])) {
                 <p class='text-[1.2vw]'><?= $courses['Name'] ?></p>
                 <div class='flex gap-15px'>
                     <button class='DeleteButtonCourses<?= $courses['id']; ?>'><?php echo $Icon_Delete ?></button>
-                    <button class='EditButtonCourses<?= $courses['id']; ?>'><?php echo $Icon_Edit ?></button>
+                    <button class='EditButtonCourses<?= $courses['id']; ?>' onclick='EditButton(<?= $courses['id']; ?>)' ><?php echo $Icon_Edit ?></button>
                 </div>
             </div>
         <?php endforeach ?>
@@ -267,5 +267,28 @@ if(isset($_POST['coursesdelete'])) {
                     alert(response);
                 }
             });
+        }
+
+        // Edit Course
+        function EditButton(id) {
+            function EditCourse(id) {
+                event.preventDefault();
+
+                var editcourse = $('#editcourse').val();
+                var editImg = $('#editImg').val();
+                var editvideo = $('#editvideo').val();
+                var editdetails = $('#editdetails').val();
+                var editprize = $('#editprize').val();
+                var editdiscount = $('#editdiscount').val();
+
+                $.ajax({
+                    url: 'src/components/Admin/Functions/UpdateCourse.php',
+                    type: 'POST',
+                    data: {'id': id, 'editcourse': editcourse, 'editImg': editImg, 'editvideo': editvideo, 'editdetails': editdetails, 'editprize': editprize, 'editdiscount': editdiscount},
+                    success: function(response) {
+                        alert(response);
+                    }
+                });
+            }
         }
 </script>
