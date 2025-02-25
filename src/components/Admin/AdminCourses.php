@@ -26,24 +26,24 @@ if ($result->num_rows > 0) {
 }
 
 // -------------------------- Editing Course --------------------------
-if(isset($_POST['editcourse']) && isset($_POST['editImg']) && isset($_POST['editvideo']) && isset($_POST['editdetails']) && isset($_POST['editprize']) && isset($_POST['editdiscount']) && !empty($_POST['editcourse']) && !empty($_POST['editImg']) && !empty($_POST['editvideo']) && !empty($_POST['editdetails']) && !empty($_POST['editprize']) && !empty($_POST['editdiscount'])) {
-    // Assign ID From the button
-    $newcourse = $_POST['editcourse'];
-    $newImg = $_POST['editImg'];
-    $newvideo = $_POST['editvideo'];
-    $newdetails = $_POST['editdetails'];
-    $newprize = $_POST['editprize'];
-    $newdiscount = $_POST['editdiscount'];
+// if(isset($_POST['editcourse']) && isset($_POST['editImg']) && isset($_POST['editvideo']) && isset($_POST['editdetails']) && isset($_POST['editprize']) && isset($_POST['editdiscount']) && !empty($_POST['editcourse']) && !empty($_POST['editImg']) && !empty($_POST['editvideo']) && !empty($_POST['editdetails']) && !empty($_POST['editprize']) && !empty($_POST['editdiscount'])) {
+//     // Assign ID From the button
+//     $newcourse = $_POST['editcourse'];
+//     $newImg = $_POST['editImg'];
+//     $newvideo = $_POST['editvideo'];
+//     $newdetails = $_POST['editdetails'];
+//     $newprize = $_POST['editprize'];
+//     $newdiscount = $_POST['editdiscount'];
 
-    $sql = "UPDATE table courses SET cname= '$editcourse', pictureurl= '$editImg', videourl= '$editvideo', cinfo= '$editdetails', prize= '$editprize', discount= 'editdiscount' WHERE id='$id' ";
+//     $sql = "UPDATE table courses SET cname= '$editcourse', pictureurl= '$editImg', videourl= '$editvideo', cinfo= '$editdetails', prize= '$editprize', discount= 'editdiscount' WHERE id='$id' ";
 
-    if ($conn->query($sql) === TRUE) {
-        echo '<script>alert("New course created successfully")</script>';
-    } else {
-        echo '<script>alert("Error: " . $sql . "<br>" . $conn->error)</script>';
-    }
-    $conn->close();
-}
+//     if ($conn->query($sql) === TRUE) {
+//         echo '<script>alert("New course created successfully")</script>';
+//     } else {
+//         echo '<script>alert("Error: " . $sql . "<br>" . $conn->error)</script>';
+//     }
+//     $conn->close();
+// }
 
 // -------------------------- Deleting Course --------------------------
 if(isset($_POST['coursesdelete'])) {
@@ -73,7 +73,7 @@ if(isset($_POST['coursesdelete'])) {
                 <p class='text-[1.2vw]'><?= $courses['Name'] ?></p>
                 <div class='flex gap-15px'>
                     <button class='DeleteButtonCourses<?= $courses['id']; ?>'><?php echo $Icon_Delete ?></button>
-                    <button class='EditButtonCourses<?= $courses['id']; ?>' onclick='EditButton(<?= $courses['id']; ?>)' ><?php echo $Icon_Edit ?></button>
+                    <button class='EditButtonCourses<?= $courses['id']; ?>' onclick='EditButton<?= $courses['id']; ?>(<?= $courses['id']; ?>)' ><?php echo $Icon_Edit ?></button>
                 </div>
             </div>
         <?php endforeach ?>
@@ -134,33 +134,33 @@ if(isset($_POST['coursesdelete'])) {
             <div class='flex flex-row'>
                 <div>
                     <label for="editcourse">Course Name</label>
-                    <input type="text" name="editcourse" required>
+                    <input type="text" id='editcourse' name="editcourse" required>
                 </div>
                 <div>
                     <label for="editImg">Picture url</label>
-                    <input type="text" name="editImg" required>
+                    <input type="text" id='editImg' name="editImg" required>
                 </div>
                 <div>
                     <label for="editvideo">Video url</label>
-                    <input type="text" name="editvideo" required>
+                    <input type="text" id='editvideo' name="editvideo" required>
                 </div>
             </div>
             <div class='flex flex-row'>
                 <div>
                     <label for="editdetails">Course Description</label>
-                    <input type="text" name="editdetails" required>
+                    <input type="text" id='editdetails' name="editdetails" required>
                 </div>
                 <div>
                     <label for="editprize">Prize</label>
-                    <input type="number" name="editprize" required>
+                    <input type="number" id='editprize' name="editprize" required>
                 </div>
                 <div>
                     <label for="editdiscount">Discount</label>
-                    <input type="number" name="editdiscount" required>
+                    <input type="number" id='editdiscount' name="editdiscount" required>
                 </div>
             </div>
             <div class='items-center'>
-                <button class='submitButton' type="submit">Submit</button>
+                <button class='submitButton' type="submit" onclick='EditCourse()'>Submit</button>
             </div>
         </form>
     </div>
@@ -270,7 +270,8 @@ if(isset($_POST['coursesdelete'])) {
         }
 
         // Edit Course
-        function EditButton(id) {
+        <?php foreach($Courses as $courses): ?>
+        function EditButton<?= $courses['id']; ?>(id) {
             function EditCourse(id) {
                 event.preventDefault();
 
@@ -291,4 +292,5 @@ if(isset($_POST['coursesdelete'])) {
                 });
             }
         }
+        <?php endforeach; ?>
 </script>
