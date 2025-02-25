@@ -272,9 +272,16 @@ if(isset($_POST['coursesdelete'])) {
         // Edit Course
         <?php foreach($Courses as $courses): ?>
         function EditButton<?= $courses['id']; ?>(id) {
-            function EditCourse(id) {
-                event.preventDefault();
+            var editid = id;
+            console.log(editid);
+        }
+        <?php endforeach; ?>
 
+        function EditCourse(editid) {
+                event.preventDefault();
+                console.log(editid);
+
+                var id = editid;
                 var editcourse = $('#editcourse').val();
                 var editImg = $('#editImg').val();
                 var editvideo = $('#editvideo').val();
@@ -291,6 +298,4 @@ if(isset($_POST['coursesdelete'])) {
                     }
                 });
             }
-        }
-        <?php endforeach; ?>
 </script>
