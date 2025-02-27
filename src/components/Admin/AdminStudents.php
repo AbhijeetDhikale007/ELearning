@@ -81,29 +81,29 @@ if(isset($_POST['editprofilelink']) && isset($_POST['editname']) && isset($_POST
             <div class='flex flex-row'>
                 <div>
                     <label for="editname">Name</label>
-                    <input type="text" name="editname" required>
+                    <input type="text" id="editname" name="editname" required>
                 </div>
                 <div>
                     <label for="editprofileurl">Profile Link</label>
-                    <input type="text" name="editprofileurl" required>
+                    <input type="text" id="editprofileurl" name="editprofileurl" required>
                 </div>
                 <div>
                     <label for="editemail">Email</label>
-                    <input type="email" name="editemail" required>
+                    <input type="email" id="editemail" name="editemail" required>
                 </div>
             </div>
             <div class='flex flex-row'>
                 <div>
                     <label for="editnumber">Phone Number</label>
-                    <input type="number" name="number" required>
+                    <input type="number" id="number" name="number" required>
                 </div>
                 <div>
                     <label for="editaddress">Address</label>
-                    <input type="text" name="editaddress" required>
+                    <input type="text" id="editaddress" name="editaddress" required>
                 </div>
                 <div>
                     <label for="editcollege">College</label>
-                    <input type="text" name="editcollege" required>
+                    <input type="text" id="editcollege" name="editcollege" required>
                 </div>
             </div>
             <div class='items-center'>
