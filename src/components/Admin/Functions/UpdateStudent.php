@@ -13,7 +13,7 @@ if(isset($_POST['id']) && isset($_POST['editname']) && isset($_POST['editprofile
     $editaddress = $_POST['editaddress'];
     $editcollege = $_POST['editcollege'];
 
-    $sql = "UPDATE students SET sname = '$editname', profileurl = '$editprofileurl', email = '$editemail', number = '$number', address = '$editaddress', college = '$editcollege' WHERE id = '$id";
+    $sql = "UPDATE students SET sname = '$editname', profileurl = '$editprofileurl', email = '$editemail', number = '$number', address = '$editaddress', college = '$editcollege' WHERE id = '$id'";
     
     if($conn->query($sql) == true) {
         echo "Student Edited Successfully";
