@@ -46,18 +46,18 @@ if ($result->num_rows > 0) {
 // }
 
 // -------------------------- Deleting Course --------------------------
-if(isset($_POST['coursesdelete'])) {
-    // Assign ID From the button
+// if(isset($_POST['coursesdelete'])) {
+//     // Assign ID From the button
 
-    $sql = "DELETE FROM courses WHERE id='$Deleteid' ";
+//     $sql = "DELETE FROM courses WHERE id='$Deleteid' ";
 
-    if ($conn->query($sql) === TRUE) {
-        echo '<script>alert("New course created successfully")</script>';
-    } else {
-        echo '<script>alert("Error: " . $sql . "<br>" . $conn->error)</script>';
-    }
-    $conn->close();
-}
+//     if ($conn->query($sql) === TRUE) {
+//         echo '<script>alert("New course created successfully")</script>';
+//     } else {
+//         echo '<script>alert("Error: " . $sql . "<br>" . $conn->error)</script>';
+//     }
+//     $conn->close();
+// }
 ?>
 
 <!------------- Courses Content ------------->
@@ -272,16 +272,13 @@ if(isset($_POST['coursesdelete'])) {
         // Edit Course
         <?php foreach($Courses as $courses): ?>
         function EditButton<?= $courses['id']; ?>(id) {
-            var editid = id;
-            console.log(editid);
+            globalEditId = id;
         }
         <?php endforeach; ?>
 
-        function EditCourse(editid) {
+        function EditCourse() {
                 event.preventDefault();
-                console.log(editid);
 
-                var id = editid;
                 var editcourse = $('#editcourse').val();
                 var editImg = $('#editImg').val();
                 var editvideo = $('#editvideo').val();
@@ -292,7 +289,7 @@ if(isset($_POST['coursesdelete'])) {
                 $.ajax({
                     url: 'src/components/Admin/Functions/UpdateCourse.php',
                     type: 'POST',
-                    data: {'id': id, 'editcourse': editcourse, 'editImg': editImg, 'editvideo': editvideo, 'editdetails': editdetails, 'editprize': editprize, 'editdiscount': editdiscount},
+                    data: {'id': globalEditId, 'editcourse': editcourse, 'editImg': editImg, 'editvideo': editvideo, 'editdetails': editdetails, 'editprize': editprize, 'editdiscount': editdiscount},
                     success: function(response) {
                         alert(response);
                     }
