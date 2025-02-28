@@ -1,5 +1,5 @@
 <?php
-$DB_file = 'C:\x' . "ampp\htdocs\ELearning\src\components\dBconnection.php";
+$DB_file = 'C:\xampp\htdocs\ELearning\src\components\dBconnection.php';
 
 require $DB_file;
 
