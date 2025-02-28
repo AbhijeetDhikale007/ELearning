@@ -77,7 +77,7 @@ if(isset($_POST['editprofilelink']) && isset($_POST['editname']) && isset($_POST
         <div class='flex w-100 justify-end'>
                 <button class='CloseButtonStudents'><?php echo $Icon_Close; ?></button>
         </div>
-        <form action="adminDash.php" method="post">
+        <form method="POST">
             <div class='flex flex-row'>
                 <div>
                     <label for="editname">Name</label>

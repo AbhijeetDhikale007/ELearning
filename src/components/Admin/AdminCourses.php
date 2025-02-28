@@ -81,7 +81,6 @@ if ($result->num_rows > 0) {
 </div>
 
 <!-------------------- Add Courses Div -------------------->
-
 <div class='CoursesChange flex items-center justify-center fixed top-0 w-100 h-100'>
     <div class='Wrapper'>
         <div class='flex w-100 justify-end'>
@@ -130,7 +129,7 @@ if ($result->num_rows > 0) {
         <div class='flex w-100 justify-end'>
                 <button class='CloseButtonCoursesEdit'><?php echo $Icon_Close; ?></button>
         </div>
-        <form action="adminDash.php" method="post">
+        <form method="POST">
             <div class='flex flex-row'>
                 <div>
                     <label for="editcourse">Course Name</label>
