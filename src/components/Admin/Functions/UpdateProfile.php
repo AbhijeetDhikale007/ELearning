@@ -1,6 +1,6 @@
 <?php
-$Login_file = 'C:\x' . "ampp\htdocs\ELearning\LoginID.php";
-$DB_file = 'C:\x' . "ampp\htdocs\ELearning\src\components\dBconnection.php";
+$Login_file = 'C:\xampp\htdocs\ELearning\LoginID.php';
+$DB_file = 'C:\xampp\htdocs\ELearning\src\components\dBconnection.php';
 
 require $Login_file;
 require $DB_file;
