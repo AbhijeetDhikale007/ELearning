@@ -24,25 +24,6 @@ if ($result->num_rows > 0) {
         ];
     }
 }
-
-if(isset($_POST['editprofilelink']) && isset($_POST['editname']) && isset($_POST['editemail']) && isset($_POST['editnumber']) && isset($_POST['editaddress']) && isset($_POST['editcollege']) && !empty($_POST['editprofileurl']) && !empty($_POST['editname']) && !empty($_POST['editemail']) && !empty($_POST['editnumber']) && !empty($_POST['editaddress']) && !empty($_POST['editcollege'])) {
-    // Assign ID Here From Button
-    $editprofileurl = $_POST['editprofileurl'];
-    $editname = $_POST['editname'];
-    $editnumber = $_POST['editnumber'];
-    $editaddress = $_POST['editaddress'];
-    $editcollege = $_POST['editcollege'];
-
-    $sql = "UPDATE table courses SET profileurl= '$editprofileurl', sname= '$editname', email= '$editemail', number= '$editnumber', address= '$editaddress', college= 'editcollege' WHERE id='$id' ";
-
-    if ($conn->query($sql) === TRUE) {
-        echo '<script>alert("Your profile edited successfully")</script>';
-    } else {
-        echo '<script>alert("Error: " . $sql . "<br>" . $conn->error)</script>';
-    }
-    $conn->close();
-}
-
 ?>
 
 <!-------------------- Students Div -------------------->
@@ -64,7 +45,7 @@ if(isset($_POST['editprofilelink']) && isset($_POST['editname']) && isset($_POST
                 <p><?= $students['Email'] ?></p>
                 <div class='flex gap-15px'>
                     <button class='DeleteStudents<?= $students['id']; ?>'><?php echo $Icon_Delete ?></button>
-                    <button class='EditStudents<?= $students['id']; ?>'><?php echo $Icon_Edit ?></button>
+                    <button class='EditStudents<?= $students['id']; ?>' onclick='EditButton<?= $students['id']; ?>(<?= $students['id']; ?>)' ><?php echo $Icon_Edit ?></button>
                 </div>
             </div>
         <?php endforeach ?>
@@ -95,7 +76,7 @@ if(isset($_POST['editprofilelink']) && isset($_POST['editname']) && isset($_POST
             <div class='flex flex-row'>
                 <div>
                     <label for="editnumber">Phone Number</label>
-                    <input type="number" id="number" name="number" required>
+                    <input type="number" id="editnumber" name="editnumber" required>
                 </div>
                 <div>
                     <label for="editaddress">Address</label>
@@ -107,7 +88,7 @@ if(isset($_POST['editprofilelink']) && isset($_POST['editname']) && isset($_POST
                 </div>
             </div>
             <div class='items-center'>
-                <button class='submitButton' type="submit">Submit</button>
+                <button class='submitButton' type="submit" onclick='EditStudent()'>Submit</button>
             </div>
         </form>
     </div>
@@ -174,4 +155,31 @@ if(isset($_POST['editprofilelink']) && isset($_POST['editname']) && isset($_POST
     CloseButtonStudentsDelete.addEventListener('click', ()=> {
         DeleteChangeStudents.classList.remove('Active');
     });
+
+        // Edit Student
+        <?php foreach($Students as $students): ?>
+            function EditButton<?= $students['id']; ?>(id) {
+                globalEditId = id;
+            }
+        <?php endforeach; ?>
+
+    function EditStudent() {
+        event.preventDefault();
+
+        var editname = $('#editname').val();
+        var editprofileurl = $('#editprofileurl').val();
+        var editemail = $('#editemail').val();
+        var editnumber = $('#editnumber').val();
+        var editaddress = $('#editaddress').val();
+        var editcollege = $('#editcollege').val();
+
+        $.ajax({
+            url: 'src/components/Admin/Functions/UpdateStudent.php',
+            type: 'POST',
+            data: {'id': globalEditId, 'editname': editname, 'editprofileurl': editprofileurl, 'editemail': editemail, 'editnumber': editnumber, 'editaddress': editaddress, 'editcollege': editcollege},
+            success: function(response) {
+                alert(response);
+            }
+        });
+    }
 </script>
