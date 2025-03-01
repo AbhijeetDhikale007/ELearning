@@ -1,6 +1,6 @@
 <?php
-include 'src/components/dBconnection.php';
-include 'src/components/Icons.php';
+// include 'src/components/dBconnection.php';
+// include 'src/components/Icons.php';
 
 $sql = "SELECT * FROM students";
 $result = $conn->query($sql);

@@ -1,5 +1,5 @@
 <?php
-// include 'src/components/dBconnection.php';
+include 'src/components/dBconnection.php';
 include 'src/components/Icons.php';
 require 'LoginID.php';
 ?>

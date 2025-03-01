@@ -1,6 +1,6 @@
 <?php
-include 'src/components/dBconnection.php';
-include 'src/components/Icons.php';
+// include 'src/components/dBconnection.php';
+// include 'src/components/Icons.php';
 
 // SQL query to fetch data
 $sql = "SELECT * FROM admin where id= '$Login_id'";
