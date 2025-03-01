@@ -16,9 +16,9 @@ if(isset($_POST['newsname']) && isset($_POST['newprofileurl']) && isset($_POST['
     $sql = "INSERT INTO students (sname, profileurl, email, number, address, college, password) VALUES ('$newsname', '$newprofileurl', '$newemail', '$newnumber', '$newaddress', '$newcollege', '$newpassword')";
     
     if($conn->query($sql) == true) {
-        echo "New Course Added Successfully";
+        echo "New Student Added Successfully";
     } else {
-        echo "Failed To Add New Course";
+        echo "Failed To Add New Student";
     }
 }
 ?> 
