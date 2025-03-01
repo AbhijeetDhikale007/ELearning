@@ -1,6 +1,6 @@
-<!--------- Remote Connection --------->
-
 <?php
+// --------- Remote Connection ---------
+
 $servername = "127.0.0.1";
 $username = "remote_user";
 $password = "_PassWord@cct";
@@ -11,11 +11,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-?>
 
-<!--------- Local Connection --------->
+// --------- Local Connection ---------
 
-<!-- <?php
 // $servername = "localhost";  // IP Address To Connect To The Database
 // $username = "root";
 // $password = "";
@@ -26,4 +24,4 @@ if ($conn->connect_error) {
 // if ($conn->connect_error) {
 //   die("Connection failed: " . $conn->connect_error);
 // }
-?> -->
+?>
