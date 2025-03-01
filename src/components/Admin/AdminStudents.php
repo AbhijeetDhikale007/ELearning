@@ -30,9 +30,9 @@ if ($result->num_rows > 0) {
 
 <div class='DashContent w-100% relative'>
     <h1 class='josefin-sans'>Students</h1>
-    <!-- <div class='flex justify-end w-94'>
-        <button class='Button-AddCourse'>Add Student +</button>
-    </div> -->
+    <div class='flex justify-end w-94'>
+        <button class='AddButtonStudent Button-AddCourse'>Add Course +</button>
+    </div>
     <div class='Students flex flex-col gap-16px w-94'>
         <div class='CourseContainer flex justify-between p-2 text-[1.2vw]'>
             <p>Name</p>
@@ -60,7 +60,55 @@ if ($result->num_rows > 0) {
     </div>
 </div>
 
-<!-------------------- Edit Div -------------------->
+<!-------------------- Add Student Div -------------------->
+<div class='CoursesChange StudentsNew flex items-center justify-center absolute w-100 h-100'>
+    <div class="Wrapper">
+        <div class='flex w-100 justify-end'>
+                <button class='CloseButtonNewStudents'><?php echo $Icon_Close; ?></button>
+        </div>
+        <form method="POST">
+            <div class='flex flex-row'>
+                <div>
+                    <label for="newsname">Name</label>
+                    <input type="text" id="newsname" name="newsname" required>
+                </div>
+                <div>
+                    <label for="newprofileurl">Profile Link</label>
+                    <input type="text" id="newprofileurl" name="newprofileurl" required>
+                </div>
+                <div>
+                    <label for="newemail">Email</label>
+                    <input type="email" id="newemail" name="newemail" required>
+                </div>
+            </div>
+            <div class='flex flex-row'>
+                <div>
+                    <label for="newnumber">Phone Number</label>
+                    <input type="number" id="newnumber" name="newnumber" required>
+                </div>
+                <div>
+                    <label for="newaddress">Address</label>
+                    <input type="text" id="newaddress" name="newaddress" required>
+                </div>
+                <div>
+                    <label for="newcollege">College</label>
+                    <input type="text" id="newcollege" name="newcollege" required>
+                </div>
+            </div>
+            <div class='flex flex-row'>
+                <div>
+                    <label for="newpassword">Password</label>
+                    <input type="password" id="newpassword" name="newpassword" required>
+                </div>
+            </div>
+            <div class='items-center'>
+                <button class='submitButton' type="submit" onclick='AddStudent()'>Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-------------------- Edit Student Div -------------------->
 <div class='CoursesChange StudentsChange flex items-center justify-center absolute w-100 h-100'>
     <div class="Wrapper">
         <div class='flex w-100 justify-end'>
@@ -118,6 +166,12 @@ if ($result->num_rows > 0) {
 </div>
 
 <script>
+    // Add Button of Adding New Student Container
+    const AddButtonStudent = document.querySelector('.AddButtonStudent');
+
+    // Close Button of Adding New Student Container
+    const CloseButtonNewStudents = document.querySelector('.CloseButtonNewStudents');
+
     // Edit Buttons of Students
     <?php foreach($Students as $students): ?>
         const EditStudents<?= $students['id']; ?> = document.querySelector('.EditStudents<?= $students['id']; ?>');
@@ -127,6 +181,9 @@ if ($result->num_rows > 0) {
     <?php foreach($Students as $students): ?>
         const DeleteStudents<?= $students['id']; ?> = document.querySelector('.DeleteStudents<?= $students['id']; ?>');
     <?php endforeach; ?>
+
+    // Students Add Container
+    const StudentsNew = document.querySelector('.StudentsNew');
 
     // Students Editing Container
     const StudentsChange = document.querySelector('.StudentsChange');
@@ -139,6 +196,16 @@ if ($result->num_rows > 0) {
 
     // Delete Students Container
     const DeleteChangeStudents = document.querySelector('.DeleteChangeStudents');
+
+    // Add Button of Adding New Student Container
+    AddButtonStudent.addEventListener('click', ()=> {
+        StudentsNew.classList.add('Active');
+    });
+
+    // Close Button of Adding New Student Container
+    CloseButtonNewStudents.addEventListener('click', ()=> {
+        StudentsNew.classList.remove('Active');
+    });
 
     // Edit Buttons of Students
     <?php foreach($Students as $students): ?>
@@ -165,7 +232,7 @@ if ($result->num_rows > 0) {
     });
 
 
-            // ----------------------- Delete Student -----------------------
+        // ----------------------- Delete Student -----------------------
         <?php foreach($Students as $students): ?>
         function DeleteButton<?= $students['id']; ?>(id) {
             globalDeleteId = id;
@@ -185,12 +252,34 @@ if ($result->num_rows > 0) {
                 });
             }
 
-        // ----------------------- Edit Student -----------------------
-        <?php foreach($Students as $students): ?>
-            function EditButton<?= $students['id']; ?>(id) {
-                globalEditId = id;
+    // ----------------------- New Student -----------------------
+    function AddStudent() {
+        event.preventDefault();
+
+        var newsname = $('#newsname').val();
+        var newprofileurl = $('#newprofileurl').val();
+        var newemail = $('#newemail').val();
+        var newnumber = $('#newnumber').val();
+        var newaddress = $('#newaddress').val();
+        var newcollege = $('#newcollege').val();
+        var newpassword = $('#newpassword').val();
+
+        $.ajax({
+            url: 'src/components/Admin/Functions/AddStudent.php',
+            type: 'POST',
+            data: {'newsname': newsname, 'newprofileurl': newprofileurl, 'newemail': newemail, 'newnumber': newnumber, 'newaddress': newaddress, 'newcollege': newcollege, 'newpassword': newpassword},
+            success: function(response) {
+                alert(response);
             }
-        <?php endforeach; ?>
+        });
+    }
+
+    // ----------------------- Edit Student -----------------------
+    <?php foreach($Students as $students): ?>
+        function EditButton<?= $students['id']; ?>(id) {
+            globalEditId = id;
+        }
+    <?php endforeach; ?>
 
     function EditStudent() {
         event.preventDefault();
