@@ -52,8 +52,16 @@ if ($result->num_rows > 0) {
             <div class='CourseContainer flex justify-between p-3'>
                 <p class='text-[1.2vw]'><?= $courses['Name'] ?></p>
                 <div class='flex gap-15px'>
-                    <button class='DeleteButtonCourses<?= $courses['id']; ?>'><?php echo $Icon_Delete ?></button>
-                    <button class='EditButtonCourses<?= $courses['id']; ?>' onclick='EditButton<?= $courses['id']; ?>(<?= $courses['id']; ?>)' ><?php echo $Icon_Edit ?></button>
+                    <button 
+                        class='DeleteButtonCourses<?= $courses['id']; ?>' 
+                        onclick='DeleteButton<?= $courses['id']; ?>(<?= $courses['id']; ?>)'>
+                        <?php echo $Icon_Delete ?>
+                    </button>
+                    <button 
+                        class='EditButtonCourses<?= $courses['id']; ?>' 
+                        onclick='EditButton<?= $courses['id']; ?>(<?= $courses['id']; ?>)'>
+                        <?php echo $Icon_Edit ?>
+                    </button>
                 </div>
             </div>
         <?php endforeach ?>
@@ -152,10 +160,10 @@ if ($result->num_rows > 0) {
         <div class='flex w-100 justify-end'>
                 <button class='CloseButtonCoursesDelete'><?php echo $Icon_Close; ?></button>
         </div>
-        <form action="adminDash.php" method="post">
+        <form method="POST">
                 <label for="coursesdelete">Are you want to delete.</label>
             <div class='items-center'>
-                <button class='submitButton' type="submit">Delete</button>
+                <button class='submitButton' type="submit" onclick='DeleteCourse()'>Delete</button>
             </div>
         </form>
     </div>
@@ -248,7 +256,27 @@ if ($result->num_rows > 0) {
             });
         }
 
-        // Edit Course
+        // ----------------------- Delete Course -----------------------
+        <?php foreach($Courses as $courses): ?>
+        function DeleteButton<?= $courses['id']; ?>(id) {
+            globalDeleteId = id;
+        }
+        <?php endforeach; ?>
+
+        function DeleteCourse() {
+                event.preventDefault();
+
+                $.ajax({
+                    url: 'src/components/Admin/Functions/DeleteCourse.php',
+                    type: 'POST',
+                    data: {'id': globalDeleteId},
+                    success: function(response) {
+                        alert(response);
+                    }
+                });
+            }
+
+        // ----------------------- Edit Course -----------------------
         <?php foreach($Courses as $courses): ?>
         function EditButton<?= $courses['id']; ?>(id) {
             globalEditId = id;
