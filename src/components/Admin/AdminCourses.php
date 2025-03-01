@@ -113,29 +113,29 @@ if ($result->num_rows > 0) {
             <div class='flex flex-row'>
                 <div>
                     <label for="editcourse">Course Name</label>
-                    <input type="text" id='editcourse' name="editcourse" required>
+                    <input type="text" id='editcourse' name="editcourse">
                 </div>
                 <div>
                     <label for="editImg">Picture url</label>
-                    <input type="text" id='editImg' name="editImg" required>
+                    <input type="text" id='editImg' name="editImg">
                 </div>
                 <div>
                     <label for="editvideo">Video url</label>
-                    <input type="text" id='editvideo' name="editvideo" required>
+                    <input type="text" id='editvideo' name="editvideo">
                 </div>
             </div>
             <div class='flex flex-row'>
                 <div>
                     <label for="editdetails">Course Description</label>
-                    <input type="text" id='editdetails' name="editdetails" required>
+                    <input type="text" id='editdetails' name="editdetails">
                 </div>
                 <div>
                     <label for="editprize">Prize</label>
-                    <input type="number" id='editprize' name="editprize" required>
+                    <input type="number" id='editprize' name="editprize">
                 </div>
                 <div>
                     <label for="editdiscount">Discount</label>
-                    <input type="number" id='editdiscount' name="editdiscount" required>
+                    <input type="number" id='editdiscount' name="editdiscount">
                 </div>
             </div>
             <div class='items-center'>
