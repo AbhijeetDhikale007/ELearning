@@ -25,26 +25,6 @@ if ($result->num_rows > 0) {
     }
 }
 
-// -------------------------- Editing Course --------------------------
-// if(isset($_POST['editcourse']) && isset($_POST['editImg']) && isset($_POST['editvideo']) && isset($_POST['editdetails']) && isset($_POST['editprize']) && isset($_POST['editdiscount']) && !empty($_POST['editcourse']) && !empty($_POST['editImg']) && !empty($_POST['editvideo']) && !empty($_POST['editdetails']) && !empty($_POST['editprize']) && !empty($_POST['editdiscount'])) {
-//     // Assign ID From the button
-//     $newcourse = $_POST['editcourse'];
-//     $newImg = $_POST['editImg'];
-//     $newvideo = $_POST['editvideo'];
-//     $newdetails = $_POST['editdetails'];
-//     $newprize = $_POST['editprize'];
-//     $newdiscount = $_POST['editdiscount'];
-
-//     $sql = "UPDATE table courses SET cname= '$editcourse', pictureurl= '$editImg', videourl= '$editvideo', cinfo= '$editdetails', prize= '$editprize', discount= 'editdiscount' WHERE id='$id' ";
-
-//     if ($conn->query($sql) === TRUE) {
-//         echo '<script>alert("New course created successfully")</script>';
-//     } else {
-//         echo '<script>alert("Error: " . $sql . "<br>" . $conn->error)</script>';
-//     }
-//     $conn->close();
-// }
-
 // -------------------------- Deleting Course --------------------------
 // if(isset($_POST['coursesdelete'])) {
 //     // Assign ID From the button
