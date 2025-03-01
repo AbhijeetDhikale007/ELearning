@@ -44,8 +44,16 @@ if ($result->num_rows > 0) {
                 <p><?= $students['Name'] ?></p>
                 <p><?= $students['Email'] ?></p>
                 <div class='flex gap-15px'>
-                    <button class='DeleteStudents<?= $students['id']; ?>'><?php echo $Icon_Delete ?></button>
-                    <button class='EditStudents<?= $students['id']; ?>' onclick='EditButton<?= $students['id']; ?>(<?= $students['id']; ?>)' ><?php echo $Icon_Edit ?></button>
+                    <button 
+                        class='DeleteStudents<?= $students['id']; ?>' 
+                        onclick='DeleteButton<?= $students['id']; ?>(<?= $students['id']; ?>)'>
+                        <?php echo $Icon_Delete ?>
+                    </button>
+                    <button 
+                        class='EditStudents<?= $students['id']; ?>' 
+                        onclick='EditButton<?= $students['id']; ?>(<?= $students['id']; ?>)'>
+                        <?php echo $Icon_Edit ?>
+                    </button>
                 </div>
             </div>
         <?php endforeach ?>
@@ -100,10 +108,10 @@ if ($result->num_rows > 0) {
         <div class='flex w-100 justify-end'>
                 <button class='CloseButtonStudentsDelete'><?php echo $Icon_Close; ?></button>
         </div>
-        <form action="adminDash.php" method="post">
+        <form method="POST">
             <label for="delete">Are you want to delete.</label>
             <div class='items-center'>
-                <button class='submitButton' type="submit">Delete</button>
+                <button class='submitButton' type="submit" onclick='DeleteStudent()'>Delete</button>
             </div>
         </form>
     </div>
@@ -156,7 +164,28 @@ if ($result->num_rows > 0) {
         DeleteChangeStudents.classList.remove('Active');
     });
 
-        // Edit Student
+
+            // ----------------------- Delete Student -----------------------
+        <?php foreach($Students as $students): ?>
+        function DeleteButton<?= $students['id']; ?>(id) {
+            globalDeleteId = id;
+        }
+        <?php endforeach; ?>
+
+        function DeleteStudent() {
+                event.preventDefault();
+
+                $.ajax({
+                    url: 'src/components/Admin/Functions/DeleteStudent.php',
+                    type: 'POST',
+                    data: {'id': globalDeleteId},
+                    success: function(response) {
+                        alert(response);
+                    }
+                });
+            }
+
+        // ----------------------- Edit Student -----------------------
         <?php foreach($Students as $students): ?>
             function EditButton<?= $students['id']; ?>(id) {
                 globalEditId = id;
