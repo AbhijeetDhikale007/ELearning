@@ -3,22 +3,74 @@ $DB_file = 'C:\xampp\htdocs\ELearning\src\components\dBconnection.php';
 
 require $DB_file;
 
-if(isset($_POST['id']) && isset($_POST['editcourse']) && isset($_POST['editImg']) && isset($_POST['editvideo']) && isset($_POST['editdetails']) && isset($_POST['editprize']) && isset($_POST['editdiscount'])) {
-    
-    $id = $_POST['id'];
-    $editcourse = $_POST['editcourse'];
-    $editImg = $_POST['editImg'];
-    $editvideo = $_POST['editvideo'];
-    $editdetails = $_POST['editdetails'];
-    $editprize = $_POST['editprize'];
-    $editdiscount = $_POST['editdiscount'];
+$id = $_POST['id'];
+$Message = "Failed To Edit Course";
 
-    $sql = "UPDATE courses SET cname = '$editcourse', pictureurl = '$editImg', videourl = '$editvideo', cinfo = '$editdetails', prize = '$editprize', discount = '$editdiscount' WHERE id = '$id'";
+if(isset($_POST['editcourse']) && !empty($_POST['editcourse'])) {
+    
+    $editcourse = $_POST['editcourse'];
+
+    $sql = "UPDATE courses SET cname = '$editcourse' WHERE id = '$id'";
     
     if($conn->query($sql) == true) {
-        echo "Course Edited Successfully";
-    } else {
-        echo "Failed To Edit Course";
+        $Message = "Course Edited Successfully";
     }
 }
+
+if(isset($_POST['editImg']) && !empty($_POST['editImg'])) {
+    
+    $editImg = $_POST['editImg'];
+
+    $sql = "UPDATE courses SET pictureurl = '$editImg' WHERE id = '$id'";
+    
+    if($conn->query($sql) == true) {
+        $Message = "Course Edited Successfully";
+    }
+}
+
+if(isset($_POST['editvideo']) && !empty($_POST['editvideo'])) {
+    
+    $editvideo = $_POST['editvideo'];
+
+    $sql = "UPDATE courses SET videourl = '$editvideo' WHERE id = '$id'";
+    
+    if($conn->query($sql) == true) {
+        $Message = "Course Edited Successfully";
+    }
+}
+
+if(isset($_POST['editdetails']) && !empty($_POST['editdetails'])) {
+    
+    $editdetails = $_POST['editdetails'];
+
+    $sql = "UPDATE courses SET cinfo = '$editdetails' WHERE id = '$id'";
+    
+    if($conn->query($sql) == true) {
+        $Message = "Course Edited Successfully";
+    }
+}
+
+if(isset($_POST['editprize']) && !empty($_POST['editprize'])) {
+    
+    $editprize = $_POST['editprize'];
+
+    $sql = "UPDATE courses SET prize = '$editprize' WHERE id = '$id'";
+    
+    if($conn->query($sql) == true) {
+        $Message = "Course Edited Successfully";
+    }
+}
+
+if(isset($_POST['editdiscount']) && !empty($_POST['editdiscount'])) {
+    
+    $editdiscount = $_POST['editdiscount'];
+
+    $sql = "UPDATE courses SET discount = '$editdiscount' WHERE id = '$id'";
+    
+    if($conn->query($sql) == true) {
+        $Message = "Course Edited Successfully";
+    }
+}
+
+echo $Message;
 ?>
