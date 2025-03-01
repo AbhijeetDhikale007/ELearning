@@ -48,19 +48,19 @@ if (!$result) {
             </div>
             <div>
                 <label for="editprofilelink">Profile url</label>
-                <input type="text" id="editprofilelink" name="editprofilelink" required>
+                <input type="text" id="editprofilelink" name="editprofilelink">
             </div>
             <div>
                 <label for="editname">Your Name</label>
-                <input type="text" id="editname" name="editname" required>
+                <input type="text" id="editname" name="editname">
             </div>
             <div>
                 <label for="editusername">Username</label>
-                <input type="text" id="editusername" name="editusername" required>
+                <input type="text" id="editusername" name="editusername">
             </div>
             <!-- <div>
                 <label for="editpassword">Password</label>
-                <input type="password" id="editpassword" name="editpassword" required>
+                <input type="password" id="editpassword" name="editpassword">
             </div> -->
             <div class='items-center'>
                 <button class='submitButton' type="submit" onclick="updateProfile()">Submit</button>
