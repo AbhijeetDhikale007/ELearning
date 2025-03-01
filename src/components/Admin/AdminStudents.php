@@ -61,30 +61,30 @@ if ($result->num_rows > 0) {
         <form method="POST">
             <div class='flex flex-row'>
                 <div>
-                    <label for="editname">Name</label>
-                    <input type="text" id="editname" name="editname" required>
+                    <label for="editsname">Name</label>
+                    <input type="text" id="editsname" name="editsname">
                 </div>
                 <div>
                     <label for="editprofileurl">Profile Link</label>
-                    <input type="text" id="editprofileurl" name="editprofileurl" required>
+                    <input type="text" id="editprofileurl" name="editprofileurl">
                 </div>
                 <div>
                     <label for="editemail">Email</label>
-                    <input type="email" id="editemail" name="editemail" required>
+                    <input type="email" id="editemail" name="editemail">
                 </div>
             </div>
             <div class='flex flex-row'>
                 <div>
                     <label for="editnumber">Phone Number</label>
-                    <input type="number" id="editnumber" name="editnumber" required>
+                    <input type="number" id="editnumber" name="editnumber">
                 </div>
                 <div>
                     <label for="editaddress">Address</label>
-                    <input type="text" id="editaddress" name="editaddress" required>
+                    <input type="text" id="editaddress" name="editaddress">
                 </div>
                 <div>
                     <label for="editcollege">College</label>
-                    <input type="text" id="editcollege" name="editcollege" required>
+                    <input type="text" id="editcollege" name="editcollege">
                 </div>
             </div>
             <div class='items-center'>
@@ -166,7 +166,7 @@ if ($result->num_rows > 0) {
     function EditStudent() {
         event.preventDefault();
 
-        var editname = $('#editname').val();
+        var editsname = $('#editsname').val();
         var editprofileurl = $('#editprofileurl').val();
         var editemail = $('#editemail').val();
         var editnumber = $('#editnumber').val();
@@ -176,7 +176,7 @@ if ($result->num_rows > 0) {
         $.ajax({
             url: 'src/components/Admin/Functions/UpdateStudent.php',
             type: 'POST',
-            data: {'id': globalEditId, 'editname': editname, 'editprofileurl': editprofileurl, 'editemail': editemail, 'editnumber': editnumber, 'editaddress': editaddress, 'editcollege': editcollege},
+            data: {'id': globalEditId, 'editsname': editsname, 'editprofileurl': editprofileurl, 'editemail': editemail, 'editnumber': editnumber, 'editaddress': editaddress, 'editcollege': editcollege},
             success: function(response) {
                 alert(response);
             }
