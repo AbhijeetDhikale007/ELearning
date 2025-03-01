@@ -143,6 +143,12 @@ if ($result->num_rows > 0) {
                     <input type="text" id="editcollege" name="editcollege">
                 </div>
             </div>
+            <div class='flex flex-row'>
+                <div>
+                    <label for="editpassword">Password</label>
+                    <input type="password" id="editpassword" name="editpassword" required>
+                </div>
+            </div>
             <div class='items-center'>
                 <button class='submitButton' type="submit" onclick='EditStudent()'>Submit</button>
             </div>
@@ -290,11 +296,12 @@ if ($result->num_rows > 0) {
         var editnumber = $('#editnumber').val();
         var editaddress = $('#editaddress').val();
         var editcollege = $('#editcollege').val();
+        var editpassword = $('#editpassword').val();
 
         $.ajax({
             url: 'src/components/Admin/Functions/UpdateStudent.php',
             type: 'POST',
-            data: {'id': globalEditId, 'editsname': editsname, 'editprofileurl': editprofileurl, 'editemail': editemail, 'editnumber': editnumber, 'editaddress': editaddress, 'editcollege': editcollege},
+            data: {'id': globalEditId, 'editsname': editsname, 'editprofileurl': editprofileurl, 'editemail': editemail, 'editnumber': editnumber, 'editaddress': editaddress, 'editcollege': editcollege, 'editpassword': editpassword},
             success: function(response) {
                 alert(response);
             }

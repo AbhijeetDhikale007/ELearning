@@ -72,5 +72,16 @@ if(isset($_POST['editcollege']) && !empty($_POST['editcollege'])) {
     }
 }
 
+if(isset($_POST['editpassword']) && !empty($_POST['editpassword'])) {
+    
+    $editpassword = $_POST['editpassword'];
+
+    $sql = "UPDATE students SET password = '$editpassword' WHERE id = '$id'";
+    
+    if($conn->query($sql) == true) {
+        $Message = "Student Edited Successfully";
+    }
+}
+
 echo $Message;
 ?>
