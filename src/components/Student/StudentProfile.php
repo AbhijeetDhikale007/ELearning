@@ -5,9 +5,6 @@
 $sql = "SELECT * FROM students where id='$Login_id'";
 $result = $conn->query($sql);
 
-if(!$result) {
-    die("Query Failed: ". $conn->error);
-}
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
