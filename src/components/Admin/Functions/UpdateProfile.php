@@ -40,5 +40,27 @@ if(isset($_POST['editusername']) && !empty($_POST['editusername'])) {
     }
 }
 
+if(isset($_POST['editpassword']) && !empty($_POST['editpassword'])) {
+
+    $editpassword = $_POST['editpassword'];
+    
+    $sql = "UPDATE admin SET password = '$editpassword' WHERE id = '$Login_id'";
+    
+    if($conn->query($sql) == true) {
+        $Message = "Your Profile Updated Successfully";
+    }
+}
+
+if(isset($_POST['editnumber']) && !empty($_POST['editnumber'])) {
+
+    $editnumber = $_POST['editnumber'];
+    
+    $sql = "UPDATE admin SET number = '$editnumber' WHERE id = '$Login_id'";
+    
+    if($conn->query($sql) == true) {
+        $Message = "Your Profile Updated Successfully";
+    }
+}
+
 echo $Message;
 ?> 

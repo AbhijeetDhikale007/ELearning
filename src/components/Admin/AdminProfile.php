@@ -48,20 +48,24 @@ if (!$result) {
             </div>
             <div>
                 <label for="editprofilelink">Profile url</label>
-                <input type="text" id="editprofilelink" name="editprofilelink">
+                <input type="text" id="editprofilelink" name="editprofilelink" placeholder='Profile Link'>
             </div>
             <div>
                 <label for="editname">Your Name</label>
-                <input type="text" id="editname" name="editname">
+                <input type="text" id="editname" name="editname" placeholder='Name'>
             </div>
             <div>
                 <label for="editusername">Username</label>
-                <input type="text" id="editusername" name="editusername">
+                <input type="text" id="editusername" name="editusername" placeholder='Username'>
             </div>
-            <!-- <div>
+            <div>
                 <label for="editpassword">Password</label>
-                <input type="password" id="editpassword" name="editpassword">
-            </div> -->
+                <input type="password" id="editpassword" name="editpassword" placeholder='Password'>
+            </div>
+            <div>
+                <label for="editnumber">Number</label>
+                <input type="number" id="editnumber" name="editnumber" placeholder='10 digits'>
+            </div>
             <div class='items-center'>
                 <button class='submitButton' type="submit" onclick="updateProfile()">Submit</button>
             </div>
@@ -93,11 +97,13 @@ if (!$result) {
             var editprofilelink = $('#editprofilelink').val();
             var editname = $('#editname').val();
             var editusername = $('#editusername').val();
+            var editpassword = $('#editpassword').val();
+            var editnumber = $('#editnumber').val();
 
             $.ajax({
                 url: 'src/components/Admin/Functions/UpdateProfile.php',
                 type: 'POST',
-                data: {'editprofilelink': editprofilelink, 'editname': editname, 'editusername': editusername},
+                data: {'editprofilelink': editprofilelink, 'editname': editname, 'editusername': editusername, 'editpassword': editpassword, 'editnumber': editnumber},
                 success: function(response) {
                     alert(response);
                 }
