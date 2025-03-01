@@ -221,7 +221,7 @@ if ($result->num_rows > 0) {
         Delete.classList.remove('Active');
     });
 
-            // Add New Course
+            // ----------------------- Add New Course -----------------------
             function addCourse() {
             event.preventDefault();
 
