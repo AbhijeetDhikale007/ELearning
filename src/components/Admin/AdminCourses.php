@@ -82,11 +82,11 @@ if ($result->num_rows > 0) {
                 </div>
                 <div>
                     <label for="newprize">Prize</label>
-                    <input type="number" id="newprize" name="newprize" required>
+                    <input type="text" id="newprize" name="newprize" required>
                 </div>
                 <div>
                     <label for="newdiscount">Discount</label>
-                    <input type="number" id="newdiscount" name="newdiscount" required>
+                    <input type="text" id="newdiscount" name="newdiscount" required>
                 </div>
             </div>
             <div class='items-center'>
@@ -125,11 +125,11 @@ if ($result->num_rows > 0) {
                 </div>
                 <div>
                     <label for="editprize">Prize</label>
-                    <input type="number" id='editprize' name="editprize">
+                    <input type="text" id='editprize' name="editprize">
                 </div>
                 <div>
                     <label for="editdiscount">Discount</label>
-                    <input type="number" id='editdiscount' name="editdiscount">
+                    <input type="text" id='editdiscount' name="editdiscount">
                 </div>
             </div>
             <div class='items-center'>
@@ -156,6 +156,26 @@ if ($result->num_rows > 0) {
 </div>
 
 <script>
+    // Remove non-digits & limit to 6
+    document.getElementById("newprize").addEventListener("input", function (e) {
+        this.value = this.value.replace(/\D/g, "").slice(0, 6);
+    });
+
+    // Remove non-digits & limit to 3
+    document.getElementById("newdiscount").addEventListener("input", function (e) {
+        this.value = this.value.replace(/\D/g, "").slice(0, 3);
+    });
+
+    // Remove non-digits & limit to 6
+    document.getElementById("editprize").addEventListener("input", function (e) {
+        this.value = this.value.replace(/\D/g, "").slice(0, 6);
+    });
+
+    // Remove non-digits & limit to 3
+    document.getElementById("editdiscount").addEventListener("input", function (e) {
+        this.value = this.value.replace(/\D/g, "").slice(0, 3);
+    });
+
     // Add Button of Adding New Course Container
     const AddButtonCourses = document.querySelector('.AddButtonCourses');
 
