@@ -74,6 +74,17 @@ aside div a.active {
     display: flex;
 }
 
+#InstructorsContent {
+    scale: 0;
+    display: none;
+    transition: .5s;
+}
+
+#InstructorsContent.Active {
+    scale: 1;
+    display: flex;
+}
+
 #StudentsContent {
     scale: 0;
     display: none;
