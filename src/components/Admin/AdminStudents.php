@@ -131,8 +131,8 @@ if ($result->num_rows > 0) {
             </div>
             <div class='flex flex-row'>
                 <div>
-                    <label for="editnumber">Phone Number</label>
-                    <input type="text" class='editnumber' id="editnumber" name="editnumber" placeholder='10 digits'>
+                    <label for="editnumberStudents">Phone Number</label>
+                    <input type="text" id="editnumberStudents" name="editnumberStudents" placeholder='10 digits'>
                 </div>
                 <div>
                     <label for="editaddress">Address</label>
@@ -178,7 +178,7 @@ if ($result->num_rows > 0) {
     });
 
     // Remove non-digits & limit to 10
-    document.querySelector(".editnumber").addEventListener("input", function (e) {
+    document.querySelector("#editnumberStudents").addEventListener("input", function (e) {
         this.value = this.value.replace(/\D/g, "").slice(0, 10);
     });
 
@@ -303,7 +303,7 @@ if ($result->num_rows > 0) {
         var editsname = $('#editsname').val();
         var editprofileurl = $('#editprofileurl').val();
         var editemail = $('#editemail').val();
-        var editnumber = $('#editnumber').val();
+        var editnumberStudents = $('#editnumberStudents').val();
         var editaddress = $('#editaddress').val();
         var editcollege = $('#editcollege').val();
         var editpassword = $('#editpassword').val();
@@ -311,7 +311,7 @@ if ($result->num_rows > 0) {
         $.ajax({
             url: 'src/components/Admin/Functions/UpdateStudent.php',
             type: 'POST',
-            data: {'id': globalEditId, 'editsname': editsname, 'editprofileurl': editprofileurl, 'editemail': editemail, 'editnumber': editnumber, 'editaddress': editaddress, 'editcollege': editcollege, 'editpassword': editpassword},
+            data: {'id': globalEditId, 'editsname': editsname, 'editprofileurl': editprofileurl, 'editemail': editemail, 'editnumber': editnumberStudents, 'editaddress': editaddress, 'editcollege': editcollege, 'editpassword': editpassword},
             success: function(response) {
                 alert(response);
             }
