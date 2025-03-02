@@ -50,29 +50,29 @@ if ($result->num_rows > 0) {
         <div class='flex flex-row'>
             <div>
                 <label for="editprofilelink">Profile url</label>
-                <input type="text" id="editprofilelink" name="editprofilelink" required>
+                <input type="text" id="editprofilelink" name="editprofilelink" required placeholder='Profile Link'>
             </div>
             <div>
                 <label for="editname">Your Name</label>
-                <input type="text" id="editname" name="editname" required>
+                <input type="text" id="editname" name="editname" required placeholder='Name'>
             </div>
             <div>
                 <label for="editemail">Email</label>
-                <input type="email" id="editemail" name="editemail" required>
+                <input type="email" id="editemail" name="editemail" required placeholder='Email'>
             </div>
         </div>
         <div class='flex flex-row'>
             <div>
                 <label for="editnumber">Number</label>
-                <input type="number" id="editnumber" name="editnumber" required>
+                <input type="text" id="editnumber" name="editnumber" required placeholder='Number'>
             </div>
             <div>
-                <label for="editlocation">Location</label>
-                <input type="text" id="editlocation" name="editlocation" required>
+                <label for="editlocation">Address</label>
+                <input type="text" id="editlocation" name="editlocation" required placeholder='Address'>
             </div>
             <div>
                 <label for="editcollege">College</label>
-                <input type="text" id="editcollege" name="editcollege" required>
+                <input type="text" id="editcollege" name="editcollege" required placeholder='College'>
             </div>
         </div>
         <div class='items-center'>
@@ -82,6 +82,11 @@ if ($result->num_rows > 0) {
 </div>
 
 <script>
+    // Remove non-digits & limit to 10
+    document.getElementById("editnumber").addEventListener("input", function (e) {
+        this.value = this.value.replace(/\D/g, "").slice(0, 10);
+    });
+
     // Profile Edit Button
     const EditButton = document.querySelector('.EditButton');
 
