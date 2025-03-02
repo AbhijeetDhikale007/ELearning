@@ -41,17 +41,6 @@ aside div a.active {
     border-bottom: .5px solid rgb(0, 250, 250);
 }
 
-#DashContent {
-    scale: 1;
-    display: flex;
-    transition: .5s;
-}
-
-#DashContent.Active {
-    scale: 0;
-    display: none;
-}
-
 #ProfileContent {
     scale: 0;
     display: none;
