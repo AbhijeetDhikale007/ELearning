@@ -16,6 +16,10 @@
             <?php echo $Icon_Courses ?>
             Courses
         </button>
+        <button id='InstructorsButton' class:active={}>
+            <?php echo $Icon_experts ?>
+            Instructors
+        </button>
         <button id='StudentsButton' class:active={}>
             <?php echo $Icon_Students ?>
             Students
@@ -35,6 +39,11 @@
     <?php include 'src/components/Admin/AdminCourses.php'; ?>
 </div>
 
+<!------------- Instructors Content ------------->
+<div class='DashContent w-100%' id='InstructorsContent'>
+    <?php include 'src/components/Admin/AdminInstructors.php'; ?>
+</div>
+
 <!------------- Students Content ------------->
 <div class='DashContent w-100%' id='StudentsContent'>
     <?php include 'src/components/Admin/AdminStudents.php'; ?>
@@ -49,6 +58,10 @@
     const CoursesButton = document.querySelector('#CoursesButton');
     const CoursesContent = document.querySelector('#CoursesContent');
 
+    // Instructors Content
+    const InstructorsButton = document.querySelector('#InstructorsButton');
+    const InstructorsContent = document.querySelector('#InstructorsContent');
+
     // Students Content
     const StudentsButton = document.querySelector('#StudentsButton');
     const StudentsContent = document.querySelector('#StudentsContent');
@@ -57,6 +70,7 @@
     ProfileButton.addEventListener('click', ()=> {
         ProfileContent.classList.add('Active');
         CoursesContent.classList.remove('Active');
+        InstructorsContent.classList.remove('Active');
         StudentsContent.classList.remove('Active');
 
         document.title = 'Admin Profile';
@@ -66,9 +80,20 @@
     CoursesButton.addEventListener('click', ()=> {
         CoursesContent.classList.add('Active');
         ProfileContent.classList.remove('Active');
+        InstructorsContent.classList.remove('Active');
         StudentsContent.classList.remove('Active');
 
         document.title = 'Admin Courses';
+    });
+
+    // Instructors Content
+    InstructorsButton.addEventListener('click', ()=> {
+        InstructorsContent.classList.add('Active');
+        StudentsContent.classList.remove('Active');
+        ProfileContent.classList.remove('Active');
+        CoursesContent.classList.remove('Active');
+
+        document.title = 'Admin Students';
     });
 
     // Students Content
@@ -76,6 +101,7 @@
         StudentsContent.classList.add('Active');
         ProfileContent.classList.remove('Active');
         CoursesContent.classList.remove('Active');
+        InstructorsContent.classList.remove('Active');
 
         document.title = 'Admin Students';
     });
