@@ -64,7 +64,7 @@ if (!$result) {
             </div>
             <div>
                 <label for="editnumber">Number</label>
-                <input type="number" id="editnumber" name="editnumber" placeholder='10 digits'>
+                <input type="text" id="editnumber" name="editnumber" placeholder='10 digits'>
             </div>
             <div class='items-center'>
                 <button class='submitButton' type="submit" onclick="updateProfile()">Submit</button>
@@ -73,6 +73,11 @@ if (!$result) {
 </div>
 
 <script>
+    // Remove non-digits & limit to 10
+    document.getElementById("editnumber").addEventListener("input", function (e) {
+        this.value = this.value.replace(/\D/g, "").slice(0, 10);
+    });
+  
     // Profile Edit Button and Content
     const EditButton = document.querySelector('.EditButton');
     const CloseButton = document.querySelector('.CloseButton');
