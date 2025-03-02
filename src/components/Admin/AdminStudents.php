@@ -31,7 +31,7 @@ if ($result->num_rows > 0) {
 <div class='DashContent w-100% relative'>
     <h1 class='josefin-sans'>Students</h1>
     <div class='flex justify-end w-94'>
-        <button class='AddButtonStudent Button-AddCourse'>Add Course +</button>
+        <button class='AddButtonStudent Button-AddCourse'>Add Student +</button>
     </div>
     <div class='Students flex flex-col gap-16px w-94'>
         <div class='CourseContainer flex justify-between p-2 text-[1.2vw]'>
@@ -70,35 +70,35 @@ if ($result->num_rows > 0) {
             <div class='flex flex-row'>
                 <div>
                     <label for="newsname">Name</label>
-                    <input type="text" id="newsname" name="newsname" required>
+                    <input type="text" id="newsname" name="newsname" required placeholder='Name'>
                 </div>
                 <div>
                     <label for="newprofileurl">Profile Link</label>
-                    <input type="text" id="newprofileurl" name="newprofileurl" required>
+                    <input type="text" id="newprofileurl" name="newprofileurl" required placeholder='Profile Link'>
                 </div>
                 <div>
                     <label for="newemail">Email</label>
-                    <input type="email" id="newemail" name="newemail" required>
+                    <input type="email" id="newemail" name="newemail" required placeholder='Email'>
                 </div>
             </div>
             <div class='flex flex-row'>
                 <div>
                     <label for="newnumber">Phone Number</label>
-                    <input type="number" id="newnumber" name="newnumber" required>
+                    <input type="text" id="newnumber" name="newnumber" required placeholder='Number'>
                 </div>
                 <div>
                     <label for="newaddress">Address</label>
-                    <input type="text" id="newaddress" name="newaddress" required>
+                    <input type="text" id="newaddress" name="newaddress" required placeholder='Address'>
                 </div>
                 <div>
                     <label for="newcollege">College</label>
-                    <input type="text" id="newcollege" name="newcollege" required>
+                    <input type="text" id="newcollege" name="newcollege" required placeholder='College'>
                 </div>
             </div>
             <div class='flex flex-row'>
                 <div>
                     <label for="newpassword">Password</label>
-                    <input type="password" id="newpassword" name="newpassword" required>
+                    <input type="password" id="newpassword" name="newpassword" required placeholder='Password'>
                 </div>
             </div>
             <div class='items-center'>
@@ -118,35 +118,35 @@ if ($result->num_rows > 0) {
             <div class='flex flex-row'>
                 <div>
                     <label for="editsname">Name</label>
-                    <input type="text" id="editsname" name="editsname">
+                    <input type="text" id="editsname" name="editsname" placeholder='Name'>
                 </div>
                 <div>
                     <label for="editprofileurl">Profile Link</label>
-                    <input type="text" id="editprofileurl" name="editprofileurl">
+                    <input type="text" id="editprofileurl" name="editprofileurl" placeholder='Profile Link'>
                 </div>
                 <div>
                     <label for="editemail">Email</label>
-                    <input type="email" id="editemail" name="editemail">
+                    <input type="email" id="editemail" name="editemail" placeholder='Email'>
                 </div>
             </div>
             <div class='flex flex-row'>
                 <div>
                     <label for="editnumber">Phone Number</label>
-                    <input type="number" id="editnumber" name="editnumber">
+                    <input type="text" class='editnumber' id="editnumber" name="editnumber" placeholder='10 digits'>
                 </div>
                 <div>
                     <label for="editaddress">Address</label>
-                    <input type="text" id="editaddress" name="editaddress">
+                    <input type="text" id="editaddress" name="editaddress" placeholder='Address'>
                 </div>
                 <div>
                     <label for="editcollege">College</label>
-                    <input type="text" id="editcollege" name="editcollege">
+                    <input type="text" id="editcollege" name="editcollege" placeholder='College'>
                 </div>
             </div>
             <div class='flex flex-row'>
                 <div>
                     <label for="editpassword">Password</label>
-                    <input type="password" id="editpassword" name="editpassword" required>
+                    <input type="password" id="editpassword" name="editpassword" placeholder='Password'>
                 </div>
             </div>
             <div class='items-center'>
@@ -172,6 +172,16 @@ if ($result->num_rows > 0) {
 </div>
 
 <script>
+    // Remove non-digits & limit to 10
+    document.getElementById("newnumber").addEventListener("input", function (e) {
+        this.value = this.value.replace(/\D/g, "").slice(0, 10);
+    });
+
+    // Remove non-digits & limit to 10
+    document.querySelector(".editnumber").addEventListener("input", function (e) {
+        this.value = this.value.replace(/\D/g, "").slice(0, 10);
+    });
+
     // Add Button of Adding New Student Container
     const AddButtonStudent = document.querySelector('.AddButtonStudent');
 
