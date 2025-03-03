@@ -20,7 +20,7 @@ if ($result->num_rows > 0) {
             // 'video' => $row['videourl'],
             // 'Info' => $row['cinfo'],
             'Prize' => $row['prize'],
-            // 'Discount' => $row['discount']
+            'Discount' => $row['discount']
         ];
     }
 }
@@ -34,10 +34,16 @@ if ($result->num_rows > 0) {
         <button class='Button-AddCourse'>Add Course +</button>
     </div> -->
     <div class='Courses flex flex-col gap-16px w-94'>
+        <div class='CourseContainer flex justify-between p-2 text-[1.2vw]'>
+            <p>Course</p>
+            <p>Prize</p>
+            <p>Discount</p>
+        </div>
         <?php foreach($Courses as $courses): ?>
             <div class='CourseContainer flex justify-between text-[1.2vw] p-3'>
                 <p><?= $courses['Name'] ?></p>
                 <p><?= $courses['Prize'] ?> &#8377;</p>
+                <p><?= $courses['Discount'] ?> %</p>
             </div>
         <?php endforeach ?>
     </div>
