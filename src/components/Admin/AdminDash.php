@@ -93,7 +93,7 @@
         ProfileContent.classList.remove('Active');
         CoursesContent.classList.remove('Active');
 
-        document.title = 'Admin Students';
+        document.title = 'Admin Instructors';
     });
 
     // Students Content
