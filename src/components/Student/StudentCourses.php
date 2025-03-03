@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
     </div> -->
     <div class='Courses flex flex-col gap-16px w-94'>
         <div class='CourseContainer flex justify-between p-2 text-[1.2vw]'>
-            <p>Course</p>
+            <p>Courses</p>
             <p>Prize</p>
             <p>Discount</p>
         </div>
