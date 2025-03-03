@@ -117,7 +117,7 @@ if ($result->num_rows > 0) {
             var editpassword = $('#editpassword').val();
 
             $.ajax({
-                url: 'src/components/Instructor/Functions/UpdateTeacher.php',
+                url: 'src/components/Instructor/Functions/UpdateProfile.php',
                 type: 'POST',
                 data: {'editprofileurl': editprofileurl, 'edittname': edittname, 'editemail': editemail, 'editprofession': editprofession, 'editpassword': editpassword},
                 success: function(response) {
