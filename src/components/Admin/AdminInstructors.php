@@ -86,7 +86,7 @@ if ($result->num_rows > 0) {
                 </div>
                 <div>
                     <label for="newpassword">Password</label>
-                    <input type="password" id="newpassword" name="newpassword" required placeholder='Password'>
+                    <input type="password" id="newpassword" name="newpassword" required placeholder='Min 8 characters'>
                 </div>
             </div>
             <div class='items-center'>
@@ -124,7 +124,7 @@ if ($result->num_rows > 0) {
                 </div>
                 <div>
                     <label for="editpasswordInstructor">Password</label>
-                     <input type="password" id="editpasswordInstructor" name="editpasswordInstructor" placeholder='Password'>
+                     <input type="password" id="editpasswordInstructor" name="editpasswordInstructor" placeholder='Min 8 characters'>
                 </div>
             </div>
             <div class='items-center'>
@@ -246,14 +246,20 @@ if ($result->num_rows > 0) {
         var newprofession = $('#newprofession').val();
         var newpassword = $('#newpassword').val();
 
-        $.ajax({
-            url: 'src/components/Admin/Functions/AddInstructor.php',
-            type: 'POST',
-            data: {'newtname': newtname, 'newprofileurl': newprofileurl, 'newemail': newemail, 'newprofession': newprofession, 'newpassword': newpassword},
-            success: function(response) {
-                alert(response);
-            }
-        });
+        if (newpassword !== "" && newpassword.length < 8) {
+            alert("Password must contains atleast 8 characters");
+        }
+
+        else {
+            $.ajax({
+                url: 'src/components/Admin/Functions/AddInstructor.php',
+                type: 'POST',
+                data: {'newtname': newtname, 'newprofileurl': newprofileurl, 'newemail': newemail, 'newprofession': newprofession, 'newpassword': newpassword},
+                success: function(response) {
+                    alert(response);
+                }
+            });
+        }
     }
 
     // ----------------------- Edit Instructor -----------------------
@@ -272,13 +278,19 @@ if ($result->num_rows > 0) {
         var editprofession = $('#editprofession').val();
         var editpasswordInstructor = $('#editpasswordInstructor').val();
 
-        $.ajax({
-            url: 'src/components/Admin/Functions/UpdateInstructor.php',
-            type: 'POST',
-            data: {'id': globalEditId, 'edittname': edittname, 'editprofileurl': editprofileurl, 'editemail': editemail, 'editprofession': editprofession, 'editpassword': editpasswordInstructor},
-            success: function(response) {
-                alert(response);
-            }
-        });
+        if (editpasswordInstructor !== "" && editpasswordInstructor.length < 8) {
+            alert("Password must contains atleast 8 characters");
+        }
+
+        else {
+            $.ajax({
+                url: 'src/components/Admin/Functions/UpdateInstructor.php',
+                type: 'POST',
+                data: {'id': globalEditId, 'edittname': edittname, 'editprofileurl': editprofileurl, 'editemail': editemail, 'editprofession': editprofession, 'editpassword': editpasswordInstructor},
+                success: function(response) {
+                    alert(response);
+                }
+            });
+        }
     }
 </script>
