@@ -84,7 +84,7 @@ if ($result->num_rows > 0) {
             <div class='flex flex-row'>
                 <div>
                     <label for="newnumber">Phone Number</label>
-                    <input type="text" id="newnumber" name="newnumber" required placeholder='Number'>
+                    <input type="text" id="newnumber" name="newnumber" required placeholder='10 digits'>
                 </div>
                 <div>
                     <label for="newaddress">Address</label>
@@ -98,7 +98,7 @@ if ($result->num_rows > 0) {
             <div class='flex flex-row'>
                 <div>
                     <label for="newpassword">Password</label>
-                    <input type="password" id="newpassword" name="newpassword" required placeholder='Password'>
+                    <input type="password" id="newpassword" name="newpassword" required placeholder='Min 8 characters'>
                 </div>
             </div>
             <div class='items-center'>
@@ -146,7 +146,7 @@ if ($result->num_rows > 0) {
             <div class='flex flex-row'>
                 <div>
                     <label for="editpassword">Password</label>
-                    <input type="password" id="editpassword" name="editpassword" placeholder='Password'>
+                    <input type="password" id="editpassword" name="editpassword" placeholder='Min 8 characters'>
                 </div>
             </div>
             <div class='items-center'>
