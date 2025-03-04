@@ -97,7 +97,7 @@ if (!$result) {
 
     // Update Profile
     function updateProfile() {
-            event.preventDefault();
+        event.preventDefault();
 
             var editprofilelink = $('#editprofilelink').val();
             var editname = $('#editname').val();
@@ -105,6 +105,15 @@ if (!$result) {
             var editpassword = $('#editpassword').val();
             var editnumber = $('#editnumber').val();
 
+        if (editpassword !== "" && editpassword.length < 8) {
+            alert("Password must contains atleast 8 characters");
+        }
+
+        else if (editnumber !== "" && editnumber.length < 10) {
+            alert("Number must contains 8 characters");
+        }
+
+        else {
             $.ajax({
                 url: 'src/components/Admin/Functions/UpdateProfile.php',
                 type: 'POST',
@@ -114,4 +123,5 @@ if (!$result) {
                 }
             });
         }
+    }
 </script>
