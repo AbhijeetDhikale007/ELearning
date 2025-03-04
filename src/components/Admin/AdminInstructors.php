@@ -157,13 +157,13 @@ if ($result->num_rows > 0) {
     const CloseButtonNewInstructors = document.querySelector('.CloseButtonNewInstructors');
 
     // Edit Buttons of Students
-    <?php foreach($Teachers as $teachers): ?>
-        const EditInstructors<?= $teachers['id']; ?> = document.querySelector('.EditInstructors<?= $teachers['id']; ?>');
+    <?php foreach($Instructor as $instructor): ?>
+        const EditInstructors<?= $instructor['id']; ?> = document.querySelector('.EditInstructors<?= $instructor['id']; ?>');
     <?php endforeach; ?>
 
     // Delete Buttons of Students
-    <?php foreach($Teachers as $teachers): ?>
-        const DeleteInstructors<?= $teachers['id']; ?> = document.querySelector('.DeleteInstructors<?= $teachers['id']; ?>');
+    <?php foreach($Instructor as $instructor): ?>
+        const DeleteInstructors<?= $instructor['id']; ?> = document.querySelector('.DeleteInstructors<?= $instructor['id']; ?>');
     <?php endforeach; ?>
 
     // Instructors Add Container
