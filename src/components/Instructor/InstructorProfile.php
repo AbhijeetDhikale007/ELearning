@@ -79,7 +79,7 @@ if ($result->num_rows > 0) {
             </div>
             <div>
                 <label for="editpassword">Password</label>
-                <input type="password" id="editpassword" name="editpassword" required placeholder='Password'>
+                <input type="password" id="editpassword" name="editpassword" required placeholder='Min 8 characters'>
             </div>
         </div>
         <div class='items-center'>
@@ -107,8 +107,8 @@ if ($result->num_rows > 0) {
     });
 
         // Update Profile
-        function updateProfile() {
-            event.preventDefault();
+    function updateProfile() {
+        event.preventDefault();
 
             var editprofileurl = $('#editprofileurl').val();
             var edittname = $('#edittname').val();
@@ -116,6 +116,11 @@ if ($result->num_rows > 0) {
             var editprofession = $('#editprofession').val();
             var editpassword = $('#editpassword').val();
 
+        if (editpassword !== "" && editpassword.length < 8) {
+            alert("Password must contains atleast 8 characters");
+        }
+
+        else {
             $.ajax({
                 url: 'src/components/Instructor/Functions/UpdateProfile.php',
                 type: 'POST',
@@ -125,4 +130,5 @@ if ($result->num_rows > 0) {
                 }
             });
         }
+    }
 </script>
