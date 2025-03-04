@@ -145,8 +145,8 @@ if ($result->num_rows > 0) {
             </div>
             <div class='flex flex-row'>
                 <div>
-                    <label for="editpassword">Password</label>
-                    <input type="password" id="editpassword" name="editpassword" placeholder='Min 8 characters'>
+                    <label for="editpasswordStudents">Password</label>
+                    <input type="password" id="editpasswordStudents" name="editpasswordStudents" placeholder='Min 8 characters'>
                 </div>
             </div>
             <div class='items-center'>
@@ -316,13 +316,13 @@ if ($result->num_rows > 0) {
         var editnumberStudents = $('#editnumberStudents').val();
         var editaddress = $('#editaddress').val();
         var editcollege = $('#editcollege').val();
-        var editpassword = $('#editpassword').val();
+        var editpasswordStudents = $('#editpasswordStudents').val();
 
         if (editnumberStudents !== "" && editnumberStudents.length < 10) {
             alert("Number must contains 10 digits");
         }
 
-        else if (editpassword !== "" && editpassword.length < 8) {
+        else if (editpasswordStudents !== "" && editpasswordStudents.length < 8) {
             alert("Password must contains atleast 8 characters");
         }
 
@@ -330,7 +330,7 @@ if ($result->num_rows > 0) {
             $.ajax({
                 url: 'src/components/Admin/Functions/UpdateStudent.php',
                 type: 'POST',
-                data: {'id': globalEditId, 'editsname': editsname, 'editprofileurl': editprofileurl, 'editemail': editemail, 'editnumber': editnumberStudents, 'editaddress': editaddress, 'editcollege': editcollege, 'editpassword': editpassword},
+                data: {'id': globalEditId, 'editsname': editsname, 'editprofileurl': editprofileurl, 'editemail': editemail, 'editnumber': editnumberStudents, 'editaddress': editaddress, 'editcollege': editcollege, 'editpassword': editpasswordStudents},
                 success: function(response) {
                     alert(response);
                 }
