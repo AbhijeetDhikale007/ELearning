@@ -75,6 +75,12 @@ if ($result->num_rows > 0) {
                 <input type="text" id="editcollege" name="editcollege" required placeholder='College'>
             </div>
         </div>
+        <div class='flex flex-row'>
+            <div>
+                <label for="editpassword">Password</label>
+                <input type="password" id="editpassword" name="editpassword" placeholder='Min 8 characters'>
+            </div>
+        </div>
         <div class='items-center'>
             <button class='submitButton' type="submit" onclick="updateProfile()">Submit</button>
         </div>
@@ -114,7 +120,17 @@ if ($result->num_rows > 0) {
             var editnumber = $('#editnumber').val();
             var editlocation = $('#editlocation').val();
             var editcollege = $('#editcollege').val();
+            var editpassword = $('#editpassword').val();
 
+        if (editnumber !== "" && editnumber.length < 10) {
+            alert("Number must contains 10 digits");
+        }
+
+        else if (editpassword !== "" && editpassword.length < 8) {
+            alert("Password must contains atleast 8 characters");
+        }
+
+        else {
             $.ajax({
                 url: 'src/components/Student/Functions/UpdateProfile.php',
                 type: 'POST',
@@ -124,4 +140,5 @@ if ($result->num_rows > 0) {
                 }
             });
         }
+    }
 </script>
