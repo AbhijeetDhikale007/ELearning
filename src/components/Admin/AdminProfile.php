@@ -110,7 +110,7 @@ if (!$result) {
         }
 
         else if (editnumber !== "" && editnumber.length < 10) {
-            alert("Number must contains 8 characters");
+            alert("Number must contains 10 digits");
         }
 
         else {
