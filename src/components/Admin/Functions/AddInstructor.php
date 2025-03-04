@@ -11,7 +11,7 @@ if(isset($_POST['newtname']) && isset($_POST['newprofileurl']) && isset($_POST['
     $newprofession = $_POST['newprofession'];
     $newpassword = $_POST['newpassword'];
 
-    $sql = "INSERT INTO teachers (tname, profile_pic, email, profession, password) VALUES ('$newtname', '$newprofileurl', '$newemail', '$newprofession', '$newpassword')";
+    $sql = "INSERT INTO instructor (tname, profile_pic, email, profession, password) VALUES ('$newtname', '$newprofileurl', '$newemail', '$newprofession', '$newpassword')";
     
     if($conn->query($sql) == true) {
         echo "New Instructor Added Successfully";

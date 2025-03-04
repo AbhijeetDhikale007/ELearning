@@ -2,18 +2,18 @@
 // include 'src/components/dBconnection.php';
 // include 'src/components/Icons.php';
 
-$sql = "SELECT * FROM teachers";
+$sql = "SELECT * FROM instructor";
 $result = $conn->query($sql);
 
 if(!$result) {
     die("Query Failed: ". $conn->error);
 }
 
-$Teachers = [];
+$Instructor = [];
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        $Teachers[] = [
+        $Instructor[] = [
             'id' => $row['id'],
             'Name' => $row['tname'],
             'Img' => $row['profile_pic'],
@@ -37,19 +37,19 @@ if ($result->num_rows > 0) {
             <p>Email</p>
             <p>Actions</p>
         </div>
-        <?php foreach($Teachers as $teachers): ?>
+        <?php foreach($Instructor as $instructor): ?>
             <div class='CourseContainer flex justify-between p-3 text-[1.2vw]'>
-                <p><?= $teachers['Name'] ?></p>
-                <p><?= $teachers['Email'] ?></p>
+                <p><?= $instructor['Name'] ?></p>
+                <p><?= $instructor['Email'] ?></p>
                 <div class='flex gap-15px'>
                     <button 
-                        class='DeleteInstructors<?= $teachers['id']; ?>' 
-                        onclick='DeleteButton<?= $teachers['id']; ?>(<?= $teachers['id']; ?>)'>
+                        class='DeleteInstructors<?= $instructor['id']; ?>' 
+                        onclick='DeleteButton<?= $instructor['id']; ?>(<?= $instructor['id']; ?>)'>
                         <?php echo $Icon_Delete ?>
                     </button>
                     <button 
-                        class='EditInstructors<?= $teachers['id']; ?>' 
-                        onclick='EditButton<?= $teachers['id']; ?>(<?= $teachers['id']; ?>)'>
+                        class='EditInstructors<?= $instructor['id']; ?>' 
+                        onclick='EditButton<?= $instructor['id']; ?>(<?= $instructor['id']; ?>)'>
                         <?php echo $Icon_Edit ?>
                     </button>
                 </div>
@@ -192,8 +192,8 @@ if ($result->num_rows > 0) {
     });
 
     // Edit Buttons of Instructor
-    <?php foreach($Teachers as $teachers): ?>
-        EditInstructors<?= $teachers['id']; ?>.addEventListener('click', ()=> {
+    <?php foreach($Instructor as $instructor): ?>
+        EditInstructors<?= $instructor['id']; ?>.addEventListener('click', ()=> {
             InstructorsChange.classList.add('Active');
         });
     <?php endforeach; ?>
@@ -204,8 +204,8 @@ if ($result->num_rows > 0) {
     });
 
     // Delete Buttons of Instructors
-    <?php foreach($Teachers as $teachers): ?>
-        DeleteInstructors<?= $teachers['id']; ?>.addEventListener('click', ()=> {
+    <?php foreach($Instructor as $instructor): ?>
+        DeleteInstructors<?= $instructor['id']; ?>.addEventListener('click', ()=> {
             DeleteChangeInstructors.classList.add('Active');
         });
     <?php endforeach; ?>
@@ -217,8 +217,8 @@ if ($result->num_rows > 0) {
 
 
         // ----------------------- Delete Instructor -----------------------
-        <?php foreach($Teachers as $teachers): ?>
-        function DeleteButton<?= $teachers['id']; ?>(id) {
+        <?php foreach($Instructor as $instructor): ?>
+        function DeleteButton<?= $instructor['id']; ?>(id) {
             globalDeleteId = id;
         }
         <?php endforeach; ?>
@@ -227,7 +227,7 @@ if ($result->num_rows > 0) {
                 event.preventDefault();
 
                 $.ajax({
-                    url: 'src/components/Admin/Functions/DeleteTeacher.php',
+                    url: 'src/components/Admin/Functions/DeleteInstructor.php',
                     type: 'POST',
                     data: {'id': globalDeleteId},
                     success: function(response) {
@@ -247,7 +247,7 @@ if ($result->num_rows > 0) {
         var newpassword = $('#newpassword').val();
 
         $.ajax({
-            url: 'src/components/Admin/Functions/AddTeacher.php',
+            url: 'src/components/Admin/Functions/AddInstructor.php',
             type: 'POST',
             data: {'newtname': newtname, 'newprofileurl': newprofileurl, 'newemail': newemail, 'newprofession': newprofession, 'newpassword': newpassword},
             success: function(response) {
@@ -257,8 +257,8 @@ if ($result->num_rows > 0) {
     }
 
     // ----------------------- Edit Instructor -----------------------
-    <?php foreach($Teachers as $teachers): ?>
-        function EditButton<?= $teachers['id']; ?>(id) {
+    <?php foreach($Instructor as $instructor): ?>
+        function EditButton<?= $instructor['id']; ?>(id) {
             globalEditId = id;
         }
     <?php endforeach; ?>
@@ -273,7 +273,7 @@ if ($result->num_rows > 0) {
         var editpasswordInstructor = $('#editpasswordInstructor').val();
 
         $.ajax({
-            url: 'src/components/Admin/Functions/UpdateTeacher.php',
+            url: 'src/components/Admin/Functions/UpdateInstructor.php',
             type: 'POST',
             data: {'id': globalEditId, 'edittname': edittname, 'editprofileurl': editprofileurl, 'editemail': editemail, 'editprofession': editprofession, 'editpassword': editpasswordInstructor},
             success: function(response) {

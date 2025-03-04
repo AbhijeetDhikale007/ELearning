@@ -2,7 +2,7 @@
 // include 'src/components/dBconnection.php';
 // include 'src/components/Icons.php';
 
-$sql = "SELECT * FROM teachers where id= '$Login_id'";
+$sql = "SELECT * FROM instructor where id= '$Login_id'";
 $result = $conn->query($sql);
 
 if (!$result) {
@@ -16,20 +16,6 @@ if (!$result) {
     $Img = $row['profile_pic'];
     $Email = $row['email'];
     $Profession = $row['profession'];
-
-$Teachers = [];
-
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $Teachers[] = [
-            'id' => $row['id'],
-            'Name' => $row['tname'],
-            'Img' => $row['profile_pic'],
-            'Email' => $row['email'],
-            'Profession' => $row['profession']
-        ];
-    }
-}
 ?>
 
 <!------------- Profile Content ------------->

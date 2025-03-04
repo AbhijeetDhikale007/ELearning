@@ -7,7 +7,7 @@ if(isset($_POST['id'])) {
     
     $id = $_POST['id'];
 
-    $sql = "DELETE FROM teachers WHERE id='$id'";
+    $sql = "DELETE FROM instructor WHERE id='$id'";
     
     if($conn->query($sql) == true) {
         echo "Instructor Deleted Successfully";
