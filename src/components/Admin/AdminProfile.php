@@ -60,7 +60,7 @@ if (!$result) {
             </div>
             <div>
                 <label for="editpassword">Password</label>
-                <input type="password" id="editpassword" name="editpassword" placeholder='Password'>
+                <input type="password" id="editpassword" name="editpassword" placeholder='Min 8 characters'>
             </div>
             <div>
                 <label for="editnumber">Number</label>
