@@ -75,7 +75,7 @@ if(isset($_POST['editcollege']) && !empty($_POST['editcollege'])) {
 
 if(isset($_POST['editpassword']) && !empty($_POST['editpassword'])) {
     
-    $editpassword = $_POST['editpassword'];
+    $editpassword = password_hash($_POST['editpassword'], PASSWORD_BCRYPT);
     
     $sql = "UPDATE students SET password = '$editpassword' WHERE id = '$Login_id'";
     

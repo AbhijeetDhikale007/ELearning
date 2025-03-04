@@ -11,7 +11,7 @@ if(isset($_POST['newsname']) && isset($_POST['newprofileurl']) && isset($_POST['
     $newnumber = $_POST['newnumber'];
     $newaddress = $_POST['newaddress'];
     $newcollege = $_POST['newcollege'];
-    $newpassword = $_POST['newpassword'];
+    $newpassword = password_hash($_POST['newpassword'], PASSWORD_BCRYPT);
 
     $sql = "INSERT INTO students (sname, profileurl, email, number, address, college, password) VALUES ('$newsname', '$newprofileurl', '$newemail', '$newnumber', '$newaddress', '$newcollege', '$newpassword')";
     

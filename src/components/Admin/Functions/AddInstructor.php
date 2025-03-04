@@ -9,7 +9,7 @@ if(isset($_POST['newtname']) && isset($_POST['newprofileurl']) && isset($_POST['
     $newprofileurl = $_POST['newprofileurl'];
     $newemail = $_POST['newemail'];
     $newprofession = $_POST['newprofession'];
-    $newpassword = $_POST['newpassword'];
+    $newpassword = password_hash($_POST['newpassword'], PASSWORD_BCRYPT);
 
     $sql = "INSERT INTO instructor (tname, profile_pic, email, profession, password) VALUES ('$newtname', '$newprofileurl', '$newemail', '$newprofession', '$newpassword')";
     

@@ -42,7 +42,7 @@ if(isset($_POST['editusername']) && !empty($_POST['editusername'])) {
 
 if(isset($_POST['editpassword']) && !empty($_POST['editpassword'])) {
 
-    $editpassword = $_POST['editpassword'];
+    $editpassword = password_hash($_POST['editpassword'], PASSWORD_BCRYPT);
     
     $sql = "UPDATE admin SET password = '$editpassword' WHERE id = '$Login_id'";
     
@@ -63,4 +63,4 @@ if(isset($_POST['editnumber']) && !empty($_POST['editnumber'])) {
 }
 
 echo $Message;
-?> 
+?>
