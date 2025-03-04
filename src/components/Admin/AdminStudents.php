@@ -279,15 +279,25 @@ if ($result->num_rows > 0) {
         var newaddress = $('#newaddress').val();
         var newcollege = $('#newcollege').val();
         var newpassword = $('#newpassword').val();
+        
+        if (newnumber !== "" && newnumber.length < 10) {
+            alert("Number must contains 10 digits");
+        }
 
-        $.ajax({
-            url: 'src/components/Admin/Functions/AddStudent.php',
-            type: 'POST',
-            data: {'newsname': newsname, 'newprofileurl': newprofileurl, 'newemail': newemail, 'newnumber': newnumber, 'newaddress': newaddress, 'newcollege': newcollege, 'newpassword': newpassword},
-            success: function(response) {
-                alert(response);
-            }
-        });
+        else if (newpassword !== "" && newpassword.length < 8) {
+            alert("Password must contains atleast 8 characters");
+        }
+
+        else {
+            $.ajax({
+                url: 'src/components/Admin/Functions/AddStudent.php',
+                type: 'POST',
+                data: {'newsname': newsname, 'newprofileurl': newprofileurl, 'newemail': newemail, 'newnumber': newnumber, 'newaddress': newaddress, 'newcollege': newcollege, 'newpassword': newpassword},
+                success: function(response) {
+                    alert(response);
+                }
+            });
+        }
     }
 
     // ----------------------- Edit Student -----------------------
@@ -308,13 +318,23 @@ if ($result->num_rows > 0) {
         var editcollege = $('#editcollege').val();
         var editpassword = $('#editpassword').val();
 
-        $.ajax({
-            url: 'src/components/Admin/Functions/UpdateStudent.php',
-            type: 'POST',
-            data: {'id': globalEditId, 'editsname': editsname, 'editprofileurl': editprofileurl, 'editemail': editemail, 'editnumber': editnumberStudents, 'editaddress': editaddress, 'editcollege': editcollege, 'editpassword': editpassword},
-            success: function(response) {
-                alert(response);
-            }
-        });
+        if (editnumberStudents !== "" && editnumberStudents.length < 10) {
+            alert("Number must contains 10 digits");
+        }
+
+        else if (editpassword !== "" && editpassword.length < 8) {
+            alert("Password must contains atleast 8 characters");
+        }
+
+        else {
+            $.ajax({
+                url: 'src/components/Admin/Functions/UpdateStudent.php',
+                type: 'POST',
+                data: {'id': globalEditId, 'editsname': editsname, 'editprofileurl': editprofileurl, 'editemail': editemail, 'editnumber': editnumberStudents, 'editaddress': editaddress, 'editcollege': editcollege, 'editpassword': editpassword},
+                success: function(response) {
+                    alert(response);
+                }
+            });
+        }
     }
 </script>
