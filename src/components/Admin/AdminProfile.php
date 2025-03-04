@@ -14,7 +14,7 @@ if (!$result) {
 
     // Assign values to variables
     $Name = $row['name'];
-    $Username = $row['username'];
+    $Email = $row['email'];
     $ImgLink = $row['profilelink'];
     $Num = $row['number'];
 ?>
@@ -29,7 +29,7 @@ if (!$result) {
             <div class='h-100 flex flex-col gap-20px'>
                 <p><?php echo $Name; ?></p>
                 <p class='text-[1.2vw]'>Instructor/Admin</p>
-                <p class='text-[1.1vw]'><?php echo $Username; ?></p>
+                <p class='text-[1.1vw]'><?php echo $Email; ?></p>
                 <p class='text-[1vw]'><?php echo $Num; ?></p>
                 <div class='flex justify-end items-end'>
                     <button class='EditButton'><?php echo $Icon_Edit ?></button>
@@ -55,8 +55,8 @@ if (!$result) {
                 <input type="text" id="editname" name="editname" placeholder='Name'>
             </div>
             <div>
-                <label for="editusername">Username</label>
-                <input type="text" id="editusername" name="editusername" placeholder='Username'>
+                <label for="editemail">Email</label>
+                <input type="email" id="editemail" name="editemail" placeholder='Username'>
             </div>
             <div>
                 <label for="editpassword">Password</label>
@@ -101,7 +101,7 @@ if (!$result) {
 
             var editprofilelink = $('#editprofilelink').val();
             var editname = $('#editname').val();
-            var editusername = $('#editusername').val();
+            var editemail = $('#editemail').val();
             var editpassword = $('#editpassword').val();
             var editnumber = $('#editnumber').val();
 
@@ -117,7 +117,7 @@ if (!$result) {
             $.ajax({
                 url: 'src/components/Admin/Functions/UpdateProfile.php',
                 type: 'POST',
-                data: {'editprofilelink': editprofilelink, 'editname': editname, 'editusername': editusername, 'editpassword': editpassword, 'editnumber': editnumber},
+                data: {'editprofilelink': editprofilelink, 'editname': editname, 'editemail': editemail, 'editpassword': editpassword, 'editnumber': editnumber},
                 success: function(response) {
                     alert(response);
                 }

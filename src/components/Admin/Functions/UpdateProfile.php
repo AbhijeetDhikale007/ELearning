@@ -29,11 +29,11 @@ if(isset($_POST['editname']) && !empty($_POST['editname'])) {
     }
 }
 
-if(isset($_POST['editusername']) && !empty($_POST['editusername'])) {
+if(isset($_POST['editemail']) && !empty($_POST['editemail'])) {
 
-    $editusername = $_POST['editusername'];
+    $editemail = $_POST['editemail'];
     
-    $sql = "UPDATE admin SET username = '$editusername' WHERE id = '$Login_id'";
+    $sql = "UPDATE admin SET email = '$editemail' WHERE id = '$Login_id'";
     
     if($conn->query($sql) == true) {
         $Message = "Your Profile Updated Successfully";
