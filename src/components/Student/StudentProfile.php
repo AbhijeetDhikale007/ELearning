@@ -50,29 +50,29 @@ if ($result->num_rows > 0) {
         <div class='flex flex-row'>
             <div>
                 <label for="editprofilelink">Profile url</label>
-                <input type="text" id="editprofilelink" name="editprofilelink" required placeholder='Profile Link'>
+                <input type="text" id="editprofilelink" name="editprofilelink" placeholder='Profile Link'>
             </div>
             <div>
                 <label for="editname">Your Name</label>
-                <input type="text" id="editname" name="editname" required placeholder='Name'>
+                <input type="text" id="editname" name="editname" placeholder='Name'>
             </div>
             <div>
                 <label for="editemail">Email</label>
-                <input type="email" id="editemail" name="editemail" required placeholder='Email'>
+                <input type="email" id="editemail" name="editemail" placeholder='Email'>
             </div>
         </div>
         <div class='flex flex-row'>
             <div>
                 <label for="editnumber">Number</label>
-                <input type="text" id="editnumber" name="editnumber" required placeholder='Number'>
+                <input type="text" id="editnumber" name="editnumber" placeholder='Number'>
             </div>
             <div>
                 <label for="editlocation">Address</label>
-                <input type="text" id="editlocation" name="editlocation" required placeholder='Address'>
+                <input type="text" id="editlocation" name="editlocation" placeholder='Address'>
             </div>
             <div>
                 <label for="editcollege">College</label>
-                <input type="text" id="editcollege" name="editcollege" required placeholder='College'>
+                <input type="text" id="editcollege" name="editcollege" placeholder='College'>
             </div>
         </div>
         <div class='flex flex-row'>
@@ -134,7 +134,7 @@ if ($result->num_rows > 0) {
             $.ajax({
                 url: 'src/components/Student/Functions/UpdateProfile.php',
                 type: 'POST',
-                data: {'editprofilelink': editprofilelink, 'editname': editname, 'editemail': editemail, 'editnumber': editnumber, 'editlocation': editlocation, 'editcollege': editcollege},
+                data: {'editprofilelink': editprofilelink, 'editname': editname, 'editemail': editemail, 'editnumber': editnumber, 'editlocation': editlocation, 'editcollege': editcollege, 'editpassword': editpassword},
                 success: function(response) {
                     alert(response);
                 }
