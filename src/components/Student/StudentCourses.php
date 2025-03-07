@@ -2,12 +2,24 @@
 // include 'src/components/dBconnection.php';
 // include 'src/components/Icons.php';
 
-$sql = "SELECT * FROM courses";
-$result = $conn->query($sql);
+$userId = $Login_id;
+
+$sql = "SELECT c.cname AS Name, c.prize AS Prize, c.discount AS Discount 
+        FROM enrollment e
+        INNER JOIN courses c ON e.courseId = c.id
+        WHERE e.userId = ?";
+
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $userId);
+$stmt->execute();
+$result = $stmt->get_result();
 
 if(!$result) {
     die("Query Failed: ". $conn->error);
 }
+
+// $sql = "SELECT * FROM courses";
+// $result = $conn->query($sql);
 
 $Courses = [];
 
@@ -15,12 +27,12 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $Courses[] = [
             // 'id' => $row['id'],
-            'Name' => $row['cname'],
+            'Name' => $row['Name'],
             // 'img' => $row['pictureurl'],
             // 'video' => $row['videourl'],
             // 'Info' => $row['cinfo'],
-            'Prize' => $row['prize'],
-            'Discount' => $row['discount']
+            'Prize' => $row['Prize'],
+            'Discount' => $row['Discount']
         ];
     }
 }
